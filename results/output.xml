@@ -1,0 +1,1500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-03-16T14:55:41.756436" rpa="false" schemaversion="5">
+<suite id="s1" name="Robotdemo" source="/Users/magnet/IdeaProjects/test/4_test_cases/robotdemo.robot">
+<kw name="[Common] - Open Chrome Browser With Mode" owner="common_keywords" type="SETUP">
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2025-03-16T14:55:42.508949" level="INFO">${browser} = chrome</msg>
+<var>${browser}</var>
+<arg>${browser}</arg>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2025-03-16T14:55:42.508867" elapsed="0.000100"/>
+</kw>
+<kw name="Convert To Boolean" owner="BuiltIn">
+<msg time="2025-03-16T14:55:42.509117" level="INFO">${true} = True</msg>
+<var>${true}</var>
+<arg>true</arg>
+<doc>Converts the given item to Boolean true or false.</doc>
+<status status="PASS" start="2025-03-16T14:55:42.509049" elapsed="0.000080"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-16T14:55:42.509250" level="INFO">${list_options_headless} = ['--no-sandbox', '--headless', '--ignore-certificate-errors', '--disable-web-security', '--disable-notifications', '--disable-impl-side-painting', '--enable-features=NetworkService,NetworkServiceInPro...</msg>
+<var>${list_options_headless}</var>
+<arg>--no-sandbox</arg>
+<arg>--headless</arg>
+<arg>--ignore-certificate-errors</arg>
+<arg>--disable-web-security</arg>
+<arg>--disable-notifications</arg>
+<arg>--disable-impl-side-painting</arg>
+<arg>--enable-features=NetworkService,NetworkServiceInProcess</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-16T14:55:42.509190" elapsed="0.000070"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-16T14:55:42.509360" level="INFO">${list_options} = ['--no-sandbox', '--ignore-certificate-errors', '--disable-web-security', '--disable-notifications', '--disable-impl-side-painting', '--enable-features=NetworkService,NetworkServiceInProcess']</msg>
+<var>${list_options}</var>
+<arg>--no-sandbox</arg>
+<arg>--ignore-certificate-errors</arg>
+<arg>--disable-web-security</arg>
+<arg>--disable-notifications</arg>
+<arg>--disable-impl-side-painting</arg>
+<arg>--enable-features=NetworkService,NetworkServiceInProcess</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-16T14:55:42.509318" elapsed="0.000051"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-16T14:55:42.509541" level="INFO">${args_headless} = {'args': ['--no-sandbox', '--headless', '--ignore-certificate-errors', '--disable-web-security', '--disable-notifications', '--disable-impl-side-painting', '--enable-features=NetworkService,NetworkSer...</msg>
+<var>${args_headless}</var>
+<arg>args=${list_options_headless}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-16T14:55:42.509426" elapsed="0.000126"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-16T14:55:42.509674" level="INFO">${args} = {'args': ['--no-sandbox', '--ignore-certificate-errors', '--disable-web-security', '--disable-notifications', '--disable-impl-side-painting', '--enable-features=NetworkService,NetworkServiceInProcess'...</msg>
+<var>${args}</var>
+<arg>args=${list_options}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-16T14:55:42.509607" elapsed="0.000077"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-16T14:55:42.509837" level="INFO">${desired_capabilities_headless} = {'acceptSslCerts': True, 'acceptInsecureCerts': True, 'ignore-certificate-errors': True, 'chromeOptions': {'args': ['--no-sandbox', '--headless', '--ignore-certificate-errors', '--disable-web-security...</msg>
+<var>${desired_capabilities_headless}</var>
+<arg>acceptSslCerts=${true}</arg>
+<arg>acceptInsecureCerts=${true}</arg>
+<arg>ignore-certificate-errors=${true}</arg>
+<arg>chromeOptions=${args_headless}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-16T14:55:42.509734" elapsed="0.000113"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-16T14:55:42.509997" level="INFO">${desired_capabilities} = {'acceptSslCerts': True, 'acceptInsecureCerts': True, 'ignore-certificate-errors': True, 'chromeOptions': {'args': ['--no-sandbox', '--ignore-certificate-errors', '--disable-web-security', '--disable-...</msg>
+<var>${desired_capabilities}</var>
+<arg>acceptSslCerts=${true}</arg>
+<arg>acceptInsecureCerts=${true}</arg>
+<arg>ignore-certificate-errors=${true}</arg>
+<arg>chromeOptions=${args}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-16T14:55:42.509899" elapsed="0.000109"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${browser}&quot; == &quot;chrome&quot;">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:42.510286" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-03-16T14:55:42.510326" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2025-03-16T14:55:43.766803" level="WARN">The chromedriver version (133.0.6943.53) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (134.0.6998.89); currently, chromedriver 134.0.6998.88 is recommended for chrome 134.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>desired_capabilities=${desired_capabilities}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-16T14:55:42.510172" elapsed="2.487914"/>
+</kw>
+<kw name="[Common] - Maximize Browser Window" owner="common_keywords">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-16T14:55:44.998824" elapsed="0.368305"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:44.998518" elapsed="0.368692"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:42.510049" elapsed="2.857189"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${browser}&quot; == &quot;headlesschrome&quot;">
+<kw name="[Common] - Open Chrome Headless Browser" owner="common_keywords">
+<arg>${url}</arg>
+<status status="NOT RUN" start="2025-03-16T14:55:45.367445" elapsed="0.000021"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-03-16T14:55:45.367562" elapsed="0.000012"/>
+</kw>
+<status status="NOT RUN" start="2025-03-16T14:55:45.367290" elapsed="0.000299"/>
+</branch>
+<branch type="ELSE">
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${FALSE}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-03-16T14:55:45.367685" elapsed="0.000012"/>
+</kw>
+<status status="NOT RUN" start="2025-03-16T14:55:45.367605" elapsed="0.000109"/>
+</branch>
+<status status="PASS" start="2025-03-16T14:55:42.510037" elapsed="2.857694"/>
+</if>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-03-16T14:55:42.508327" elapsed="2.859443"/>
+</kw>
+<test id="s1-t1" name="Should be able to add new customer" line="22">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-03-16T14:55:45.368317" level="INFO">Opening url 'https://automationplayground.com/crm/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-16T14:55:45.368211" elapsed="1.526950"/>
+</kw>
+<kw name="[Login] - Login success" owner="Login_Keywords">
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:46.908782" elapsed="1.001260"/>
+</kw>
+<arg>Customers Are Priority One</arg>
+<status status="PASS" start="2025-03-16T14:55:46.908266" elapsed="1.002539"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:47.911531" elapsed="0.009425"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:47.911314" elapsed="0.009695"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:47.921245" level="INFO">Clicking element '//a[@id="SignIn"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:47.921127" elapsed="1.265677"/>
+</kw>
+<arg>${btn_SignIn}</arg>
+<status status="PASS" start="2025-03-16T14:55:47.911018" elapsed="1.275873"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.187242" elapsed="0.013366"/>
+</kw>
+<arg>Login</arg>
+<status status="PASS" start="2025-03-16T14:55:49.187016" elapsed="0.013673"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.201180" elapsed="0.007613"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.201016" elapsed="0.007825"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:49.209060" level="INFO">Typing text 'test@gmail.com' into text field '//input[@id="email-id"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.208939" elapsed="0.073252"/>
+</kw>
+<arg>${txt_Email}</arg>
+<arg>${Admin_email}</arg>
+<status status="PASS" start="2025-03-16T14:55:49.200794" elapsed="0.081469"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.282701" elapsed="0.006965"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.282569" elapsed="0.007155"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:49.289955" level="INFO">Typing text 'text' into text field '//input[@id="password"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.289828" elapsed="0.025504"/>
+</kw>
+<arg>${txt_Password}</arg>
+<arg>${Admin_password}</arg>
+<status status="PASS" start="2025-03-16T14:55:49.282365" elapsed="0.033037"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.315830" elapsed="0.005789"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.315689" elapsed="0.005975"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:49.321852" level="INFO">Clicking element '//button[@id="submit-id"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.321755" elapsed="0.019949"/>
+</kw>
+<arg>${btn_Submit}</arg>
+<status status="PASS" start="2025-03-16T14:55:49.315503" elapsed="0.026263"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.342011" elapsed="0.550886"/>
+</kw>
+<arg>Our Happy Customers</arg>
+<status status="PASS" start="2025-03-16T14:55:49.341857" elapsed="0.551114"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:46.905623" elapsed="2.987374"/>
+</kw>
+<kw name="[AddCustomer] - Input correct Customer Info" owner="AddCustomerService_keywords">
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.893583" elapsed="0.006586"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.893442" elapsed="0.006792"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:49.900498" level="INFO">Clicking element '//a[@id="new-customer"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:49.900363" elapsed="0.517719"/>
+</kw>
+<arg>${btn_addCustomer}</arg>
+<status status="PASS" start="2025-03-16T14:55:49.893288" elapsed="0.524874"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.418496" elapsed="0.005106"/>
+</kw>
+<arg>Add Customer</arg>
+<status status="PASS" start="2025-03-16T14:55:50.418278" elapsed="0.005374"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.424063" elapsed="0.006619"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.423917" elapsed="0.006873"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:50.431006" level="INFO">Typing text 'test101@gmail.com' into text field '//input[@id="EmailAddress"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.430890" elapsed="0.024181"/>
+</kw>
+<arg>${txt_addNewEmail}</arg>
+<arg>${AddNew_email}</arg>
+<status status="PASS" start="2025-03-16T14:55:50.423730" elapsed="0.031399"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.455553" elapsed="0.005743"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.455423" elapsed="0.005907"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:50.461478" level="INFO">Typing text 'Robin' into text field '//input[@id="FirstName"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.461399" elapsed="0.022925"/>
+</kw>
+<arg>${txt_addNewFirstName}</arg>
+<arg>${AddNew_FirstName}</arg>
+<status status="PASS" start="2025-03-16T14:55:50.455231" elapsed="0.029158"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.484781" elapsed="0.005507"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.484661" elapsed="0.005668"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:50.490504" level="INFO">Typing text 'Hood' into text field '//input[@id="LastName"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.490415" elapsed="0.020911"/>
+</kw>
+<arg>${txt_addNewLastName}</arg>
+<arg>${AddNew_LastName}</arg>
+<status status="PASS" start="2025-03-16T14:55:50.484480" elapsed="0.026908"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.511760" elapsed="0.005910"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.511643" elapsed="0.006067"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:50.517888" level="INFO">Typing text 'Dallas' into text field '//input[@id="City"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.517792" elapsed="0.020378"/>
+</kw>
+<arg>${txt_addNewCity}</arg>
+<arg>Dallas</arg>
+<status status="PASS" start="2025-03-16T14:55:50.511477" elapsed="0.026752"/>
+</kw>
+<kw name="[Common] - Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.538593" elapsed="0.005433"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element.</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.538479" elapsed="0.005577"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:50.544194" level="INFO">Clicking element '//select[@id="StateOrRegion"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.544124" elapsed="0.038986"/>
+</kw>
+<arg>${drpList_Filter_State}</arg>
+<status status="PASS" start="2025-03-16T14:55:50.538318" elapsed="0.044861"/>
+</kw>
+<kw name="[Common] - Click Element Contains Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[contains(text(),"${text}")]</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find //*[contains(text(),"${text}")] Element.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.583595" elapsed="0.005986"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//*[contains(text(),"${text}")]</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find //*[contains(text(),"${text}")] Element.</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.583455" elapsed="0.006176"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:50.589839" level="INFO">Clicking element '//*[contains(text(),"Iowa")]'.</msg>
+<arg>//*[contains(text(),"${text}")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.589731" elapsed="0.010965"/>
+</kw>
+<arg>Iowa</arg>
+<status status="PASS" start="2025-03-16T14:55:50.583279" elapsed="0.017478"/>
+</kw>
+<kw name="[Common] - Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.601126" elapsed="0.015630"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element.</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.601005" elapsed="0.015800"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:50.617001" level="INFO">Clicking element '//input[@value="male"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.616898" elapsed="0.032910"/>
+</kw>
+<arg>${rab_Male}</arg>
+<status status="PASS" start="2025-03-16T14:55:50.600842" elapsed="0.049033"/>
+</kw>
+<kw name="[Common] - Click Element" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.650526" elapsed="0.005474"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element.</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.650342" elapsed="0.005692"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:50.656173" level="INFO">Clicking element '//input[@name="promos-name"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.656105" elapsed="0.016650"/>
+</kw>
+<arg>${rab_Promo}</arg>
+<status status="PASS" start="2025-03-16T14:55:50.649973" elapsed="0.022833"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.673155" elapsed="0.005027"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.673043" elapsed="0.005167"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:50.678335" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.678273" elapsed="0.019845"/>
+</kw>
+<arg>${btn_addNewCustomer_submit}</arg>
+<status status="PASS" start="2025-03-16T14:55:50.672887" elapsed="0.025302"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:50.698536" elapsed="0.334686"/>
+</kw>
+<arg>Success! New customer added.</arg>
+<status status="PASS" start="2025-03-16T14:55:50.698360" elapsed="0.334955"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:49.893148" elapsed="1.140206"/>
+</kw>
+<kw name="Clear Browser Cache" type="TEARDOWN">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.034201" level="INFO">Executing JavaScript:
+window.localStorage.clear();
+Without any arguments.</msg>
+<arg>window.localStorage.clear();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.033884" elapsed="0.002588"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.036742" level="INFO">Executing JavaScript:
+window.sessionStorage.clear();
+Without any arguments.</msg>
+<arg>window.sessionStorage.clear();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.036586" elapsed="0.001977"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.038786" level="INFO">Executing JavaScript:
+caches.keys().then(keys =&gt; { keys.forEach(key =&gt; caches.delete(key)); });
+Without any arguments.</msg>
+<arg>caches.keys().then(keys =&gt; { keys.forEach(key =&gt; caches.delete(key)); });</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.038657" elapsed="0.001761"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:51.033633" elapsed="0.006825"/>
+</kw>
+<doc>1006 Should be able to add new customer</doc>
+<tag>1006</tag>
+<tag>Customer</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-03-16T14:55:45.367854" elapsed="5.672656"/>
+</test>
+<test id="s1-t2" name="Should be able to log out" line="28">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-03-16T14:55:51.040952" level="INFO">Opening url 'https://automationplayground.com/crm/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.040885" elapsed="0.015067"/>
+</kw>
+<kw name="[Login] - Login success" owner="Login_Keywords">
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.056677" elapsed="0.003926"/>
+</kw>
+<arg>Customers Are Priority One</arg>
+<status status="PASS" start="2025-03-16T14:55:51.056425" elapsed="0.004247"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.061106" elapsed="0.004520"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.060966" elapsed="0.004699"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.065835" level="INFO">Clicking element '//a[@id="SignIn"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.065751" elapsed="0.032273"/>
+</kw>
+<arg>${btn_SignIn}</arg>
+<status status="PASS" start="2025-03-16T14:55:51.060774" elapsed="0.037312"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.098382" elapsed="0.002868"/>
+</kw>
+<arg>Login</arg>
+<status status="PASS" start="2025-03-16T14:55:51.098176" elapsed="0.003120"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.101625" elapsed="0.007737"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.101514" elapsed="0.007880"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.109549" level="INFO">Typing text 'test@gmail.com' into text field '//input[@id="email-id"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.109470" elapsed="0.024142"/>
+</kw>
+<arg>${txt_Email}</arg>
+<arg>${Admin_email}</arg>
+<status status="PASS" start="2025-03-16T14:55:51.101367" elapsed="0.032313"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.134100" elapsed="0.012529"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.133968" elapsed="0.012719"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.146947" level="INFO">Typing text 'text' into text field '//input[@id="password"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.146804" elapsed="0.035575"/>
+</kw>
+<arg>${txt_Password}</arg>
+<arg>${Admin_password}</arg>
+<status status="PASS" start="2025-03-16T14:55:51.133777" elapsed="0.048658"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.182794" elapsed="0.004526"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.182679" elapsed="0.004683"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.187539" level="INFO">Clicking element '//button[@id="submit-id"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.187447" elapsed="0.017827"/>
+</kw>
+<arg>${btn_Submit}</arg>
+<status status="PASS" start="2025-03-16T14:55:51.182522" elapsed="0.022821"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.205573" elapsed="0.223555"/>
+</kw>
+<arg>Our Happy Customers</arg>
+<status status="PASS" start="2025-03-16T14:55:51.205428" elapsed="0.223833"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:51.056190" elapsed="0.373126"/>
+</kw>
+<kw name="[Login] - Sign out success" owner="Login_Keywords">
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.430401" elapsed="0.010454"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.430136" elapsed="0.010798"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.441297" level="INFO">Clicking element '//a[@href="sign-out.html"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.441090" elapsed="0.396352"/>
+</kw>
+<arg>${btn_SignOut}</arg>
+<status status="PASS" start="2025-03-16T14:55:51.429846" elapsed="0.407691"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.837938" elapsed="0.013790"/>
+</kw>
+<arg>Signed Out</arg>
+<status status="PASS" start="2025-03-16T14:55:51.837679" elapsed="0.014117"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:51.429577" elapsed="0.422251"/>
+</kw>
+<kw name="Clear Browser Cache" type="TEARDOWN">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.852437" level="INFO">Executing JavaScript:
+window.localStorage.clear();
+Without any arguments.</msg>
+<arg>window.localStorage.clear();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.852189" elapsed="0.002057"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.854499" level="INFO">Executing JavaScript:
+window.sessionStorage.clear();
+Without any arguments.</msg>
+<arg>window.sessionStorage.clear();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.854353" elapsed="0.001641"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.856219" level="INFO">Executing JavaScript:
+caches.keys().then(keys =&gt; { keys.forEach(key =&gt; caches.delete(key)); });
+Without any arguments.</msg>
+<arg>caches.keys().then(keys =&gt; { keys.forEach(key =&gt; caches.delete(key)); });</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.856082" elapsed="0.001625"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:51.852003" elapsed="0.005740"/>
+</kw>
+<doc>1004 Should be able to log out</doc>
+<tag>1004</tag>
+<tag>Login</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-03-16T14:55:51.040677" elapsed="0.817114"/>
+</test>
+<test id="s1-t3" name="Should be able to cancel adding new customer" line="34">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-03-16T14:55:51.858207" level="INFO">Opening url 'https://automationplayground.com/crm/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.858144" elapsed="0.018042"/>
+</kw>
+<kw name="[Login] - Login success" owner="Login_Keywords">
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.876865" elapsed="0.004983"/>
+</kw>
+<arg>Customers Are Priority One</arg>
+<status status="PASS" start="2025-03-16T14:55:51.876566" elapsed="0.005349"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.882352" elapsed="0.004704"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.882203" elapsed="0.004886"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.887311" level="INFO">Clicking element '//a[@id="SignIn"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.887234" elapsed="0.043472"/>
+</kw>
+<arg>${btn_SignIn}</arg>
+<status status="PASS" start="2025-03-16T14:55:51.882016" elapsed="0.048758"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.931093" elapsed="0.003076"/>
+</kw>
+<arg>Login</arg>
+<status status="PASS" start="2025-03-16T14:55:51.930875" elapsed="0.003346"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.934561" elapsed="0.004600"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.934449" elapsed="0.004742"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.939337" level="INFO">Typing text 'test@gmail.com' into text field '//input[@id="email-id"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.939259" elapsed="0.030209"/>
+</kw>
+<arg>${txt_Email}</arg>
+<arg>${Admin_email}</arg>
+<status status="PASS" start="2025-03-16T14:55:51.934296" elapsed="0.035243"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.969961" elapsed="0.020574"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.969835" elapsed="0.020746"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:51.990783" level="INFO">Typing text 'text' into text field '//input[@id="password"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:51.990675" elapsed="0.021686"/>
+</kw>
+<arg>${txt_Password}</arg>
+<arg>${Admin_password}</arg>
+<status status="PASS" start="2025-03-16T14:55:51.969637" elapsed="0.042784"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.012786" elapsed="0.004576"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.012670" elapsed="0.004734"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:52.017580" level="INFO">Clicking element '//button[@id="submit-id"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.017490" elapsed="0.016965"/>
+</kw>
+<arg>${btn_Submit}</arg>
+<status status="PASS" start="2025-03-16T14:55:52.012509" elapsed="0.022019"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.034756" elapsed="0.210073"/>
+</kw>
+<arg>Our Happy Customers</arg>
+<status status="PASS" start="2025-03-16T14:55:52.034610" elapsed="0.210345"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:51.876401" elapsed="0.368600"/>
+</kw>
+<kw name="[AddCustomer] - Click Cancel button in add customer page" owner="AddCustomerService_keywords">
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.246066" elapsed="0.007942"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.245807" elapsed="0.008280"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:52.254401" level="INFO">Clicking element '//a[@id="new-customer"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.254241" elapsed="0.271884"/>
+</kw>
+<arg>${btn_addCustomer}</arg>
+<status status="PASS" start="2025-03-16T14:55:52.245510" elapsed="0.280760"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.526852" elapsed="0.006232"/>
+</kw>
+<arg>Add Customer</arg>
+<status status="PASS" start="2025-03-16T14:55:52.526486" elapsed="0.006685"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.533817" elapsed="0.010021"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.533586" elapsed="0.010306"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:52.544133" level="INFO">Clicking element '//a[text()="Cancel"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.544010" elapsed="0.292997"/>
+</kw>
+<arg>${btn_addNewCustomer_cancel}</arg>
+<status status="PASS" start="2025-03-16T14:55:52.533314" elapsed="0.303863"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:52.245250" elapsed="0.591966"/>
+</kw>
+<kw name="Clear Browser Cache" type="TEARDOWN">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:52.837919" level="INFO">Executing JavaScript:
+window.localStorage.clear();
+Without any arguments.</msg>
+<arg>window.localStorage.clear();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.837644" elapsed="0.008068"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:52.846008" level="INFO">Executing JavaScript:
+window.sessionStorage.clear();
+Without any arguments.</msg>
+<arg>window.sessionStorage.clear();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.845834" elapsed="0.002423"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:52.848635" level="INFO">Executing JavaScript:
+caches.keys().then(keys =&gt; { keys.forEach(key =&gt; caches.delete(key)); });
+Without any arguments.</msg>
+<arg>caches.keys().then(keys =&gt; { keys.forEach(key =&gt; caches.delete(key)); });</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.848396" elapsed="0.001923"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:52.837423" elapsed="0.012952"/>
+</kw>
+<doc>1007 Should be able to cancel adding new customer</doc>
+<tag>1007</tag>
+<tag>Customer</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-03-16T14:55:51.857925" elapsed="0.992513"/>
+</test>
+<test id="s1-t4" name="Login should succeed with valid credentials" line="41">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-03-16T14:55:52.850957" level="INFO">Opening url 'https://automationplayground.com/crm/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.850871" elapsed="0.018266"/>
+</kw>
+<kw name="[Login] - Login success" owner="Login_Keywords">
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.870208" elapsed="0.008491"/>
+</kw>
+<arg>Customers Are Priority One</arg>
+<status status="PASS" start="2025-03-16T14:55:52.869804" elapsed="0.008966"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.879210" elapsed="0.004999"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.879068" elapsed="0.005189"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:52.884452" level="INFO">Clicking element '//a[@id="SignIn"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.884349" elapsed="0.033951"/>
+</kw>
+<arg>${btn_SignIn}</arg>
+<status status="PASS" start="2025-03-16T14:55:52.878875" elapsed="0.039495"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.918632" elapsed="0.002742"/>
+</kw>
+<arg>Login</arg>
+<status status="PASS" start="2025-03-16T14:55:52.918466" elapsed="0.002940"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.921721" elapsed="0.013609"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.921607" elapsed="0.013760"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:52.935529" level="INFO">Typing text 'test@gmail.com' into text field '//input[@id="email-id"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.935443" elapsed="0.040504"/>
+</kw>
+<arg>${txt_Email}</arg>
+<arg>${Admin_email}</arg>
+<status status="PASS" start="2025-03-16T14:55:52.921463" elapsed="0.054608"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.976588" elapsed="0.237198"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:52.976450" elapsed="0.237392"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.214077" level="INFO">Typing text 'text' into text field '//input[@id="password"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.213951" elapsed="0.021929"/>
+</kw>
+<arg>${txt_Password}</arg>
+<arg>${Admin_password}</arg>
+<status status="PASS" start="2025-03-16T14:55:52.976234" elapsed="0.259697"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.236292" elapsed="0.004080"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.236170" elapsed="0.004232"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.240529" level="INFO">Clicking element '//button[@id="submit-id"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.240465" elapsed="0.027198"/>
+</kw>
+<arg>${btn_Submit}</arg>
+<status status="PASS" start="2025-03-16T14:55:53.236014" elapsed="0.031722"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.268386" elapsed="0.014194"/>
+</kw>
+<arg>Our Happy Customers</arg>
+<status status="PASS" start="2025-03-16T14:55:53.267862" elapsed="0.014778"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:52.869514" elapsed="0.413150"/>
+</kw>
+<kw name="Clear Browser Cache" type="TEARDOWN">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.283167" level="INFO">Executing JavaScript:
+window.localStorage.clear();
+Without any arguments.</msg>
+<arg>window.localStorage.clear();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.282976" elapsed="0.001543"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.284711" level="INFO">Executing JavaScript:
+window.sessionStorage.clear();
+Without any arguments.</msg>
+<arg>window.sessionStorage.clear();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.284604" elapsed="0.001413"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.286192" level="INFO">Executing JavaScript:
+caches.keys().then(keys =&gt; { keys.forEach(key =&gt; caches.delete(key)); });
+Without any arguments.</msg>
+<arg>caches.keys().then(keys =&gt; { keys.forEach(key =&gt; caches.delete(key)); });</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.286080" elapsed="0.001856"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:53.282812" elapsed="0.005212"/>
+</kw>
+<doc>1002 Login should succeed with valid credentials</doc>
+<tag>1002</tag>
+<tag>Login</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-03-16T14:55:52.850601" elapsed="0.437489"/>
+</test>
+<test id="s1-t5" name="Customers page should display multiple customers" line="46">
+<kw name="Go To" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-03-16T14:55:53.288590" level="INFO">Opening url 'https://automationplayground.com/crm/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.288500" elapsed="0.018796"/>
+</kw>
+<kw name="[Login] - Login success" owner="Login_Keywords">
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.307759" elapsed="0.003117"/>
+</kw>
+<arg>Customers Are Priority One</arg>
+<status status="PASS" start="2025-03-16T14:55:53.307624" elapsed="0.003302"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.311248" elapsed="0.005834"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.311136" elapsed="0.005998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.317332" level="INFO">Clicking element '//a[@id="SignIn"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.317230" elapsed="0.037448"/>
+</kw>
+<arg>${btn_SignIn}</arg>
+<status status="PASS" start="2025-03-16T14:55:53.310997" elapsed="0.043740"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.354989" elapsed="0.013234"/>
+</kw>
+<arg>Login</arg>
+<status status="PASS" start="2025-03-16T14:55:53.354825" elapsed="0.013463"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.368652" elapsed="0.011840"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.368538" elapsed="0.011988"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.380682" level="INFO">Typing text 'test@gmail.com' into text field '//input[@id="email-id"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.380597" elapsed="0.023994"/>
+</kw>
+<arg>${txt_Email}</arg>
+<arg>${Admin_email}</arg>
+<status status="PASS" start="2025-03-16T14:55:53.368373" elapsed="0.036273"/>
+</kw>
+<kw name="[Common] - Input Text" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.405005" elapsed="0.022743"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.404891" elapsed="0.022901"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.427984" level="INFO">Typing text 'text' into text field '//input[@id="password"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.427883" elapsed="0.021661"/>
+</kw>
+<arg>${txt_Password}</arg>
+<arg>${Admin_password}</arg>
+<status status="PASS" start="2025-03-16T14:55:53.404729" elapsed="0.044869"/>
+</kw>
+<kw name="[Common] - Click Button" owner="common_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.449943" elapsed="0.004140"/>
+</kw>
+<arg>${time_out}</arg>
+<arg>${polling_every}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${time_out}</arg>
+<arg>error=Could Not find ${locator} Element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.449831" elapsed="0.004279"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.454236" level="INFO">Clicking element '//button[@id="submit-id"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.454172" elapsed="0.017189"/>
+</kw>
+<arg>${btn_Submit}</arg>
+<status status="PASS" start="2025-03-16T14:55:53.449680" elapsed="0.021774"/>
+</kw>
+<kw name="[Common] - Verify Page Contains Element Text" owner="common_keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<arg>${time_out}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.471705" elapsed="0.214252"/>
+</kw>
+<arg>Our Happy Customers</arg>
+<status status="PASS" start="2025-03-16T14:55:53.471549" elapsed="0.214550"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:53.307489" elapsed="0.378665"/>
+</kw>
+<kw name="[Login] - Count row data" owner="Login_Keywords">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.694412" level="INFO">${count} = 6</msg>
+<var>${count}</var>
+<arg>//tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.686842" elapsed="0.007602"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>0 &lt; ${count}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.694589" elapsed="0.000219"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:53.686431" elapsed="0.008423"/>
+</kw>
+<kw name="Clear Browser Cache" type="TEARDOWN">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.695512" level="INFO">Executing JavaScript:
+window.localStorage.clear();
+Without any arguments.</msg>
+<arg>window.localStorage.clear();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.695213" elapsed="0.002724"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.698284" level="INFO">Executing JavaScript:
+window.sessionStorage.clear();
+Without any arguments.</msg>
+<arg>window.sessionStorage.clear();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.698070" elapsed="0.002083"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-16T14:55:53.700413" level="INFO">Executing JavaScript:
+caches.keys().then(keys =&gt; { keys.forEach(key =&gt; caches.delete(key)); });
+Without any arguments.</msg>
+<arg>caches.keys().then(keys =&gt; { keys.forEach(key =&gt; caches.delete(key)); });</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.700257" elapsed="0.001916"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:53.695022" elapsed="0.007194"/>
+</kw>
+<doc>1005 Customers page should display multiple customers</doc>
+<tag>1005</tag>
+<tag>Login</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-03-16T14:55:53.288257" elapsed="0.414019"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-16T14:55:53.702799" elapsed="0.072503"/>
+</kw>
+<status status="PASS" start="2025-03-16T14:55:41.756985" elapsed="12.018393"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">1002</stat>
+<stat pass="1" fail="0" skip="0">1004</stat>
+<stat pass="1" fail="0" skip="0">1005</stat>
+<stat pass="1" fail="0" skip="0">1006</stat>
+<stat pass="1" fail="0" skip="0">1007</stat>
+<stat pass="2" fail="0" skip="0">Customer</stat>
+<stat pass="3" fail="0" skip="0">Login</stat>
+<stat pass="5" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat name="Robotdemo" id="s1" pass="5" fail="0" skip="0">Robotdemo</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-03-16T14:55:42.510286" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-03-16T14:55:43.766803" level="WARN">The chromedriver version (133.0.6943.53) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (134.0.6998.89); currently, chromedriver 134.0.6998.88 is recommended for chrome 134.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
