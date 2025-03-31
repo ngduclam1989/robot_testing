@@ -1,5 +1,5 @@
 *** Settings ***
-Resource            ../import.robot
+Resource                    ../imports.robot
 
 
 #Run script

@@ -2,7 +2,7 @@
 Library           Collections
 Library           OperatingSystem
 Library           JSONLibrary
-Resource            ${CURDIR}/../../../imports.robot
+Resource                    ../imports.robot
 
 *** Variables ***
 ${BASE_PARAM}   ddMasterInquiry
