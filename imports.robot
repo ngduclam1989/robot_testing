@@ -29,6 +29,7 @@ Library     ./0_resources/pythonlibs/rest_util.py
 Library     ./0_resources/pythonlibs/urlparse_compat.py
 Library     ./0_resources/pythonlibs/sql_db.py
 Library     ./0_resources/pythonlibs/api_libs/testing_api.py
+Library     ./0_resources/pythonlibs/api_libs/json_utils.py
 
 #### ROBOT WEB COMMON ####
 Resource    ./1_common/common_keywords.robot
