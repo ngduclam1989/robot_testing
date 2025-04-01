@@ -3,6 +3,10 @@ Resource                    ../imports.robot
 Library         DataDriver          file=../5_test_datas/API_datas/test_addAPI.xlsx      encoding=utf-8    dialect=unix
 Test Template       Call API demo
 
+*** Variables ***
+
+
+
 
 *** Test Cases ***
 ${STT} - ${Name}

@@ -1,51 +1,55 @@
 import json
 
-def find_key_recursive(data, target_key):
-    """Tìm kiếm key trong JSON ở mọi cấp độ."""
+def find_nested_key(data, key):
+    """Tìm kiếm key ở mọi cấp trong JSON."""
     if isinstance(data, dict):
-        if target_key in data:
-            return data[target_key]
-        for key, value in data.items():
-            result = find_key_recursive(value, target_key)
-            if result is not None:
-                return result
+        if key in data:
+            return data[key]
+        for v in data.values():
+            found = find_nested_key(v, key)
+            if found is not None:
+                return found
     elif isinstance(data, list):
         for item in data:
-            result = find_key_recursive(item, target_key)
-            if result is not None:
-                return result
+            found = find_nested_key(item, key)
+            if found is not None:
+                return found
     return None
 
-def check_json_params(json_data, base_param=None, *sub_params):
-    """Kiểm tra JSON với base_param và sub_params."""
+def validate_json(json_data, base_param="", sub_params="", sub_params_value=""):
     try:
         data = json.loads(json_data)
 
-        # Nếu không có BASE_PARAM, kiểm tra toàn bộ JSON
+        # Điều hướng đến base_param nếu có
         if base_param:
-            base_keys = base_param.split()
-            base_data = data
-            for key in base_keys:
-                base_data = base_data.get(key, None)
-                if base_data is None:
-                    return False
-        else:
-            base_data = data  # Kiểm tra trên toàn bộ JSON nếu không có base_param
+            keys = base_param.split("/")
+            for key in keys:
+                if key in data:
+                    data = data[key]
+                else:
+                    raise AssertionError(f"Error: Missing `{key}` in JSON.")
 
-        # Nếu không có SUB_PARAMS, chỉ kiểm tra sự tồn tại của BASE_PARAM
-        if not sub_params:
-            return True
+        # Tách danh sách params và values
+        sub_params_list = sub_params.strip(";").split(";") if sub_params else []
+        sub_values_list = sub_params_value.split(";") if sub_params_value else []
 
-        for param in sub_params:
-            param_value = find_key_recursive(base_data, param)
-            if param_value is None or param_value == "":
-                return False
+        # Đảm bảo số lượng giá trị khớp với số param
+        while len(sub_values_list) < len(sub_params_list):
+            sub_values_list.append("")
 
-        return True
+        # Kiểm tra từng param trong JSON
+        for i, param in enumerate(sub_params_list):
+            actual_value = find_nested_key(data, param)
+
+            if actual_value is None:
+                raise AssertionError(f"Error: Missing `{param}` in JSON.")
+
+            # Giữ nguyên giá trị mong đợi, không strip() để tránh mất ""
+            expected_value = sub_values_list[i]
+            if expected_value != actual_value:
+                raise AssertionError(f"Error: `{param}` has value `{actual_value}`, expected `{expected_value}`.")
+
+    except json.JSONDecodeError:
+        raise AssertionError("Error: Invalid JSON format.")
     except Exception as e:
-        print(f"Lỗi: {e}")
-        return False
-
-def validate_json(json_data, base_param=None, *sub_params):
-    """Tích hợp kiểm tra vào Python, trả về True hoặc False."""
-    return check_json_params(json_data, base_param, *sub_params)
+        raise AssertionError(f"Unexpected error: {e}")

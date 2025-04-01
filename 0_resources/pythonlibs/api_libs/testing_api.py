@@ -2,28 +2,38 @@ import requests
 import json
 from robot.libraries.BuiltIn import BuiltIn
 
-def call_api(url, method, data):
+def call_api(url, method, data=None, headers=None, params_keys=None, params_values=None):
     headers = {}
     headers["Content-Type"] = "application/json"
+
+    params = {}
+    if params_keys and params_values:
+        keys = params_keys.split(";")
+        values = params_values.split(";")
+        params = dict(zip(keys, values))
+
+    results = {}
 
     results = {}
 
     try:
+        response = None
         if method == "PUT":
-            response = requests.put(url, headers=headers, data=data)
-        if method == "GET":
-            response = requests.get(url, headers=headers)
-        if method == "PATCH":
-            response = requests.patch(url, headers=headers, data=data)
-        if method == "POST":
-            response = requests.post(url, headers=headers, data=data)
-        if method == "DELETE":
-            response = requests.delete(url, headers=headers)
+            response = requests.put(url, headers=headers, params=params, data=json.dumps(data) if data else None)
+        elif method == "GET":
+            response = requests.get(url, headers=headers, params=params)
+        elif method == "PATCH":
+            response = requests.patch(url, headers=headers, params=params, data=json.dumps(data) if data else None)
+        elif method == "POST":
+            response = requests.post(url, headers=headers, params=params, data=json.dumps(data) if data else None)
+        elif method == "DELETE":
+            response = requests.delete(url, headers=headers, params=params)
         results["status_code"] = response.status_code
-        results["response"] = response.text
+        results["response"] = response.json() if response.text else {}
 
-    except requests.exceptions.RequestException:
+    except requests.exceptions.RequestException as e:
         results["status_code"] = "Có lỗi xảy ra"
+        results["error"] = str(e)
 
     return results
 

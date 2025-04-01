@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-03-31T17:34:30.739101" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-04-01T17:43:27.127029" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Json" source="/Users/magnet/IdeaProjects/test/4_test_cases/test_json.robot">
-<test id="s1-t1" name="Check JSON Parameters" line="14">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<test id="s1-t1" name="Validate JSON Parameters" line="14">
 <kw name="Validate Json" owner="json_utils">
-<msg time="2025-03-31T17:34:31.066173" level="FAIL">Variable '@{SUB_PARAMS}' not found.</msg>
+<msg time="2025-04-01T17:43:27.428293" level="FAIL">Unexpected error: Error: `respDesc` has value `Invalid User ID`, expected `""`.</msg>
 <arg>${JSON_DATA}</arg>
 <arg>${BASE_PARAM}</arg>
-<arg>@{SUB_PARAMS}</arg>
-<doc>Tích hợp kiểm tra vào Python, trả về True hoặc False.</doc>
-<status status="FAIL" start="2025-03-31T17:34:31.065726" elapsed="0.001014">Variable '@{SUB_PARAMS}' not found.</status>
+<arg>${SUB_PARAMS}</arg>
+<arg>${SUB_PARAMS_VALUE}</arg>
+<status status="FAIL" start="2025-04-01T17:43:27.428100" elapsed="0.001131">Unexpected error: Error: `respDesc` has value `Invalid User ID`, expected `""`.</status>
 </kw>
-<msg time="2025-03-31T17:34:31.066834" level="INFO">${result} = False</msg>
-<var>${result}</var>
-<arg>validate_json</arg>
-<arg>${JSON_DATA}</arg>
-<arg>${BASE_PARAM}</arg>
-<arg>@{SUB_PARAMS}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-03-31T17:34:31.065570" elapsed="0.001300"/>
-</kw>
-<status status="PASS" start="2025-03-31T17:34:31.064870" elapsed="0.002073"/>
+<status status="FAIL" start="2025-04-01T17:43:27.427395" elapsed="0.001952">Unexpected error: Error: `respDesc` has value `Invalid User ID`, expected `""`.</status>
 </test>
-<status status="PASS" start="2025-03-31T17:34:30.746497" elapsed="0.320652"/>
+<status status="FAIL" start="2025-04-01T17:43:27.134031" elapsed="0.295532"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Test Json" id="s1" pass="1" fail="0" skip="0">Test Json</stat>
+<stat name="Test Json" id="s1" pass="0" fail="1" skip="0">Test Json</stat>
 </suite>
 </statistics>
 <errors>
