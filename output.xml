@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-04-03T14:55:36.143446" rpa="false" schemaversion="5">
+<suite id="s1" name="Api Demo" source="/Users/magnet/IdeaProjects/test/4_test_cases/api_demo.robot">
+<test id="s1-t1" name="1 - Check API add product thành công với đầy đủ các dữ liệu hợp lệ" line="15">
+<kw name="Call API demo">
+<kw name="Call Api" owner="testing_api">
+<msg time="2025-04-03T14:56:51.591791" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="PASS" start="2025-04-03T14:55:36.584394" elapsed="75.007663"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-03T14:56:51.593974" level="FAIL">Có lỗi xảy ra != 201</msg>
+<arg>${Results}[status_code]</arg>
+<arg>${StatusCode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-04-03T14:56:51.593076" elapsed="0.001471">Có lỗi xảy ra != 201</status>
+</kw>
+<arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
+<arg>EndPoint=/product</arg>
+<arg>Method=POST</arg>
+<arg>Data={ 
+    "category": "67B6EE4C-9F71-464C-8BC1-CCE699BD9299",
+    "code": "LamOK123459999", 
+    "description": "lam_1234599991", 
+    "name": "lam_1234599991", 
+    "price": 500, 
+    "quantity": 400, 
+    "supplier": "1e17f190-fa6a-45e0-84b4-6fd0811ffa57", 
+    "unit": "cai"
+}</arg>
+<arg>StatusCode=201</arg>
+<arg>BaseParam=code;data</arg>
+<arg>SubParam=id;productCode;productName</arg>
+<arg>SubParamValue=</arg>
+<status status="FAIL" start="2025-04-03T14:55:36.583815" elapsed="75.011166">Có lỗi xảy ra != 201</status>
+</kw>
+<tag>api</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:55:36.583009" elapsed="75.012424">Có lỗi xảy ra != 201</status>
+</test>
+<test id="s1-t2" name="2 - Check API add product thành công với với code là chuỗi kí tự số" line="15">
+<kw name="Call API demo">
+<kw name="Call Api" owner="testing_api">
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="FAIL" start="2025-04-03T14:56:51.598681" elapsed="57.842041">Execution terminated by signal</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Results}[status_code]</arg>
+<arg>${StatusCode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-04-03T14:57:49.440963" elapsed="0.000032"/>
+</kw>
+<arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
+<arg>EndPoint=/product</arg>
+<arg>Method=POST</arg>
+<arg>Data={ 
+    "category": "67B6EE4C-9F71-464C-8BC1-CCE699BD9299",
+    "code": "123459999", 
+    "description": "lam_1234599991", 
+    "name": "lam_1234599991", 
+    "price": 500, 
+    "quantity": 400, 
+    "supplier": "1e17f190-fa6a-45e0-84b4-6fd0811ffa57", 
+    "unit": "cai"
+}</arg>
+<arg>StatusCode=201</arg>
+<arg>BaseParam=code;data</arg>
+<arg>SubParam=id;productCode;productName</arg>
+<arg>SubParamValue=</arg>
+<status status="FAIL" start="2025-04-03T14:56:51.598211" elapsed="57.842870">Execution terminated by signal</status>
+</kw>
+<tag>api</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:56:51.595713" elapsed="57.845551">Execution terminated by signal</status>
+</test>
+<test id="s1-t3" name="3 - Check API add product thành công với với code là chuỗi kí tự lower case" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.441421" elapsed="0.001015">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t4" name="4 - Check API add product thành công với với code là chuỗi kí tự upper case" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.442560" elapsed="0.000874">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t5" name="5 - Check API add product thành công với với code là chuỗi kí tự upper case và lower case" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.443548" elapsed="0.000808">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t6" name="6 - Check API add product thành công với dữ liệu không có param desc" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.444453" elapsed="0.000730">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t7" name="7 - Check API add product thành công với dữ liệu không có param Unit" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.445284" elapsed="0.000708">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t8" name="8 - Check API add product thành công với dữ liệu không có param desc và Unit" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.446090" elapsed="0.000705">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t9" name="9 - Check API add product không thành công với dữ liệu UUID của category không tồn tại" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.446890" elapsed="0.000824">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t10" name="10 - Check API add product không thành công với dữ liệu UUID của category là biến name của category có trong hệ thống" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.447809" elapsed="0.000920">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t11" name="11 - Check API add product không thành công với dữ liệu UUID của Supply không tồn tại" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.448829" elapsed="0.000811">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t12" name="12 - Check API add product không thành công với dữ liệu UUID của Supply là biến name của Supply có trong hệ thống" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.449728" elapsed="0.000850">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t13" name="13 - Check API add product không thành công với code product đã tồn tại trong hệ thống" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.450667" elapsed="0.000716">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t14" name="14 - Check API add product không thành công với baseURL bị sai" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.451469" elapsed="0.000602">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t15" name="15 - Check API add product không thành công với endpoint bị sai" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.452157" elapsed="0.000591">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t16" name="16 - Check API add product không thành công khi chọn method là GET" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.452838" elapsed="0.000571">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t17" name="17 - Check API add product không thành công khi chọn method là PUT" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.453494" elapsed="0.000567">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t18" name="18 - Check API add product không thành công khi chọn method là DELETE" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.454361" elapsed="0.000599">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t19" name="19 - Check API add product không thành công khi body truyền vào sai chuẩn json" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.455052" elapsed="0.000610">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t20" name="20 - Check API add product không thành công khi body truyền vào là rỗng dạng {}" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.455746" elapsed="0.000609">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t21" name="21 - Check API add product không thành công khi không truyền gì ở body" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.456439" elapsed="0.000564">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t22" name="22 - Kiểm tra require của trường category khi không truyền giá trị vào param category" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.457091" elapsed="0.000685">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t23" name="23 - Kiểm tra require của trường category khi không truyền param category" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.457858" elapsed="0.000636">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t24" name="24 - Kiểm tra validate của trường category có giá trị null" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.458576" elapsed="0.000621">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t25" name="25 - Kiểm tra validate của trường category có giá trị là số" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.459278" elapsed="0.000662">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t26" name="26 - Kiểm tra validate của trường category có giá trị là kí tự đặc biệt" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.460023" elapsed="0.000741">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t27" name="27 - Kiểm tra validate của trường category có giá trị là kí tự tiếng việt" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.460845" elapsed="0.000716">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t28" name="28 - Kiểm tra validate của trường category có giá trị là kí tự tiếng trung" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.461638" elapsed="0.000660">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t29" name="29 - Kiểm tra validate của trường category có giá trị space ở đầu" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.462374" elapsed="0.000655">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t30" name="30 - Kiểm tra validate của trường category có giá trị space ở cuối" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.463105" elapsed="0.000658">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t31" name="31 - Kiểm tra validate của trường category có giá trị space ở giữa" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.463839" elapsed="0.000657">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t32" name="32 - Kiểm tra require của trường supplier khi không truyền giá trị vào param supplier" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.464575" elapsed="0.000629">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t33" name="33 - Kiểm tra require của trường supplier khi không truyền param supplier" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.465280" elapsed="0.000594">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t34" name="34 - Kiểm tra validate của trường supplier có giá trị null" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.465949" elapsed="0.000600">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t35" name="35 - Kiểm tra validate của trường supplier có giá trị là số" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.466731" elapsed="0.000807">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t36" name="36 - Kiểm tra validate của trường supplier có giá trị là kí tự đặc biệt" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.467620" elapsed="0.000674">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t37" name="37 - Kiểm tra validate của trường supplier có giá trị là kí tự tiếng việt" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.468367" elapsed="0.000665">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t38" name="38 - Kiểm tra validate của trường supplier có giá trị là kí tự tiếng trung" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.469104" elapsed="0.000632">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t39" name="39 - Kiểm tra validate của trường supplier có giá trị space ở đầu" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.469807" elapsed="0.000628">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t40" name="40 - Kiểm tra validate của trường supplier có giá trị space ở cuối" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.470510" elapsed="0.000635">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t41" name="41 - Kiểm tra validate của trường supplier có giá trị space ở giữa" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.471217" elapsed="0.000630">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t42" name="42 - Kiểm tra require của trường supplier khi không truyền giá trị vào param code" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.471919" elapsed="0.000622">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t43" name="43 - Kiểm tra require của trường supplier khi không truyền param code" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.472612" elapsed="0.000559">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t44" name="44 - Kiểm tra validate của trường code có giá trị null" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.473293" elapsed="0.000565">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t45" name="45 - Kiểm tra validate của trường code có giá trị số" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.473930" elapsed="0.000577">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t46" name="46 - Kiểm tra validate của trường code có giá trị là kí tự đặc biệt" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.474577" elapsed="0.000647">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t47" name="47 - Kiểm tra validate của trường code có giá trị là kí tự tiếng việt" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.475293" elapsed="0.000651">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t48" name="48 - Kiểm tra validate của trường code có giá trị là kí tự tiếng trung" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.476014" elapsed="0.000625">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t49" name="49 - Kiểm tra validate của trường code có giá trị space ở đầu" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.476711" elapsed="0.000607">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t50" name="50 - Kiểm tra validate của trường code có giá trị space ở cuối" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.477387" elapsed="0.000613">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t51" name="51 - Kiểm tra validate của trường code có giá trị space ở giữa" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.478068" elapsed="0.000606">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t52" name="52 - Kiểm tra max length của trường code " line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.478746" elapsed="0.000490">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t53" name="53 - Kiểm tra require của trường supplier khi không truyền giá trị vào param name" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.479302" elapsed="0.000567">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t54" name="54 - Kiểm tra require của trường supplier khi không truyền param name" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.479936" elapsed="0.000531">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t55" name="55 - Kiểm tra validate của trường name có giá trị null" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.480534" elapsed="0.000523">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t56" name="56 - Kiểm tra validate của trường name có giá trị số" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.481128" elapsed="0.000551">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t57" name="57 - Kiểm tra validate của trường name có giá trị là kí tự đặc biệt" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.481744" elapsed="0.000621">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t58" name="58 - Kiểm tra validate của trường name có giá trị là kí tự tiếng việt" line="15">
+<tag>api</tag>
+<tag>robot:exit</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:49.482431" elapsed="0.000622">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" start="2025-04-03T14:55:36.144160" elapsed="133.339067"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="58" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat info="combined" combined="NOT robot:exit" pass="0" fail="2" skip="0">NOT robot:exit</stat>
+<stat pass="0" fail="58" skip="0">api</stat>
+<stat pass="0" fail="58" skip="0">test</stat>
+</tag>
+<suite>
+<stat name="Api Demo" id="s1" pass="0" fail="58" skip="0">Api Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

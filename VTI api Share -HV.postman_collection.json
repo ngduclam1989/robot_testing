@@ -1,0 +1,889 @@
+{
+	"info": {
+		"_postman_id": "54ef9b02-5f63-4164-b8d7-96caed8f4c07",
+		"name": "VTI api Share -HV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43455089"
+	},
+	"item": [
+		{
+			"name": "Function Test",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Precondition",
+							"item": [
+								{
+									"name": "1. Login",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var res = pm.response.json();               // Get response data",
+													"var token = res.access_token;               // Extract token from the response",
+													"",
+													"//pm.collectionVariables.set(\"accessToken\", token);     // Set gia tri token vao bien accessToken - Collection Scope",
+													"pm.collectionVariables.set(\"accessToken\", \"Bearer \" + token);",
+													"//console.log(\"acces: \" + JSON.stringify(res));",
+													"",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"admin_role\",\n  \"password\": \"aA12345678@\"\n}\n\n\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/login-with-local",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"login-with-local"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Search supplier",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var res = pm.response.json();           // Get response data",
+													"//console.log(\"Testek: \" + JSON.stringify(res));",
+													"",
+													"var supplierId = res.data.rows[0].id;",
+													"//var supplierName = res.data.rows[0].supName;",
+													"//console.log(\"Id: \"+ supplierId +\"  Name: \"+ supplierName);",
+													"",
+													"pm.collectionVariables.set(\"supplierId\",supplierId);",
+													"",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{accessToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/supplier/search?limit=100&page=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"supplier",
+												"search"
+											],
+											"query": [
+												{
+													"key": "keyword",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "limit",
+													"value": "100"
+												},
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "sort",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "sort",
+													"value": "<string>",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "<API Key>",
+														"description": "Added as a part of security scheme: apikey"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/supplier/search?keyword=<string>&limit=<integer>&page=<integer>&sort=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"supplier",
+														"search"
+													],
+													"query": [
+														{
+															"key": "keyword",
+															"value": "<string>"
+														},
+														{
+															"key": "limit",
+															"value": "<integer>"
+														},
+														{
+															"key": "page",
+															"value": "<integer>"
+														},
+														{
+															"key": "sort",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": \"<integer>\",\n  \"data\": {\n    \"count\": \"<long>\",\n    \"limit\": \"<integer>\",\n    \"page\": \"<integer>\",\n    \"rows\": [\n      {\n        \"id\": \"<uuid>\",\n        \"supAddress\": \"<string>\",\n        \"supCity\": \"<string>\",\n        \"supContactName\": \"<string>\",\n        \"supCountry\": \"<string>\",\n        \"supName\": \"<string>\",\n        \"supPhone\": \"<string>\",\n        \"supPostalCode\": \"<string>\"\n      },\n      {\n        \"id\": \"<uuid>\",\n        \"supAddress\": \"<string>\",\n        \"supCity\": \"<string>\",\n        \"supContactName\": \"<string>\",\n        \"supCountry\": \"<string>\",\n        \"supName\": \"<string>\",\n        \"supPhone\": \"<string>\",\n        \"supPostalCode\": \"<string>\"\n      }\n    ],\n    \"totalPage\": \"<long>\"\n  },\n  \"message\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Search category",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var res = pm.response.json();",
+													"",
+													"// Lay gia tri id tai category thu 5",
+													"var categoryId = res.data.rows[4].id;",
+													"console.log(\"categoryId: \"+ categoryId);",
+													"pm.collectionVariables.set(\"categoryId\", categoryId);",
+													"",
+													"",
+													"// Lay category theo dieu kien cho truoc (co cateName = Cate1)",
+													"const categories = res.data.rows;",
+													"console.log(\"Category Size: \"+ categories.length);",
+													"for(var i = 0;i < categories.length; i++){",
+													"    const category = categories[i];",
+													"    console.log(\"Index: \"+ (i+1)+ \" - Value: \"+ JSON.stringify(categories[i]));",
+													"    console.log(\"Name: \"+ category.categoryName);",
+													"    if(category.categoryName == \"Cate1\"){",
+													"        const cateId = category.id;",
+													"        pm.collectionVariables.set(\"categoryId7\",cateId);",
+													"    }",
+													"}",
+													"",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{accessToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/category/search?limit=100&page=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"category",
+												"search"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "category",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "keyword",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "limit",
+													"value": "100"
+												},
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "sort",
+													"value": "<string>",
+													"disabled": true
+												},
+												{
+													"key": "sort",
+													"value": "<string>",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"key": "Authorization",
+														"value": "<API Key>",
+														"description": "Added as a part of security scheme: apikey"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/category/search?category=<string>&keyword=<string>&limit=<integer>&page=<integer>&sort=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"category",
+														"search"
+													],
+													"query": [
+														{
+															"key": "category",
+															"value": "<string>"
+														},
+														{
+															"key": "keyword",
+															"value": "<string>"
+														},
+														{
+															"key": "limit",
+															"value": "<integer>"
+														},
+														{
+															"key": "page",
+															"value": "<integer>"
+														},
+														{
+															"key": "sort",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"code\": \"<integer>\",\n  \"data\": {\n    \"count\": \"<long>\",\n    \"limit\": \"<integer>\",\n    \"page\": \"<integer>\",\n    \"rows\": [\n      {\n        \"cateDesc\": \"<string>\",\n        \"categoryName\": \"<string>\",\n        \"id\": \"<uuid>\",\n        \"status\": \"ACTIVE\"\n      },\n      {\n        \"cateDesc\": \"<string>\",\n        \"categoryName\": \"<string>\",\n        \"id\": \"<uuid>\",\n        \"status\": \"INACTIVE\"\n      }\n    ],\n    \"totalPage\": \"<long>\"\n  },\n  \"message\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Add New Product",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}"
+									},
+									{
+										"key": "Authentication",
+										"value": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt2345690012â\", \n    \"description\": \"lam_123451\", \n    \"name\": \"lam_123451\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Product",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/search",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find product detail by ID",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/283c80ef-64bd-4d52-9056-e4117687686e/detail",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"283c80ef-64bd-4d52-9056-e4117687686e",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Product",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category\": \"67b6ee4c-9f71-464c-8bc1-cce699bd9299\",\r\n    \"code\": \"lam_12345\",\r\n    \"description\": \"lam_12345\",\r\n    \"name\": \"lam_12345\",\r\n    \"price\": 500,\r\n    \"quantity\": 400,\r\n    \"supplier\": \"1e17f190-fa6a-45e0-84b4-6fd0811ffa57\",\r\n    \"unit\": \"cai\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/283c80ef-64bd-4d52-9056-e4117687686e",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"283c80ef-64bd-4d52-9056-e4117687686e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find by keyword",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/search?keyword=TIVI",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"search"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "TIVI"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete by ID",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product/c0a85475-a7c6-45a1-a494-d1161f80f1d2?isSoft=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"c0a85475-a7c6-45a1-a494-d1161f80f1d2"
+									],
+									"query": [
+										{
+											"key": "isSoft",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Edit Category",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"cateDesc\": \"string\", \"status\": \"ACTIVE\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://testek.vn/lab/api/v0/prod-man/category/a0b50e78-15eb-41b2-95ac-ca4b112a4c2f",
+									"protocol": "https",
+									"host": [
+										"testek",
+										"vn"
+									],
+									"path": [
+										"lab",
+										"api",
+										"v0",
+										"prod-man",
+										"category",
+										"a0b50e78-15eb-41b2-95ac-ca4b112a4c2f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View category detail",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/category/a0b50e78-15eb-41b2-95ac-ca4b112a4c2f/detail",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"a0b50e78-15eb-41b2-95ac-ca4b112a4c2f",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add category",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cateDesc\": \"string\",\n    \"categoryName\": \"string\",\n    \"status\": \"ACTIVE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "Get order",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/order/search?limit=100&page=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order",
+										"search"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search employee",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employee/search?limit=100&page=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										"search"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://testek.vn/lab/api/v0/prod-man",
+			"type": "string"
+		},
+		{
+			"key": "accessToken",
+			"value": ""
+		},
+		{
+			"key": "supplierId",
+			"value": ""
+		},
+		{
+			"key": "categoryId7",
+			"value": ""
+		},
+		{
+			"key": "categoryId",
+			"value": ""
+		},
+		{
+			"key": "expiredToken",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
