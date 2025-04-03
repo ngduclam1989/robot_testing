@@ -170,66 +170,28 @@ BrokenPipeError: [Errno 32] Broken pipe</msg>
 <arg>BaseParam=code;data</arg>
 <arg>SubParam=id;productCode;productName</arg>
 <arg>SubParamValue=</arg>
-<status status="FAIL" start="2025-04-03T14:56:53.790671" elapsed="75.009195">              
-</kw>
-<kw name="Validate Json" owner="json_utils">
-<arg>${Res}</arg>
-<arg>${BaseParam}</arg>
-<arg>${SubParam}</arg>
-<arg>${SubParamValue}</arg>
-<status status="NOT RUN" start="2025-04-03T14:49:47.253918" elapsed="0.000141"/>
-</kw>
-<arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
-<arg>EndPoint=/product</arg>
-<arg>Method=POST</arg>
-<arg>Data={ 
-    "category": "67B6EE4C-9F71-464C-8BC1-CCE699BD9299",
-    "code": "TEST1234599996", 
-    "description": "lam_1234599991", 
-    "name": "lam_1234599991", 
-    "price": 500, 
-    "quantity": 400, 
-    "supplier": "1e17f190-fa6a-45e0-84b4-6fd0811ffa57", 
-    "unit": "cai"
-}</arg>
-<arg>StatusCode=201</arg>
-<arg>BaseParam=code;data</arg>
-<arg>SubParam=id;productCode;productName</arg>
-<arg>SubParamValue=</arg>
-<status status="FAIL" start="2025-04-03T14:48:32.244988" elapsed="75.009362">Có lỗi xảy ra != 201</status>
+<status status="FAIL" start="2025-04-03T14:56:53.790671" elapsed="75.009195">Có lỗi xảy ra != 201</status>
 </kw>
 <tag>api</tag>
 <tag>test</tag>
-<status status="FAIL" start="2025-04-03T14:48:32.242905" elapsed="75.011822">Có lỗi xảy ra != 201</status>
+<status status="FAIL" start="2025-04-03T14:56:53.788681" elapsed="75.013208">Có lỗi xảy ra != 201</status>
 </test>
 <test id="s1-t5" name="5 - Check API add product thành công với với code là chuỗi kí tự upper case và lower case" line="15">
 <kw name="Call API demo">
 <kw name="Call Api" owner="testing_api">
-<msg time="2025-04-03T14:51:02.261705" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
+<msg time="2025-04-03T14:59:23.810833" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
 <var>${Results}</var>
 <arg>${Domain}${EndPoint}</arg>
 <arg>${Method}</arg>
 <arg>${Data}</arg>
-<status status="PASS" start="2025-04-03T14:49:47.258611" elapsed="75.003529"/>
+<status status="PASS" start="2025-04-03T14:58:08.805090" elapsed="75.006058"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-04-03T14:51:02.263627" level="FAIL">Có lỗi xảy ra != 201</msg>
+<msg time="2025-04-03T14:59:23.812496" level="FAIL">Có lỗi xảy ra != 201</msg>
 <arg>${Results}[status_code]</arg>
 <arg>${StatusCode}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="FAIL" start="2025-04-03T14:51:02.262913" elapsed="0.000917">Có lỗi xảy ra != 201</status>
-</kw>
-<kw name="Load Data To Json" owner="testing_api">
-<var>${Res}</var>
-<arg>${Results}[response]</arg>
-<status status="NOT RUN" start="2025-04-03T14:51:02.264119" elapsed="0.000099"/>
-</kw>
-<kw name="Validate Json" owner="json_utils">
-<arg>${Res}</arg>
-<arg>${BaseParam}</arg>
-<arg>${SubParam}</arg>
-<arg>${SubParamValue}</arg>
-<status status="NOT RUN" start="2025-04-03T14:51:02.264412" elapsed="0.000085"/>
+<status status="FAIL" start="2025-04-03T14:59:23.811714" elapsed="0.001024">Có lỗi xảy ra != 201</status>
 </kw>
 <arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
 <arg>EndPoint=/product</arg>
@@ -248,40 +210,28 @@ BrokenPipeError: [Errno 32] Broken pipe</msg>
 <arg>BaseParam=code;data</arg>
 <arg>SubParam=id;productCode;productName</arg>
 <arg>SubParamValue=</arg>
-<status status="FAIL" start="2025-04-03T14:49:47.257760" elapsed="75.006924">Có lỗi xảy ra != 201</status>
+<status status="FAIL" start="2025-04-03T14:58:08.804189" elapsed="75.009039">Có lỗi xảy ra != 201</status>
 </kw>
 <tag>api</tag>
 <tag>test</tag>
-<status status="FAIL" start="2025-04-03T14:49:47.255116" elapsed="75.009902">Có lỗi xảy ra != 201</status>
+<status status="FAIL" start="2025-04-03T14:58:08.802372" elapsed="75.011455">Có lỗi xảy ra != 201</status>
 </test>
 <test id="s1-t6" name="6 - Check API add product thành công với dữ liệu không có param desc" line="15">
 <kw name="Call API demo">
 <kw name="Call Api" owner="testing_api">
-<msg time="2025-04-03T14:52:17.272008" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
+<msg time="2025-04-03T15:00:38.826846" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
 <var>${Results}</var>
 <arg>${Domain}${EndPoint}</arg>
 <arg>${Method}</arg>
 <arg>${Data}</arg>
-<status status="PASS" start="2025-04-03T14:51:02.268314" elapsed="75.003862"/>
+<status status="PASS" start="2025-04-03T14:59:23.817335" elapsed="75.010168"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-04-03T14:52:17.272672" level="FAIL">Có lỗi xảy ra != 201</msg>
+<msg time="2025-04-03T15:00:38.829849" level="FAIL">Có lỗi xảy ra != 201</msg>
 <arg>${Results}[status_code]</arg>
 <arg>${StatusCode}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="FAIL" start="2025-04-03T14:52:17.272400" elapsed="0.000358">Có lỗi xảy ra != 201</status>
-</kw>
-<kw name="Load Data To Json" owner="testing_api">
-<var>${Res}</var>
-<arg>${Results}[response]</arg>
-<status status="NOT RUN" start="2025-04-03T14:52:17.272897" elapsed="0.000055"/>
-</kw>
-<kw name="Validate Json" owner="json_utils">
-<arg>${Res}</arg>
-<arg>${BaseParam}</arg>
-<arg>${SubParam}</arg>
-<arg>${SubParamValue}</arg>
-<status status="NOT RUN" start="2025-04-03T14:52:17.273064" elapsed="0.000048"/>
+<status status="FAIL" start="2025-04-03T15:00:38.828699" elapsed="0.001486">Có lỗi xảy ra != 201</status>
 </kw>
 <arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
 <arg>EndPoint=/product</arg>
@@ -299,40 +249,28 @@ BrokenPipeError: [Errno 32] Broken pipe</msg>
 <arg>BaseParam=code;data</arg>
 <arg>SubParam=id;productCode;productName</arg>
 <arg>SubParamValue=</arg>
-<status status="FAIL" start="2025-04-03T14:51:02.267692" elapsed="75.005506">Có lỗi xảy ra != 201</status>
+<status status="FAIL" start="2025-04-03T14:59:23.816553" elapsed="75.014008">Có lỗi xảy ra != 201</status>
 </kw>
 <tag>api</tag>
 <tag>test</tag>
-<status status="FAIL" start="2025-04-03T14:51:02.265678" elapsed="75.007658">Có lỗi xảy ra != 201</status>
+<status status="FAIL" start="2025-04-03T14:59:23.814315" elapsed="75.016750">Có lỗi xảy ra != 201</status>
 </test>
 <test id="s1-t7" name="7 - Check API add product thành công với dữ liệu không có param Unit" line="15">
 <kw name="Call API demo">
 <kw name="Call Api" owner="testing_api">
-<msg time="2025-04-03T14:53:32.430483" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
+<msg time="2025-04-03T15:01:53.839614" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
 <var>${Results}</var>
 <arg>${Domain}${EndPoint}</arg>
 <arg>${Method}</arg>
 <arg>${Data}</arg>
-<status status="PASS" start="2025-04-03T14:52:17.275043" elapsed="75.155598"/>
+<status status="PASS" start="2025-04-03T15:00:38.834396" elapsed="75.005603"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-04-03T14:53:32.431291" level="FAIL">Có lỗi xảy ra != 201</msg>
+<msg time="2025-04-03T15:01:53.841676" level="FAIL">Có lỗi xảy ra != 201</msg>
 <arg>${Results}[status_code]</arg>
 <arg>${StatusCode}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="FAIL" start="2025-04-03T14:53:32.430938" elapsed="0.000464">Có lỗi xảy ra != 201</status>
-</kw>
-<kw name="Load Data To Json" owner="testing_api">
-<var>${Res}</var>
-<arg>${Results}[response]</arg>
-<status status="NOT RUN" start="2025-04-03T14:53:32.431576" elapsed="0.000066"/>
-</kw>
-<kw name="Validate Json" owner="json_utils">
-<arg>${Res}</arg>
-<arg>${BaseParam}</arg>
-<arg>${SubParam}</arg>
-<arg>${SubParamValue}</arg>
-<status status="NOT RUN" start="2025-04-03T14:53:32.431763" elapsed="0.000056"/>
+<status status="FAIL" start="2025-04-03T15:01:53.840747" elapsed="0.001227">Có lỗi xảy ra != 201</status>
 </kw>
 <arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
 <arg>EndPoint=/product</arg>
@@ -350,13 +288,435 @@ BrokenPipeError: [Errno 32] Broken pipe</msg>
 <arg>BaseParam=code;data</arg>
 <arg>SubParam=id;productCode;productName</arg>
 <arg>SubParamValue=</arg>
-<status status="FAIL" start="2025-04-03T14:52:17.274697" elapsed="75.157226">Có lỗi xảy ra != 201</status>
+<status status="FAIL" start="2025-04-03T15:00:38.833896" elapsed="75.008409">Có lỗi xảy ra != 201</status>
 </kw>
 <tag>api</tag>
 <tag>test</tag>
-<status status="FAIL" start="2025-04-03T14:52:17.273667" elapsed="75.158436">Có lỗi xảy ra != 201</status>
+<status status="FAIL" start="2025-04-03T15:00:38.831747" elapsed="75.010876">Có lỗi xảy ra != 201</status>
 </test>
 <test id="s1-t8" name="8 - Check API add product thành công với dữ liệu không có param desc và Unit" line="15">
 <kw name="Call API demo">
 <kw name="Call Api" owner="testing_api">
-<msg time="2025-04-03T14:54:47.438861" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...
+<msg time="2025-04-03T15:03:08.892586" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="PASS" start="2025-04-03T15:01:53.846280" elapsed="75.046442"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-03T15:03:08.893351" level="FAIL">Có lỗi xảy ra != 201</msg>
+<arg>${Results}[status_code]</arg>
+<arg>${StatusCode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-04-03T15:03:08.893022" elapsed="0.000439">Có lỗi xảy ra != 201</status>
+</kw>
+<arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
+<arg>EndPoint=/product</arg>
+<arg>Method=POST</arg>
+<arg>Data={ 
+    "category": "67B6EE4C-9F71-464C-8BC1-CCE699BD9299",
+    "code": "TeSt23459999690002", 
+    "name": "lam_1234599991", 
+    "price": 500, 
+    "quantity": 400, 
+    "supplier": "1e17f190-fa6a-45e0-84b4-6fd0811ffa57"
+}</arg>
+<arg>StatusCode=201</arg>
+<arg>BaseParam=code;data</arg>
+<arg>SubParam=id;productCode;productName</arg>
+<arg>SubParamValue=</arg>
+<status status="FAIL" start="2025-04-03T15:01:53.845477" elapsed="75.048110">Có lỗi xảy ra != 201</status>
+</kw>
+<tag>api</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T15:01:53.843065" elapsed="75.050709">Có lỗi xảy ra != 201</status>
+</test>
+<test id="s1-t9" name="9 - Check API add product không thành công với dữ liệu UUID của category không tồn tại" line="15">
+<kw name="Call API demo">
+<kw name="Call Api" owner="testing_api">
+<msg time="2025-04-03T15:04:23.900011" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="PASS" start="2025-04-03T15:03:08.896108" elapsed="75.004880"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-03T15:04:23.902934" level="FAIL">
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="PASS" start="2025-04-03T14:53:32.434419" elapsed="75.006344"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-03T14:54:47.442026" level="FAIL">Có lỗi xảy ra != 201</msg>
+<arg>${Results}[status_code]</arg>
+<arg>${StatusCode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-04-03T14:54:47.441393" elapsed="0.000826">Có lỗi xảy ra != 201</status>
+</kw>
+<kw name="Load Data To Json" owner="testing_api">
+<var>${Res}</var>
+<arg>${Results}[response]</arg>
+<status status="NOT RUN" start="2025-04-03T14:54:47.442538" elapsed="0.000123"/>
+</kw>
+<kw name="Validate Json" owner="json_utils">
+<arg>${Res}</arg>
+<arg>${BaseParam}</arg>
+<arg>${SubParam}</arg>
+<arg>${SubParamValue}</arg>
+<status status="NOT RUN" start="2025-04-03T14:54:47.442891" elapsed="0.000108"/>
+</kw>
+<arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
+<arg>EndPoint=/product</arg>
+<arg>Method=POST</arg>
+<arg>Data={ 
+    "category": "67B6EE4C-9F71-464C-8BC1-CCE699BD9299",
+    "code": "TeSt23459999690002", 
+    "name": "lam_1234599991", 
+    "price": 500, 
+    "quantity": 400, 
+    "supplier": "1e17f190-fa6a-45e0-84b4-6fd0811ffa57"
+}</arg>
+<arg>StatusCode=201</arg>
+<arg>BaseParam=code;data</arg>
+<arg>SubParam=id;productCode;productName</arg>
+<arg>SubParamValue=</arg>
+<status status="FAIL" start="2025-04-03T14:53:32.433963" elapsed="75.009226">Có lỗi xảy ra != 201</status>
+</kw>
+<tag>api</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:53:32.432582" elapsed="75.010901">Có lỗi xảy ra != 201</status>
+</test>
+<test id="s1-t9" name="9 - Check API add product không thành công với dữ liệu UUID của category không tồn tại" line="15">
+<kw name="Call API demo">
+<kw name="Call Api" owner="testing_api">
+<msg time="2025-04-03T14:56:02.452464" level="INFO">robot: 2025-04-03 14:54:47 UTC pid: 41837 - Write from robot to dap (_RobotTargetComm) - EXCEPTION - robocorp_ls_core.debug_adapter_core.debug_adapter_threads
+Error writing message.
+
+Traceback (most recent call last):
+  File "/Users/magnet/Library/Application Support/JetBrains/IntelliJIdea2024.3/plugins/robotframework-intellij/lib/robotframework_ls/vendored/robocorp_ls_core/debug_adapter_core/debug_adapter_threads.py", line 266, in writer_thread
+    stream.flush()
+    ~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py", line 737, in write
+    return self._sock.send(b)
+           ~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: &lt;_io.BufferedWriter name=-1&gt;
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socket.py", line 737, in write
+    return self._sock.send(b)
+BrokenPipeError: [Errno 32] Broken pipe</msg>
+<msg time="2025-04-03T14:56:02.453099" level="FAIL">BrokenPipeError: [Errno 32] Broken pipe</msg>
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="FAIL" start="2025-04-03T14:54:47.446861" elapsed="75.010314">BrokenPipeError: [Errno 32] Broken pipe</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Results}[status_code]</arg>
+<arg>${StatusCode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-04-03T14:56:02.457711" elapsed="0.000148"/>
+</kw>
+<kw name="Load Data To Json" owner="testing_api">
+<var>${Res}</var>
+<arg>${Results}[response]</arg>
+<status status="NOT RUN" start="2025-04-03T14:56:02.458087" elapsed="0.000082"/>
+</kw>
+<kw name="Validate Json" owner="json_utils">
+<arg>${Res}</arg>
+<arg>${BaseParam}</arg>
+<arg>${SubParam}</arg>
+<arg>${SubParamValue}</arg>
+<status status="NOT RUN" start="2025-04-03T14:56:02.458350" elapsed="0.000079"/>
+</kw>
+<arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
+<arg>EndPoint=/product</arg>
+<arg>Method=POST</arg>
+<arg>Data={ 
+    "category": "01ba3470-81ea-40b3-9698-a92cec54b411",
+    "code": "TeSt23459999690003", 
+    "description": "lam_1234599991", 
+    "name": "lam_1234599991", 
+    "price": 500, 
+    "quantity": 400, 
+    "supplier": "1e17f190-fa6a-45e0-84b4-6fd0811ffa57", 
+    "unit": "chiec"
+}</arg>
+<arg>StatusCode=400</arg>
+<arg>BaseParam=code;message</arg>
+<arg>SubParam=code;message;field</arg>
+<arg>SubParamValue=4044001;Category not found: {0};category</arg>
+<status status="FAIL" start="2025-04-03T14:54:47.446227" elapsed="75.012371">BrokenPipeError: [Errno 32] Broken pipe</status>
+</kw>
+<tag>api</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:54:47.444138" elapsed="75.014766">BrokenPipeError: [Errno 32] Broken pipe</status>
+</test>
+<test id="s1-t10" name="10 - Check API add product không thành công với dữ liệu UUID của category là biến name của category có trong hệ thống" line="15">
+<kw name="Call API demo">
+<kw name="Call Api" owner="testing_api">
+<msg time="2025-04-03T14:57:17.471822" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="PASS" start="2025-04-03T14:56:02.462005" elapsed="75.011407"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-03T14:57:17.478578" level="FAIL">Có lỗi xảy ra != 400</msg>
+<arg>${Results}[status_code]</arg>
+<arg>${StatusCode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-04-03T14:57:17.476621" elapsed="0.002453">Có lỗi xảy ra != 400</status>
+</kw>
+<kw name="Load Data To Json" owner="testing_api">
+<var>${Res}</var>
+<arg>${Results}[response]</arg>
+<status status="NOT RUN" start="2025-04-03T14:57:17.479562" elapsed="0.000164"/>
+</kw>
+<kw name="Validate Json" owner="json_utils">
+<arg>${Res}</arg>
+<arg>${BaseParam}</arg>
+<arg>${SubParam}</arg>
+<arg>${SubParamValue}</arg>
+<status status="NOT RUN" start="2025-04-03T14:57:17.479972" elapsed="0.000092"/>
+</kw>
+<arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
+<arg>EndPoint=/product</arg>
+<arg>Method=POST</arg>
+<arg>Data={ 
+    "category": "Máy giặt",
+    "code": "TeSt23459999690003", 
+    "description": "lam_1234599991", 
+    "name": "lam_1234599991", 
+    "price": 500, 
+    "quantity": 400, 
+    "supplier": "1e17f190-fa6a-45e0-84b4-6fd0811ffa57", 
+    "unit": "chiec"
+}</arg>
+<arg>StatusCode=400</arg>
+<arg>BaseParam=code;message</arg>
+<arg>SubParam=code;message;field</arg>
+<arg>SubParamValue=400;Mismatched input;category</arg>
+<status status="FAIL" start="2025-04-03T14:56:02.461412" elapsed="75.018960">Có lỗi xảy ra != 400</status>
+</kw>
+<tag>api</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:56:02.459280" elapsed="75.021570">Có lỗi xảy ra != 400</status>
+</test>
+<test id="s1-t11" name="11 - Check API add product không thành công với dữ liệu UUID của Supply không tồn tại" line="15">
+<kw name="Call API demo">
+<kw name="Call Api" owner="testing_api">
+<msg time="2025-04-03T14:58:32.490892" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="PASS" start="2025-04-03T14:57:17.485301" elapsed="75.005876"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-03T14:58:32.492338" level="FAIL">Có lỗi xảy ra != 400</msg>
+<arg>${Results}[status_code]</arg>
+<arg>${StatusCode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-04-03T14:58:32.491718" elapsed="0.000814">Có lỗi xảy ra != 400</status>
+</kw>
+<kw name="Load Data To Json" owner="testing_api">
+<var>${Res}</var>
+<arg>${Results}[response]</arg>
+<status status="NOT RUN" start="2025-04-03T14:58:32.493731" elapsed="0.000135"/>
+</kw>
+<kw name="Validate Json" owner="json_utils">
+<arg>${Res}</arg>
+<arg>${BaseParam}</arg>
+<arg>${SubParam}</arg>
+<arg>${SubParamValue}</arg>
+<status status="NOT RUN" start="2025-04-03T14:58:32.494088" elapsed="0.000096"/>
+</kw>
+<arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
+<arg>EndPoint=/product</arg>
+<arg>Method=POST</arg>
+<arg>Data={ 
+    "category": "01ba3470-81ea-40b3-9698-a92cec54b400",
+    "code": "TeSt23459999690003", 
+    "description": "lam_1234599991", 
+    "name": "lam_1234599991", 
+    "price": 500, 
+    "quantity": 400, 
+    "supplier": "a913c855-5f57-4630-8743-9c427a876a99", //20
+    "unit": "chiec"
+}</arg>
+<arg>StatusCode=400</arg>
+<arg>BaseParam=code;message</arg>
+<arg>SubParam=code;message;field</arg>
+<arg>SubParamValue=4045001;Supplier not found: {0};supplier</arg>
+<status status="FAIL" start="2025-04-03T14:57:17.484549" elapsed="75.009818">Có lỗi xảy ra != 400</status>
+</kw>
+<tag>api</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:57:17.481616" elapsed="75.013044">Có lỗi xảy ra != 400</status>
+</test>
+<test id="s1-t12" name="12 - Check API add product không thành công với dữ liệu UUID của Supply là biến name của Supply có trong hệ thống" line="15">
+<kw name="Call API demo">
+<kw name="Call Api" owner="testing_api">
+<msg time="2025-04-03T14:59:47.506872" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="PASS" start="2025-04-03T14:58:32.497834" elapsed="75.010379"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-03T14:59:47.513587" level="FAIL">Có lỗi xảy ra != 400</msg>
+<arg>${Results}[status_code]</arg>
+<arg>${StatusCode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-04-03T14:59:47.511541" elapsed="0.002549">Có lỗi xảy ra != 400</status>
+</kw>
+<kw name="Load Data To Json" owner="testing_api">
+<var>${Res}</var>
+<arg>${Results}[response]</arg>
+<status status="NOT RUN" start="2025-04-03T14:59:47.514560" elapsed="0.000156"/>
+</kw>
+<kw name="Validate Json" owner="json_utils">
+<arg>${Res}</arg>
+<arg>${BaseParam}</arg>
+<arg>${SubParam}</arg>
+<arg>${SubParamValue}</arg>
+<status status="NOT RUN" start="2025-04-03T14:59:47.514992" elapsed="0.000091"/>
+</kw>
+<arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
+<arg>EndPoint=/product</arg>
+<arg>Method=POST</arg>
+<arg>Data={ 
+    "category": "01ba3470-81ea-40b3-9698-a92cec54b400",
+    "code": "TeSt23459999690003", 
+    "description": "lam_1234599991", 
+    "name": "lam_1234599991", 
+    "price": 500, 
+    "quantity": 400, 
+    "supplier": "Canon Viet Nam", //20
+    "unit": "chiec"
+}</arg>
+<arg>StatusCode=400</arg>
+<arg>BaseParam=code;message</arg>
+<arg>SubParam=code;message;field</arg>
+<arg>SubParamValue=400;Mismatched input;supplier</arg>
+<status status="FAIL" start="2025-04-03T14:58:32.497219" elapsed="75.018179">Có lỗi xảy ra != 400</status>
+</kw>
+<tag>api</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:58:32.495076" elapsed="75.020791">Có lỗi xảy ra != 400</status>
+</test>
+<test id="s1-t13" name="13 - Check API add product không thành công với code product đã tồn tại trong hệ thống" line="15">
+<kw name="Call API demo">
+<kw name="Call Api" owner="testing_api">
+<msg time="2025-04-03T15:01:02.529372" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man/product (Caused by ConnectTimeoutError(&lt;urllib3.connecti...</msg>
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="PASS" start="2025-04-03T14:59:47.522462" elapsed="75.007205"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-03T15:01:02.530981" level="FAIL">Có lỗi xảy ra != 400</msg>
+<arg>${Results}[status_code]</arg>
+<arg>${StatusCode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-04-03T15:01:02.530333" elapsed="0.000871">Có lỗi xảy ra != 400</status>
+</kw>
+<kw name="Load Data To Json" owner="testing_api">
+<var>${Res}</var>
+<arg>${Results}[response]</arg>
+<status status="NOT RUN" start="2025-04-03T15:01:02.531536" elapsed="0.000129"/>
+</kw>
+<kw name="Validate Json" owner="json_utils">
+<arg>${Res}</arg>
+<arg>${BaseParam}</arg>
+<arg>${SubParam}</arg>
+<arg>${SubParamValue}</arg>
+<status status="NOT RUN" start="2025-04-03T15:01:02.531911" elapsed="0.000109"/>
+</kw>
+<arg>Domain=https://testek.vn/lab/api/v0/prod-man</arg>
+<arg>EndPoint=/product</arg>
+<arg>Method=POST</arg>
+<arg>Data={ 
+    "category": "01ba3470-81ea-40b3-9698-a92cec54b400",
+    "code": "Lam111", 
+    "description": "lam_1234599991", 
+    "name": "lam_1234599991", 
+    "price": 500, 
+    "quantity": 400, 
+    "supplier": "a913c855-5f57-4630-8743-9c427a876a20", //20
+    "unit": "chiec"
+}</arg>
+<arg>StatusCode=400</arg>
+<arg>BaseParam=code;message</arg>
+<arg>SubParam=code;message;field</arg>
+<arg>SubParamValue=400;Mismatched input;supplier</arg>
+<status status="FAIL" start="2025-04-03T14:59:47.521853" elapsed="75.010373">Có lỗi xảy ra != 400</status>
+</kw>
+<tag>api</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T14:59:47.516631" elapsed="75.016014">Có lỗi xảy ra != 400</status>
+</test>
+<test id="s1-t14" name="14 - Check API add product không thành công với baseURL bị sai" line="15">
+<kw name="Call API demo">
+<kw name="Call Api" owner="testing_api">
+<msg time="2025-04-03T15:02:17.544443" level="INFO">${Results} = {'status_code': 'Có lỗi xảy ra', 'error': "HTTPSConnectionPool(host='testek.vn', port=443): Max retries exceeded with url: /lab/api/v0/prod-man1/product (Caused by ConnectTimeoutError(&lt;urllib3.connect...</msg>
+<var>${Results}</var>
+<arg>${Domain}${EndPoint}</arg>
+<arg>${Method}</arg>
+<arg>${Data}</arg>
+<status status="PASS" start="2025-04-03T15:01:02.537849" elapsed="75.006971"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-03T15:02:17.546289" level="FAIL">Có lỗi xảy ra != 404</msg>
+<arg>${Results}[status_code]</arg>
+<arg>${StatusCode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-04-03T15:02:17.545604" elapsed="0.000901">Có lỗi xảy ra != 404</status>
+</kw>
+<kw name="Load Data To Json" owner="testing_api">
+<var>${Res}</var>
+<arg>${Results}[response]</arg>
+<status status="NOT RUN" start="2025-04-03T15:02:17.546826" elapsed="0.000116"/>
+</kw>
+<kw name="Validate Json" owner="json_utils">
+<arg>${Res}</arg>
+<arg>${BaseParam}</arg>
+<arg>${SubParam}</arg>
+<arg>${SubParamValue}</arg>
+<status status="NOT RUN" start="2025-04-03T15:02:17.547153" elapsed="0.000095"/>
+</kw>
+<arg>Domain=https://testek.vn/lab/api/v0/prod-man1</arg>
+<arg>EndPoint=/product</arg>
+<arg>Method=POST</arg>
+<arg>Data=Url: https://testek.vn/lab/api/v0/prod-man1/product
+
+{ 
+    "category": "01ba3470-81ea-40b3-9698-a92cec54b400",
+    "code": "TeSt23459999690001", 
+    "description": "lam_1234599991", 
+    "name": "lam_1234599991", 
+    "price": 500, 
+    "quantity": 400, 
+    "supplier": "a913c855-5f57-4630-8743-9c427a876a20", //20
+    "unit": "chiec"
+}</arg>
+<arg>StatusCode=404</arg>
+<arg>BaseParam=</arg>
+<arg>SubParam=</arg>
+<arg>SubParamValue=</arg>
+<status status="FAIL" start="2025-04-03T15:01:02.537115" elapsed="75.010317">Có lỗi xảy ra != 404</status>
+</kw>
+<tag>api</tag>
+<tag>test</tag>
+<status status="FAIL" start="2025-04-03T15:01:02.533082" elapsed="75.014640">Có lỗi xảy ra != 404</status>
+</test>
+<test id="s1-t15" name="15 - Check API add product không thành công với endpoint bị sai" line="15">
