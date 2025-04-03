@@ -5,60 +5,16 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 7.2.2 (Python 3.13.2 on darwin)" name="Generator">
+<meta content="Robot Framework 6.1.1 (Python 3.12.0 on darwin)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
-<style media="all">
-:root {
-    --text-color: black;
-    --background-color: white;
-    --primary-color: #ddd;
-    --secondary-color: #ccc;
-    --link-color: #15c;
-    --link-hover-color: #61c;
-    --highlight-color: #eee;
-    --target-color: #f9f9f9;
-    --pass-color: #97bd61;
-    --fail-color: #ce3e01;
-    --warn-color: #fed84f;
-    --pass-link-color: #098a09;
-    --warn-link-color: #927201;
-    --fail-link-color: #ce3e01;
-    --ascending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
-    --descending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
-}
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-    }
-}
-[data-theme="dark"] {
-    --text-color: #e2e1d7;
-    --background-color: #1c2227;
-    --primary-color: #26373b;
-    --secondary-color: #424f5a;
-    --link-color: #8cc4ff;
-    --link-hover-color: #bb86fc;
-    --highlight-color: #002b36;
-    --target-color: #1a252e;
-    --pass-link-color: #97bd61;
-    --warn-link-color: #fed84f;
-    --fail-link-color: #ff9b8f;
-    --ascending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAAfn5+////f/cqYgAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
-    --descending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAA////fn5+K6jOaAAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
-}
+<style media="all" type="text/css">
 /* Generic and misc styles */
 body {
     font-family: Helvetica, sans-serif;
     font-size: 0.8em;
-    color: black; /* Fallback value */
-    color: var(--text-color);
+    color: black;
     padding: 6px;
-    background: white; /* Fallback value */
-    background: var(--background-color);
-    margin-left: 15px;
-}
-body[theme-toggled] {
-    transition: background 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+    background: white;
 }
 table {
     table-layout: fixed;
@@ -73,37 +29,20 @@ br {
     mso-data-placement: same-cell; /* maintain line breaks in Excel */
 }
 hr {
-    background: #ccc; /* Fallback value */
-    background: var(--secondary-color);
+    background: #ccc;
     height: 1px;
     border: 0;
 }
 a, a:link, a:visited {
     text-decoration: none;
-    color: #15c; /* Fallback value */
-    color: var(--link-color);
+    color: #15c;
 }
 a > img {
-    border-width: 1px !important;
-    border-style: solid !important;
-    border-color: #15c !important; /* Fallback value */
-    border-color: var(--link-color) !important;
+    border: 1px solid #15c !important;
 }
 a:hover, a:active {
     text-decoration: underline;
-    color: #61c; /* Fallback value */
-    color: var(--link-hover-color);
-}
-select {
-    background-color: white; /* Fallback value */
-    background-color: var(--background-color);
-    color: black; /* Fallback value */
-    color: var(--text-color);
-    border-width: 2px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
-    border-radius: 4px;
+    color: #61c;
 }
 .parent-name {
     font-size: 0.7em;
@@ -116,7 +55,7 @@ select {
 #header {
     width: 65em;
     height: 3em;
-    margin: 20px 0 6px 0;
+    margin: 6px 0;
 }
 h1 {
     float: left;
@@ -144,17 +83,14 @@ h2 {
 }
 /* Status text colors -- !important allows using them in links */
 .fail {
-    color: #ce3e01 !important; /* Fallback value */
-    color: var(--fail-link-color) !important;
+    color: #ce3e01 !important;
     font-weight: bold;
 }
 .pass {
-    color: #098a09 !important; /* Fallback value */
-    color: var(--pass-link-color) !important;
+    color: #098a09 !important;
 }
 .skip {
-    color: #927201 !important; /* Fallback value */
-    color: var(--warn-link-color) !important;
+    color: #927201 !important;
     font-weight: bold;
 }
 .label {
@@ -162,10 +98,8 @@ h2 {
     font-size: 0.75em;
     letter-spacing: 1px;
     white-space: nowrap;
-    color: black; /* Fallback value */
-    color: var(--text-color);
-    background-color: #ddd; /* Fallback value */
-    background-color: var(--primary-color);
+    color: black;
+    background-color: #ddd;
     border-radius: 3px;
 }
 .label.debug, .label.trace, .label.error, .label.keyword {
@@ -175,18 +109,15 @@ h2 {
     font-weight: bold;
 }
 .label.pass {
-    background-color: #97bd61; /* Fallback value */
-    background-color: var(--pass-color);
+    background-color: #97bd61;
     color: #000 !important;
 }
 .label.fail, .label.error {
-    background-color: #ce3e01; /* Fallback value */
-    background-color: var(--fail-color);
+    background-color: #ce3e01;
     color: #fff !important;
 }
 .label.skip, .label.warn {
-    background-color: #fed84f; /* Fallback value */
-    background-color: var(--warn-color);
+    background-color: #fed84f;
     color: #000 !important;
 }
 /* Top right header */
@@ -215,8 +146,7 @@ h2 {
     padding: 0.3em 0;
     font-size: 0.9em;
     border-bottom-left-radius: 4px;
-    background: #ddd; /* Fallback value */
-    background: var(--primary-color);
+    background: #ddd;
 }
 /* Statistics table */
 .statistics {
@@ -226,20 +156,15 @@ h2 {
     margin-bottom: 1em;
 }
 .statistics tr:hover {
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #f4f4f4;
     cursor: pointer;
 }
 .statistics th, .statistics td {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+    border: 1px solid #ccc;
     padding: 0.1em 0.3em;
 }
 .statistics th {
-    background-color: #ddd; /* Fallback value */
-    background-color: var(--primary-color);
+    background-color: #ddd;
     padding: 0.2em 0.3em;
 }
 .statistics td {
@@ -275,33 +200,27 @@ th.stats-col-graph:hover {
 }
 /* Statistics graph */
 .graph, .empty-graph {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+    border: 1px solid #ccc;
     width: auto;
     height: 7px;
     padding: 0;
+    background: #aaa;
 }
 .empty-graph {
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #eee;
 }
 .pass-bar, .fail-bar, .skip-bar {
     float: left;
     height: 100%;
 }
 .fail-bar {
-    background: #ce3e01; /* Fallback value */
-    background: var(--fail-color);
+    background: #ce3e01;
 }
 .pass-bar {
-    background: #97bd61; /* Fallback value */
-    background: var(--pass-color);
+    background: #97bd61;
 }
 .skip-bar {
-    background: #fed84f; /* Fallback value */
-    background: var(--warn-color);
+    background: #fed84f;
 }
 /* Tablesorter - adapted from provided Blue Skin */
 .tablesorter-header {
@@ -311,84 +230,30 @@ th.stats-col-graph:hover {
     cursor: pointer;
 }
 .tablesorter-header:hover {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--secondary-color);
+    background-color: #ccc;
 }
 .tablesorter-headerAsc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==); /* Fallback value */
-    background-image: var(--ascending-icon);
-    background-color: #ccc !important; /* Fallback value */
-    background-color: var(--secondary-color) !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
+    background-color: #ccc !important;
 }
 .tablesorter-headerDesc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==); /* Fallback value */
-    background-image: var(--descending-icon);
-    background-color: #ccc !important; /* Fallback value */
-    background-color: var(--secondary-color) !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
+    background-color: #ccc !important;
 }
 .sorter-false {
     background-image: none;
     cursor: default;
 }
 .sorter-false:hover {
-    background-color: #ddd; /* Fallback value */
-    background-color: var(--primary-color);
-}
-#theme-toggle {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 28px;
-    height: 28px;
-    border: none;
-    padding: 4px;
-    z-index: 1000;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background: var(--highlight-color);
-}
-[data-theme="dark"] .dark-mode-icon,
-[data-theme="light"] .light-mode-icon {
-    display: none;
-}
-[data-theme="dark"] .light-mode-icon,
-[data-theme="light"] .dark-mode-icon {
-    display: block;
-}
-@keyframes highlight {
-    0% {
-        background: var(--primary-color)
-    }
-    100% {
-        background: var(--target-color);
-    }
-}
-:target {
-    background: var(--target-color);
-    transition: background 0.3s;
-    animation: highlight 4s;
+    background-color: #ddd;
 }
 </style>
-<style media="all">
+<style media="all" type="text/css">
 /* Icons are from Open Iconic <https://useiconic.com/open/>.
    Licensed under the MIT License. */
-:root {
-    --icon-filter: invert(0);
-    --icon-highlight: var(--secondary-color);
-    --elapsed-color: #666;
-}
-/* @media (prefers-color-scheme: dark) { */
-[data-theme="dark"] {
-    --icon-filter: invert(1);
-    --icon-highlight: #a39990;
-    --elapsed-color: #999;
-}
 /* Containers */
 .suite, .test, #errors {
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     padding: 0.3em 0.2em;
     margin: 0.2em 0;
 }
@@ -417,10 +282,8 @@ th.stats-col-graph:hover {
 }
 .element-header:hover {
     cursor: pointer;
-    background-color: #eee; /* Fallback value */
-    background-color: var(--highlight-color);
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+    background-color: #eee;
+    border-color: #ccc;
 }
 .element-header-toggle {
     position: absolute;
@@ -430,14 +293,10 @@ th.stats-col-graph:hover {
     background-position: center;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JChSkZz20AAAAGklEQVQI12NgQAKMDKzInP8IDhOqMk4G7AAANQwBE427PYUAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2Mmg4di0yaC04eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzKSIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
     height: 10px;
     width: 10px;
     background-size: 6px 6px;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--icon-highlight);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     border-radius: 2px;
 }
 .closed > .element-header-toggle {
@@ -445,8 +304,7 @@ th.stats-col-graph:hover {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0zIDB2M2gtM3YyaDN2M2gydi0zaDN2LTJoLTN2LTNoLTJ6IiAvPgo8L3N2Zz4=), none;
 }
 .element-header:hover > .element-header-toggle {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--icon-highlight);
+    background-color: #ccc;
 }
 .element-header-right:hover ~ .element-header-toggle {
     background-color: transparent;
@@ -466,31 +324,23 @@ th.stats-col-graph:hover {
 }
 .name {
     font-weight: bold;
-    white-space: pre-wrap;
-}
-.arg, .assign {
-    white-space: pre-wrap;
 }
 .elapsed {
     float: right;
-    color: #666; /* Fallback value */
-    color: var(--elapsed-color);
+    color: #666;
     padding-left: 1em;
 }
 .link {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAHlJREFUGJVtzrEJwmAQBtCn6ASuIKTIBhY2gmghBiJYB1udwk10B8FJbKMBcQFbtbkfJHrVwfu+4/idJR64Y9H7E3higj5O3S8Y44ApLnjhnXCNGhV2yNGggDJwiC02gavUbpDFvscRo4QdXOMKDHBufz3HLYKzNn4AbSkV3fncGQYAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik01Ljg4LjAzYy0uMTguMDEtLjM2LjAzLS41My4wOS0uMjcuMS0uNTMuMjUtLjc1LjQ3YS41LjUgMCAxIDAgLjY5LjY5Yy4xMS0uMTEuMjQtLjE3LjM4LS4yMi4zNS0uMTIuNzgtLjA3IDEuMDYuMjIuMzkuMzkuMzkgMS4wNCAwIDEuNDRsLTEuNSAxLjVjLS40NC40NC0uOC40OC0xLjA2LjQ3LS4yNi0uMDEtLjQxLS4xMy0uNDEtLjEzYS41LjUgMCAxIDAtLjUuODhzLjM0LjIyLjg0LjI1Yy41LjAzIDEuMi0uMTYgMS44MS0uNzhsMS41LTEuNWMuNzgtLjc4Ljc4LTIuMDQgMC0yLjgxLS4yOC0uMjgtLjYxLS40NS0uOTctLjUzLS4xOC0uMDQtLjM4LS4wNC0uNTYtLjAzem0tMiAyLjMxYy0uNS0uMDItMS4xOS4xNS0xLjc4Ljc1bC0xLjUgMS41Yy0uNzguNzgtLjc4IDIuMDQgMCAyLjgxLjU2LjU2IDEuMzYuNzIgMi4wNi40Ny4yNy0uMS41My0uMjUuNzUtLjQ3YS41LjUgMCAxIDAtLjY5LS42OWMtLjExLjExLS4yNC4xNy0uMzguMjItLjM1LjEyLS43OC4wNy0xLjA2LS4yMi0uMzktLjM5LS4zOS0xLjA0IDAtMS40NGwxLjUtMS41Yy40LS40Ljc1LS40NSAxLjAzLS40NC4yOC4wMS40Ny4wOS40Ny4wOWEuNS41IDAgMSAwIC40NC0uODhzLS4zNC0uMi0uODQtLjIyeiIKICAvPgo8L3N2Zz4=), none;
-    filter: var(--icon-filter);
 }
 .expand {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUGJVjYCACKDAwMByA0ljFDjAwMPxnYGB4ABVQgLL/Q+VQBB6gseGmIivCkERXhFUSWRFOSawAAEl7E3uv1iMcAAAAAElFTkSuQmCC);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0xLjUgMGwtMS41IDEuNSA0IDQgNC00LTEuNS0xLjUtMi41IDIuNS0yLjUtMi41eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxKSIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
 }
 .collapse {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAC5JREFUGJVjYCARNEAxTsn/UIyhCFkSQxG6ThQ+C5IpjWhG1yNb4YDFTdjEMAEACi8Q++9Y9TAAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik00IDBsLTQgNCAxLjUgMS41IDIuNS0yLjUgMi41IDIuNSAxLjUtMS41LTQtNHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMSkiIC8+Cjwvc3ZnPg==), none;
-    filter: var(--icon-filter);
 }
 .expand, .collapse, .link {
     float: left;
@@ -502,10 +352,7 @@ th.stats-col-graph:hover {
     background-size: 8px 8px;
     background-repeat: no-repeat;
     background-position: center;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--icon-highlight);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     border-radius: 2px;
 }
 .link {
@@ -515,8 +362,7 @@ th.stats-col-graph:hover {
     visibility: visible;
 }
 .expand:hover, .collapse:hover, .link:hover {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--icon-highlight);
+    background-color: #ccc;
 }
 /* Messages and errors */
 .messages .time, .messages .message {
@@ -557,16 +403,11 @@ th.stats-col-graph:hover {
 .message-row:hover .select-message div {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0MOzhWKZQOAAAASUlEQVQY032PsRHAIAwDX9BkicD+W8UMEqegAQJWKZ/+3sLZJhFGQEZzNaIa4ibh66En867VNaIeoP5WppNuIGoAlOm3g5VC1AdYeQv1BZPRSgAAAABJRU5ErkJggg==);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2MWg4di0xaC04em0wIDJ2MWg2di0xaC02em0wIDJ2MWg4di0xaC04em0wIDJ2MWg2di0xaC02eiIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--icon-highlight);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     border-radius: 2px;
 }
 .select-message:hover div {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--icon-highlight);
+    background-color: #ccc;
     cursor: pointer;
 }
 /* Message tables - these MUST NOT be combined together because otherwise
@@ -598,7 +439,7 @@ th.stats-col-graph:hover {
     cursor: default;
 }
 </style>
-<style media="print">
+<style media="print" type="text/css">
 body {
     background: white !important;
     padding: 0;
@@ -638,7 +479,7 @@ a:link, a:visited {
     background: #ddd !important;
 }
 </style>
-<style media="all">
+<style media="all" type="text/css">
 #javascript-disabled {
     width: 600px;
     margin: 100px auto 0 auto;
@@ -661,7 +502,7 @@ a:link, a:visited {
     font-style: italic;
 }
 </style>
-<style media="all">
+<style media="all" type="text/css">
 .doc > * {
     margin: 0.7em 1em 0.1em 1em;
     padding: 0;
@@ -673,12 +514,14 @@ a:link, a:visited {
     margin-top: 0.1em;
 }
 .doc table {
+    border: 1px solid #ccc;
     background: transparent;
     border-collapse: collapse;
     empty-cells: show;
     font-size: 0.9em;
 }
 .doc table th, .doc table td {
+    border: 1px solid #ccc;
     background: transparent;
     padding: 0.1em 0.3em;
     height: 1.2em;
@@ -688,32 +531,24 @@ a:link, a:visited {
     letter-spacing: 0.1em;
 }
 .doc pre {
-    border-radius: 2px;
     font-size: 1.1em;
     letter-spacing: 0.05em;
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #f4f4f4;
 }
 .doc code {
-    border-radius: 2px;
     padding: 0 0.2em;
     letter-spacing: 0.05em;
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #eee;
 }
 .doc li {
     list-style-position: inside;
     list-style-type: square;
 }
-.doc img, .doc table, .doc table th, .doc table td {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+.doc img {
+    border: 1px solid #ccc;
 }
 .doc hr {
-    background: #ccc; /* Fallback value */
-    background: var(--secondary-color);
+    background: #ccc;
     height: 1px;
     border: 0;
 }
@@ -1015,6 +850,7 @@ window.model = (function () {
         suite.populateSuites = createIterablePopulator('Suite');
         suite.childrenNames = ['keyword', 'suite', 'test'];
         suite.callWhenChildrenReady = function (callable) { callable(); };
+        suite.message = data.message;
         suite.children = function () {
             return suite.keywords().concat(suite.tests()).concat(suite.suites());
         };
@@ -1105,7 +941,6 @@ window.model = (function () {
             name: data.name,
             doc: data.doc,
             status: data.status,
-            message: data.message,
             times: data.times,
             id: data.parent ? data.parent.id + '-' + data.id : data.id
         };
@@ -1126,6 +961,7 @@ window.model = (function () {
                 return test.keywords();
         };
         test.tags = data.tags;
+        test.message = data.message;
         test.matchesTagPattern = function (pattern) {
             return containsTagPattern(test.tags, pattern);
         };
@@ -1136,12 +972,13 @@ window.model = (function () {
     }
     function Keyword(data) {
         var kw = createModelObject(data);
+        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
         kw.libname = data.libname;
         kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =  ' : '');
+        kw.assign = data.assign + (data.assign ? ' =' : '');
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1252,48 +1089,58 @@ window.stats = (function () {
             });
     }
     function calculatePercents(total, passed, failed, skipped) {
-        if (total == 0)
+        if (total == 0) {
             return [0.0, 0.0, 0.0];
+        }
         var pass = 100.0 * passed / total;
         var skip = 100.0 * skipped / total;
         var fail = 100.0 * failed / total;
         if (pass > 0 && pass < 0.1)
-            pass = 0.1;
+            pass = 0.1
         if (fail > 0 && fail < 0.1)
-            fail = 0.1;
+            fail = 0.1
         if (skip > 0 && skip < 0.1)
-            skip = 0.1;
+            skip = 0.1
         if (pass > 99.95 && pass < 100)
-            pass = 99.9;
+            pass = 99.9
         if (fail > 99.95 && fail < 100)
-            fail = 99.9;
+            fail = 99.9
         if (skip > 99.95 && skip < 100)
-            skip = 99.9;
-        return [round1(pass), round1(skip), round1(fail)];
+            skip = 99.9
+        return [Math.round(pass*10)/10, Math.round(skip*10)/10, Math.round(fail*10)/10];
     }
     function calculateWidths(num1, num2, num3) {
         if (num1 + num2 + num3 === 0)
             return [0.0, 0.0, 0.0];
         // Make small percentages better visible
         if (num1 > 0 && num1 < 1)
-            num1 = 1.0;
+            num1 = 1
         if (num2 > 0 && num2 < 1)
-            num2 = 1.0;
+            num2 = 1
         if (num3 > 0 && num3 < 1)
-            num3 = 1.0;
+            num3 = 1
         // Handle situation where some are rounded up
         while (num1 + num2 + num3 > 100) {
-            if (num1 >= num2 && num1 >= num3)
-                num1 = round1(num1 - 0.1);
-            else if (num2 >= num1 && num2 >= num3)
-                num2 = round1(num2 - 0.1);
-            else
-                num3 = round1(num3 - 0.1);
+            if (num1 > num2 && num1 > num3)
+                num1 -= 0.1;
+            else if (num2 > num1 && num2 > num3)
+                num2 -= 0.1;
+            else if (num3 > num1 && num3 > num2)
+                num3 -= 0.1;
+            else if (num1 > num3 && num1 == num2) {
+                num1 -= 0.1;
+                num2 -= 0.1;
+            }
+            else if (num1 > num2 && num1 == num3) {
+                num1 -= 0.1;
+                num3 -= 0.1;
+            }
+            else if (num2 > num1 && num2 == num3) {
+                num2 -= 0.1;
+                num3 -= 0.1;
+            }
         }
-        return [num1, num2, num3];
-    }
-    function round1(num) {
-        return Math.round(num*10) / 10;
+        return [Math.ceil(num1*10)/10, Math.ceil(num2*10)/10, Math.ceil(num3*10)/10];
     }
     return {
         Statistics: Statistics
@@ -1510,9 +1357,8 @@ window.testdata = function () {
     var _statistics = null;
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
-    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF',
-                         'ELSE IF', 'ELSE', 'RETURN', 'VAR', 'TRY', 'EXCEPT', 'FINALLY',
-                         'WHILE', 'GROUP', 'CONTINUE', 'BREAK', 'ERROR'];
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
+                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1555,7 +1401,6 @@ window.testdata = function () {
         return createKeyword(parent, element, strings, index - messages.length);
     }
     function createKeyword(parent, element, strings, index) {
-        var status = element[8];
         var kw = model.Keyword({
             parent: parent,
             type: KEYWORD_TYPES[element[0]],
@@ -1571,12 +1416,7 @@ window.testdata = function () {
                 this.doc = function () { return doc; };
                 return doc;
             },
-            status: parseStatus(status),
-            message: function () {
-                var msg = status.length == 4 ? strings.get(status[3]) : '';
-                this.message = function () { return msg; };
-                return msg;
-            },
+            status: parseStatus(element[8], strings),
             times: model.Times(times(element[8])),
             isChildrenLoaded: typeof(element[9]) !== 'number'
         });
@@ -1787,20 +1627,6 @@ window.testdata = function () {
 }();
 </script>
 <script type="text/javascript">
-const lightModeIcon = `
-<svg class="light-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
-    viewBox="0 0 24 24" fill="var(--text-color)">
-    <rect fill="none" height="24" width="24" />
-    <path
-        d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z" />
-</svg>`
-const darkModeIcon = `
-<svg class="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
-    viewBox="0 0 24 24" fill="var(--text-color)">
-    <rect fill="none" height="24" width="24" />
-    <path
-        d="M11.01,3.05C6.51,3.54,3,7.36,3,12c0,4.97,4.03,9,9,9c4.63,0,8.45-3.5,8.95-8c0.09-0.79-0.78-1.42-1.54-0.95 c-0.84,0.54-1.84,0.85-2.91,0.85c-2.98,0-5.4-2.42-5.4-5.4c0-1.06,0.31-2.06,0.84-2.89C12.39,3.94,11.9,2.98,11.01,3.05z" />
-</svg>`
 function removeJavaScriptDisabledWarning() {
     // Not using jQuery here for maximum speed
     document.getElementById('javascript-disabled').style.display = 'none';
@@ -1836,10 +1662,6 @@ function setTitle(suiteName, type) {
 function addHeader() {
     var generated = util.timestamp(window.output.generated);
     $.tmpl('<h1>${title}</h1>' +
-           '<button id=theme-toggle>' +
-             lightModeIcon +
-             darkModeIcon +
-           '</button>' +
            '<div id="generated">' +
              '<span>Generated<br>${generated}</span><br>' +
              '<span id="generated-ago">${ago} ago</span>' +
@@ -1851,7 +1673,6 @@ function addHeader() {
         ago: util.createGeneratedAgoString(generated),
         title: document.title
     }).appendTo($('#header'));
-    document.getElementById('theme-toggle')?.addEventListener('click', theme.onClick);
 }
 function addReportOrLogLink(myType) {
     var url;
@@ -1980,126 +1801,43 @@ function stopPropagation(event) {
     if (event.stopPropagation)
         event.stopPropagation();
 }
-const theme = function () {
-    const storageKey = 'theme-preference';
-    const urlParams = new URLSearchParams(window.location.search);
-    var storage;
-    var theme;
-    function init(givenStorage) {
-        storage = givenStorage;
-        theme = { value: getPreference() };
-        document.body.setAttribute('data-theme', theme.value);
-        reflectPreference();
-        window.matchMedia('(prefers-color-scheme: dark)')
-            .addEventListener('change', ({matches:isDark}) => {
-                theme.value = isDark ? 'dark' : 'light';
-                setPreference();
-            });
-        window.addEventListener('storage', ({key, newValue}) => {
-            if (key === storage.fullKey(storageKey)) {
-                theme.value = newValue === 'dark' ? 'dark' : 'light';
-                setPreference();
-            }
-        });
-    }
-    function getPreference() {
-        if (urlParams.has('theme')) {
-            var urlTheme = urlParams.get('theme') === 'dark' ? 'dark' : 'light';
-            storage.set(storageKey, urlTheme);
-            urlParams.delete('theme');
-            return urlTheme;
-        }
-        if (storage.get(storageKey))
-            return storage.get(storageKey) === 'dark' ? 'dark' : 'light';
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    function setPreference() {
-        storage.set(storageKey, theme.value);
-        reflectPreference();
-    }
-    function reflectPreference() {
-        document.body.setAttribute('data-theme', theme.value);
-        document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
-        const event = new Event('theme-change', {value: theme.value});
-        document.dispatchEvent(event);
-    }
-    function onClick() {
-        theme.value = theme.value === 'light' ? 'dark' : 'light';
-        document.body.setAttribute('theme-toggled', "");
-        setPreference();
-    }
-    return {init: init, getPreference: getPreference, setPreference: setPreference,
-        reflectPreference: reflectPreference, onClick: onClick};
-}();
-</script>
-<script type="text/javascript">
-storage = function () {
-    var prefix = 'robot-framework-';
-    var storage;
-    function init(user) {
-        if (user)
-            prefix += user + '-';
-        storage = getStorage();
-    }
-    function getStorage() {
-        // Use localStorage if it's accessible, normal object otherwise.
-        // Inspired by https://stackoverflow.com/questions/11214404
-        try {
-            localStorage.setItem(prefix, prefix);
-            localStorage.removeItem(prefix);
-            return localStorage;
-        } catch (exception) {
-            return {};
-        }
-    }
-    function get(key, defaultValue) {
-        var value = storage[fullKey(key)];
-        if (typeof value === 'undefined')
-            return defaultValue;
-        return value;
-    }
-    function set(key, value) {
-        storage[fullKey(key)] = value;
-    }
-    function fullKey(key) {
-        return prefix + key;
-    }
-    return {init: init, get: get, set: set, fullKey: fullKey};
-}();
 </script>
 <script type="text/javascript">
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[],[0,0,536],[],[[4,0,0,[5,6],[0,452,3,7],[[0,8,0,0,0,9,0,0,[0,453,2],[[0,10,11,0,0,12,13,0,[0,454,1],[[454,5,7]]],[0,14,15,0,16,17,0,0,[3,455,0],[]]]]]],[18,0,0,[5,6],[0,456,1,7],[[0,8,0,0,0,19,0,0,[0,456,1],[[0,10,11,0,0,12,13,0,[0,456,0],[[457,5,7]]],[0,14,15,0,16,17,0,0,[3,457,0],[]]]]]],[20,0,0,[5,6],[0,457,2,7],[[0,8,0,0,0,21,0,0,[0,458,1],[[0,10,11,0,0,12,13,0,[0,458,0],[[458,5,7]]],[0,14,15,0,16,17,0,0,[3,459,0],[]]]]]],[22,0,0,[5,6],[0,459,1,7],[[0,8,0,0,0,23,0,0,[0,459,1],[[0,10,11,0,0,12,13,0,[0,460,0],[[460,5,7]]],[0,14,15,0,16,17,0,0,[3,460,0],[]]]]]],[24,0,0,[5,6],[0,460,1,7],[[0,8,0,0,0,25,0,0,[0,461,1],[[0,10,11,0,0,12,13,0,[0,461,0],[[461,5,7]]],[0,14,15,0,16,17,0,0,[3,461,0],[]]]]]],[26,0,0,[5,6],[0,462,1,7],[[0,8,0,0,0,27,0,0,[0,462,1],[[0,10,11,0,0,12,13,0,[0,462,0],[[463,5,7]]],[0,14,15,0,16,17,0,0,[3,463,0],[]]]]]],[28,0,0,[5,6],[0,463,1,7],[[0,8,0,0,0,29,0,0,[0,464,1],[[0,10,11,0,0,12,13,0,[0,464,0],[[464,5,7]]],[0,14,15,0,16,17,0,0,[3,464,0],[]]]]]],[30,0,0,[5,6],[0,464,1,7],[[0,8,0,0,0,31,0,0,[0,465,0],[[0,10,11,0,0,12,13,0,[0,465,0],[[465,5,7]]],[0,14,15,0,16,17,0,0,[3,465,0],[]]]]]],[32,0,0,[5,6],[0,466,1,7],[[0,8,0,0,0,33,0,0,[0,466,1],[[0,10,11,0,0,12,13,0,[0,466,0],[[466,5,7]]],[0,14,15,0,16,17,0,0,[3,467,0],[]]]]]],[34,0,0,[5,6],[0,467,1,7],[[0,8,0,0,0,35,0,0,[0,468,1],[[0,10,11,0,0,12,13,0,[0,468,0],[[468,5,7]]],[0,14,15,0,16,17,0,0,[3,468,0],[]]]]]],[36,0,0,[5,6],[0,468,1,7],[[0,8,0,0,0,37,0,0,[0,469,0],[[0,10,11,0,0,12,13,0,[0,469,0],[[469,5,7]]],[0,14,15,0,16,17,0,0,[3,469,0],[]]]]]],[38,0,0,[5,6],[0,470,1,7],[[0,8,0,0,0,39,0,0,[0,471,1],[[0,10,11,0,0,12,13,0,[0,471,0],[[471,5,7]]],[0,14,15,0,16,17,0,0,[3,471,0],[]]]]]],[40,0,0,[5,6],[0,471,1,7],[[0,8,0,0,0,41,0,0,[0,472,1],[[0,10,11,0,0,12,13,0,[0,472,0],[[472,5,7]]],[0,14,15,0,16,17,0,0,[3,472,0],[]]]]]],[42,0,0,[5,6],[0,473,1,7],[[0,8,0,0,0,43,0,0,[0,473,1],[[0,10,11,0,0,12,13,0,[0,473,0],[[474,5,7]]],[0,14,15,0,16,17,0,0,[3,474,0],[]]]]]],[44,0,0,[5,6],[0,474,1,7],[[0,8,0,0,0,45,0,0,[0,474,1],[[0,10,11,0,0,12,13,0,[0,475,0],[[475,5,7]]],[0,14,15,0,16,17,0,0,[3,475,0],[]]]]]],[46,0,0,[5,6],[0,475,1,7],[[0,8,0,0,0,47,0,0,[0,476,0],[[0,10,11,0,0,12,13,0,[0,476,0],[[476,5,7]]],[0,14,15,0,16,17,0,0,[3,476,0],[]]]]]],[48,0,0,[5,6],[0,476,1,7],[[0,8,0,0,0,49,0,0,[0,477,0],[[0,10,11,0,0,12,13,0,[0,477,0],[[477,5,7]]],[0,14,15,0,16,17,0,0,[3,477,0],[]]]]]],[50,0,0,[5,6],[0,477,1,7],[[0,8,0,0,0,51,0,0,[0,478,0],[[0,10,11,0,0,12,13,0,[0,478,0],[[478,5,7]]],[0,14,15,0,16,17,0,0,[3,478,0],[]]]]]],[52,0,0,[5,6],[0,479,1,7],[[0,8,0,0,0,53,0,0,[0,479,0],[[0,10,11,0,0,12,13,0,[0,479,0],[[479,5,7]]],[0,14,15,0,16,17,0,0,[3,479,0],[]]]]]],[54,0,0,[5,6],[0,480,1,7],[[0,8,0,0,0,55,0,0,[0,480,0],[[0,10,11,0,0,12,13,0,[0,480,0],[[480,5,7]]],[0,14,15,0,16,17,0,0,[3,481,0],[]]]]]],[56,0,0,[5,6],[0,481,1,7],[[0,8,0,0,0,57,0,0,[0,481,1],[[0,10,11,0,0,12,13,0,[0,481,0],[[482,5,7]]],[0,14,15,0,16,17,0,0,[3,482,0],[]]]]]],[58,0,0,[5,6],[0,482,1,7],[[0,8,0,0,0,59,0,0,[0,483,1],[[0,10,11,0,0,12,13,0,[0,483,0],[[483,5,7]]],[0,14,15,0,16,17,0,0,[3,483,0],[]]]]]],[60,0,0,[5,6],[0,483,1,7],[[0,8,0,0,0,61,0,0,[0,484,0],[[0,10,11,0,0,12,13,0,[0,484,0],[[484,5,7]]],[0,14,15,0,16,17,0,0,[3,484,0],[]]]]]],[62,0,0,[5,6],[0,485,1,7],[[0,8,0,0,0,63,0,0,[0,485,1],[[0,10,11,0,0,12,13,0,[0,485,0],[[485,5,7]]],[0,14,15,0,16,17,0,0,[3,486,0],[]]]]]],[64,0,0,[5,6],[0,486,1,7],[[0,8,0,0,0,65,0,0,[0,486,0],[[0,10,11,0,0,12,13,0,[0,487,0],[[487,5,7]]],[0,14,15,0,16,17,0,0,[3,487,0],[]]]]]],[66,0,0,[5,6],[0,487,1,7],[[0,8,0,0,0,67,0,0,[0,488,1],[[0,10,11,0,0,12,13,0,[0,488,0],[[488,5,7]]],[0,14,15,0,16,17,0,0,[3,488,0],[]]]]]],[68,0,0,[5,6],[0,488,1,7],[[0,8,0,0,0,69,0,0,[0,489,1],[[0,10,11,0,0,12,13,0,[0,489,0],[[489,5,7]]],[0,14,15,0,16,17,0,0,[3,490,0],[]]]]]],[70,0,0,[5,6],[0,490,1,7],[[0,8,0,0,0,71,0,0,[0,490,1],[[0,10,11,0,0,12,13,0,[0,491,0],[[491,5,7]]],[0,14,15,0,16,17,0,0,[3,491,0],[]]]]]],[72,0,0,[5,6],[0,491,1,7],[[0,8,0,0,0,73,0,0,[0,492,1],[[0,10,11,0,0,12,13,0,[0,492,0],[[492,5,7]]],[0,14,15,0,16,17,0,0,[3,492,0],[]]]]]],[74,0,0,[5,6],[0,492,1,7],[[0,8,0,0,0,75,0,0,[0,493,0],[[0,10,11,0,0,12,13,0,[0,493,0],[[493,5,7]]],[0,14,15,0,16,17,0,0,[3,493,0],[]]]]]],[76,0,0,[5,6],[0,494,1,7],[[0,8,0,0,0,77,0,0,[0,494,1],[[0,10,11,0,0,12,13,0,[0,494,0],[[494,5,7]]],[0,14,15,0,16,17,0,0,[3,495,0],[]]]]]],[78,0,0,[5,6],[0,495,1,7],[[0,8,0,0,0,79,0,0,[0,496,0],[[0,10,11,0,0,12,13,0,[0,496,0],[[496,5,7]]],[0,14,15,0,16,17,0,0,[3,496,0],[]]]]]],[80,0,0,[5,6],[0,496,1,7],[[0,8,0,0,0,81,0,0,[0,497,0],[[0,10,11,0,0,12,13,0,[0,497,0],[[497,5,7]]],[0,14,15,0,16,17,0,0,[3,497,0],[]]]]]],[82,0,0,[5,6],[0,497,1,7],[[0,8,0,0,0,83,0,0,[0,498,0],[[0,10,11,0,0,12,13,0,[0,498,0],[[498,5,7]]],[0,14,15,0,16,17,0,0,[3,498,0],[]]]]]],[84,0,0,[5,6],[0,499,1,7],[[0,8,0,0,0,85,0,0,[0,499,0],[[0,10,11,0,0,12,13,0,[0,499,0],[[499,5,7]]],[0,14,15,0,16,17,0,0,[3,500,0],[]]]]]],[86,0,0,[5,6],[0,500,1,7],[[0,8,0,0,0,87,0,0,[0,501,1],[[0,10,11,0,0,12,13,0,[0,501,0],[[501,5,7]]],[0,14,15,0,16,17,0,0,[3,501,0],[]]]]]],[88,0,0,[5,6],[0,501,1,7],[[0,8,0,0,0,89,0,0,[0,502,1],[[0,10,11,0,0,12,13,0,[0,502,0],[[502,5,7]]],[0,14,15,0,16,17,0,0,[3,502,0],[]]]]]],[90,0,0,[5,6],[0,503,1,7],[[0,8,0,0,0,91,0,0,[0,503,1],[[0,10,11,0,0,12,13,0,[0,503,0],[[504,5,7]]],[0,14,15,0,16,17,0,0,[3,504,0],[]]]]]],[92,0,0,[5,6],[0,504,1,7],[[0,8,0,0,0,93,0,0,[0,505,1],[[0,10,11,0,0,12,13,0,[0,505,0],[[505,5,7]]],[0,14,15,0,16,17,0,0,[3,505,0],[]]]]]],[94,0,0,[5,6],[0,505,1,7],[[0,8,0,0,0,95,0,0,[0,506,1],[[0,10,11,0,0,12,13,0,[0,506,0],[[506,5,7]]],[0,14,15,0,16,17,0,0,[3,506,0],[]]]]]],[96,0,0,[5,6],[0,507,1,7],[[0,8,0,0,0,97,0,0,[0,507,1],[[0,10,11,0,0,12,13,0,[0,508,0],[[508,5,7]]],[0,14,15,0,16,17,0,0,[3,508,0],[]]]]]],[98,0,0,[5,6],[0,509,1,7],[[0,8,0,0,0,99,0,0,[0,509,1],[[0,10,11,0,0,12,13,0,[0,509,0],[[509,5,7]]],[0,14,15,0,16,17,0,0,[3,510,0],[]]]]]],[100,0,0,[5,6],[0,510,1,7],[[0,8,0,0,0,101,0,0,[0,510,1],[[0,10,11,0,0,12,13,0,[0,511,0],[[511,5,7]]],[0,14,15,0,16,17,0,0,[3,511,0],[]]]]]],[102,0,0,[5,6],[0,511,1,7],[[0,8,0,0,0,103,0,0,[0,512,1],[[0,10,11,0,0,12,13,0,[0,512,0],[[512,5,7]]],[0,14,15,0,16,17,0,0,[3,513,0],[]]]]]],[104,0,0,[5,6],[0,513,1,7],[[0,8,0,0,0,105,0,0,[0,514,1],[[0,10,11,0,0,12,13,0,[0,514,0],[[514,5,7]]],[0,14,15,0,16,17,0,0,[3,514,0],[]]]]]],[106,0,0,[5,6],[0,514,1,7],[[0,8,0,0,0,107,0,0,[0,515,1],[[0,10,11,0,0,12,13,0,[0,515,0],[[515,5,7]]],[0,14,15,0,16,17,0,0,[3,516,0],[]]]]]],[108,0,0,[5,6],[0,516,2,7],[[0,8,0,0,0,109,0,0,[0,517,1],[[0,10,11,0,0,12,13,0,[0,517,1],[[517,5,7]]],[0,14,15,0,16,17,0,0,[3,517,0],[]]]]]],[110,0,0,[5,6],[0,518,2,7],[[0,8,0,0,0,111,0,0,[0,519,1],[[0,10,11,0,0,12,13,0,[0,519,0],[[519,5,7]]],[0,14,15,0,16,17,0,0,[3,520,0],[]]]]]],[112,0,0,[5,6],[0,520,3,7],[[0,8,0,0,0,113,0,0,[0,521,2],[[0,10,11,0,0,12,13,0,[0,521,1],[[521,5,7]]],[0,14,15,0,16,17,0,0,[3,522,0],[]]]]]],[114,0,0,[5,6],[0,523,2,7],[[0,8,0,0,0,115,0,0,[0,524,1],[[0,10,11,0,0,12,13,0,[0,524,0],[[524,5,7]]],[0,14,15,0,16,17,0,0,[3,524,0],[]]]]]],[116,0,0,[5,6],[0,525,1,7],[[0,8,0,0,0,117,0,0,[0,525,1],[[0,10,11,0,0,12,13,0,[0,526,0],[[526,5,7]]],[0,14,15,0,16,17,0,0,[3,526,0],[]]]]]],[118,0,0,[5,6],[0,526,1,7],[[0,8,0,0,0,119,0,0,[0,527,1],[[0,10,11,0,0,12,13,0,[0,527,0],[[527,5,7]]],[0,14,15,0,16,17,0,0,[3,527,0],[]]]]]],[120,0,0,[5,6],[0,528,2,7],[[0,8,0,0,0,121,0,0,[0,528,1],[[0,10,11,0,0,12,13,0,[0,529,0],[[529,5,7]]],[0,14,15,0,16,17,0,0,[3,529,0],[]]]]]],[122,0,0,[5,6],[0,529,1,7],[[0,8,0,0,0,123,0,0,[0,530,1],[[0,10,11,0,0,12,13,0,[0,530,0],[[530,5,7]]],[0,14,15,0,16,17,0,0,[3,531,0],[]]]]]],[124,0,0,[5,6],[0,531,1,7],[[0,8,0,0,0,125,0,0,[0,531,1],[[0,10,11,0,0,12,13,0,[0,532,0],[[532,5,7]]],[0,14,15,0,16,17,0,0,[3,532,0],[]]]]]],[126,0,0,[5,6],[0,532,1,7],[[0,8,0,0,0,127,0,0,[0,533,1],[[0,10,11,0,0,12,13,0,[0,533,0],[[533,5,7]]],[0,14,15,0,16,17,0,0,[3,533,0],[]]]]]],[128,0,0,[5,6],[0,534,1,7],[[0,8,0,0,0,129,0,0,[0,534,1],[[0,10,11,0,0,12,13,0,[0,534,0],[[534,5,7]]],[0,14,15,0,16,17,0,0,[3,535,0],[]]]]]],[130,0,0,[5,6],[0,535,1,7],[[0,8,0,0,0,131,0,0,[0,536,1],[[0,10,11,0,0,12,13,0,[0,536,0],[[536,5,7]]],[0,14,15,0,16,17,0,0,[3,536,0],[]]]]]]],[],[58,0,58,0]];
+window.sPart0 = [[4,0,0,[5,6],[0,1591,165,7],[[0,8,0,0,0,9,0,0,[0,1593,162],[[0,10,11,0,12,13,0,0,[1,1594,0],[[1594,2,14]]],[0,15,16,0,0,0,17,0,[1,1594,0],[[1594,2,18]]],[0,19,16,0,0,20,21,0,[1,1594,1],[[1595,2,22]]],[0,10,11,0,12,21,0,0,[1,1595,0],[[1595,2,14]]],[0,23,16,0,0,24,25,0,[1,1595,159],[[1754,2,26]]],[0,27,11,0,28,29,0,0,[0,1754,1],[[1755,2,30],[1755,5,7]]],[0,31,32,0,0,33,0,0,[3,1755,0],[]]]]]],[34,0,0,[5,6],[0,1756,86,7],[[0,8,0,0,0,35,0,0,[0,1758,84],[[0,10,11,0,12,13,0,0,[1,1759,0],[[1759,2,36]]],[0,15,16,0,0,0,17,0,[1,1759,0],[[1759,2,37]]],[0,19,16,0,0,20,21,0,[1,1759,0],[[1759,2,38]]],[0,10,11,0,12,21,0,0,[1,1760,0],[[1760,2,36]]],[0,23,16,0,0,24,25,0,[1,1760,81],[[1841,2,26]]],[0,27,11,0,28,29,0,0,[0,1841,1],[[1841,2,30],[1842,5,7]]],[0,31,32,0,0,33,0,0,[3,1842,0],[]]]]]],[39,0,0,[5,6],[0,1842,88,7],[[0,8,0,0,0,40,0,0,[0,1844,86],[[0,10,11,0,12,13,0,0,[1,1845,0],[[1845,2,41]]],[0,15,16,0,0,0,17,0,[1,1845,0],[[1845,2,42]]],[0,19,16,0,0,20,21,0,[1,1845,1],[[1846,2,43]]],[0,10,11,0,12,21,0,0,[1,1846,0],[[1846,2,41]]],[0,23,16,0,0,24,25,0,[1,1846,83],[[1929,2,26]]],[0,27,11,0,28,29,0,0,[0,1929,1],[[1930,2,30],[1930,5,7]]],[0,31,32,0,0,33,0,0,[3,1930,0],[]]]]]],[44,0,0,[5,6],[0,1931,87,7],[[0,8,0,0,0,45,0,0,[0,1932,86],[[0,10,11,0,12,13,0,0,[1,1933,0],[[1933,2,46]]],[0,15,16,0,0,0,17,0,[1,1933,0],[[1933,2,47]]],[0,19,16,0,0,20,21,0,[1,1934,0],[[1934,2,48]]],[0,10,11,0,12,21,0,0,[1,1934,0],[[1934,2,46]]],[0,23,16,0,0,24,25,0,[1,1934,83],[[2017,2,26]]],[0,27,11,0,28,29,0,0,[0,2017,1],[[2017,2,30],[2017,5,7]]],[0,31,32,0,0,33,0,0,[3,2018,0],[]]]]]],[49,0,0,[5,6],[0,2018,90,7],[[0,8,0,0,0,9,0,0,[0,2020,88],[[0,10,11,0,12,13,0,0,[1,2022,0],[[2022,2,14]]],[0,15,16,0,0,0,17,0,[1,2023,0],[[2023,2,50]]],[0,19,16,0,0,20,21,0,[1,2023,0],[[2023,2,22]]],[0,10,11,0,12,21,0,0,[1,2023,1],[[2024,2,14]]],[0,23,16,0,0,24,25,0,[1,2024,82],[[2106,2,26]]],[0,27,11,0,28,29,0,0,[0,2107,0],[[2107,2,30],[2107,5,7]]],[0,31,32,0,0,33,0,0,[3,2107,0],[]]]]]],[51,0,0,[5,6],[0,2108,114,7],[[0,8,0,0,0,52,0,0,[0,2110,112],[[0,10,11,0,12,13,0,0,[1,2111,0],[[2111,2,53]]],[0,15,16,0,0,0,17,0,[1,2111,1],[[2112,2,54]]],[0,19,16,0,0,20,21,0,[1,2112,0],[[2112,2,55]]],[0,10,11,0,12,21,0,0,[1,2112,1],[[2113,2,53]]],[0,23,16,0,0,24,25,0,[1,2113,108],[[2221,2,26]]],[0,27,11,0,28,29,0,0,[0,2221,1],[[2222,2,30],[2222,5,7]]],[0,31,32,0,0,33,0,0,[3,2222,0],[]]]]]],[56,0,0,[5,6],[0,2223,90,7],[[0,8,0,0,0,57,0,0,[0,2225,88],[[0,10,11,0,12,13,0,0,[1,2225,0],[[2225,2,58]]],[0,15,16,0,0,0,17,0,[1,2226,0],[[2226,2,59]]],[0,19,16,0,0,20,21,0,[1,2226,0],[[2226,2,22]]],[0,10,11,0,12,21,0,0,[1,2226,0],[[2226,2,58]]],[0,23,16,0,0,24,25,0,[1,2227,85],[[2312,2,26]]],[0,27,11,0,28,29,0,0,[0,2312,0],[[2312,2,30],[2312,5,7]]],[0,31,32,0,0,33,0,0,[3,2313,0],[]]]]]],[60,0,0,[5,6],[0,2313,89,7],[[0,8,0,0,0,61,0,0,[0,2315,87],[[0,10,11,0,12,13,0,0,[1,2316,0],[[2316,2,62]]],[0,15,16,0,0,0,17,0,[1,2316,0],[[2316,2,63]]],[0,19,16,0,0,20,21,0,[1,2316,1],[[2317,2,55]]],[0,10,11,0,12,21,0,0,[1,2317,0],[[2317,2,62]]],[0,23,16,0,0,24,25,0,[1,2317,84],[[2401,2,26]]],[0,27,11,0,28,29,0,0,[0,2401,0],[[2401,2,30],[2401,5,7]]],[0,31,32,0,0,33,0,0,[3,2402,0],[]]]]]],[64,0,0,[5,6],[1,2402,103],[[0,8,0,0,0,65,0,0,[1,2404,101],[[0,10,11,0,12,13,0,0,[1,2405,0],[[2405,2,66]]],[0,15,16,0,0,0,17,0,[1,2405,1],[[2405,2,67]]],[0,19,16,0,0,20,21,0,[1,2406,0],[[2406,2,68]]],[0,10,11,0,12,21,0,0,[1,2406,0],[[2406,2,66]]],[0,23,16,0,0,24,25,0,[1,2406,97],[[2502,2,26]]],[0,27,11,0,28,29,0,0,[1,2503,0],[[2503,2,30]]],[0,31,32,0,0,33,0,0,[1,2503,2],[[0,69,16,0,0,70,71,0,[1,2504,0],[[2504,2,72]]],[0,73,16,0,0,71,74,0,[1,2504,0],[[2504,2,75]]],[0,76,11,0,77,78,79,0,[1,2504,1],[[2505,2,80]]],[0,81,82,0,0,83,0,0,[1,2505,0],[]]]]]]]],[84,0,0,[5,6],[1,2506,97],[[0,8,0,0,0,85,0,0,[1,2507,96],[[0,10,11,0,12,13,0,0,[1,2508,0],[[2508,2,86]]],[0,15,16,0,0,0,17,0,[1,2508,0],[[2508,2,87]]],[0,19,16,0,0,20,21,0,[1,2509,0],[[2509,2,88]]],[0,10,11,0,12,21,0,0,[1,2509,0],[[2509,2,86]]],[0,23,16,0,0,24,25,0,[1,2509,91],[[2600,2,26]]],[0,27,11,0,28,29,0,0,[1,2600,0],[[2600,2,30]]],[0,31,32,0,0,33,0,0,[1,2600,3],[[0,69,16,0,0,70,71,0,[1,2601,0],[[2601,2,72]]],[0,73,16,0,0,71,74,0,[1,2602,0],[[2602,2,75]]],[0,76,11,0,77,78,79,0,[1,2602,1],[[2603,2,80]]],[0,81,82,0,0,83,0,0,[1,2603,0],[]]]]]]]],[89,0,0,[5,6],[1,2604,95],[[0,8,0,0,0,90,0,0,[1,2605,94],[[0,10,11,0,12,13,0,0,[1,2606,0],[[2606,2,91]]],[0,15,16,0,0,0,17,0,[1,2606,0],[[2606,2,92]]],[0,19,16,0,0,20,21,0,[1,2606,1],[[2607,2,93]]],[0,10,11,0,12,21,0,0,[1,2607,0],[[2607,2,91]]],[0,23,16,0,0,24,25,0,[1,2607,89],[[2696,2,26]]],[0,27,11,0,28,29,0,0,[1,2696,1],[[2697,2,30]]],[0,31,32,0,0,33,0,0,[1,2697,2],[[0,69,16,0,0,70,71,0,[1,2697,1],[[2698,2,72]]],[0,73,16,0,0,71,74,0,[1,2698,0],[[2698,2,75]]],[0,76,11,0,77,78,79,0,[1,2698,1],[[2699,2,80]]],[0,81,82,0,0,83,0,0,[1,2699,0],[]]]]]]]],[94,0,0,[5,6],[1,2700,118],[[0,8,0,0,0,95,0,0,[1,2701,117],[[0,10,11,0,12,13,0,0,[1,2702,0],[[2702,2,96]]],[0,15,16,0,0,0,17,0,[1,2703,0],[[2703,2,97]]],[0,19,16,0,0,20,21,0,[1,2704,1],[[2705,2,93]]],[0,10,11,0,12,21,0,0,[1,2705,0],[[2705,2,96]]],[0,23,16,0,0,24,25,0,[1,2706,108],[[2814,2,26]]],[0,27,11,0,28,29,0,0,[1,2815,0],[[2815,2,30]]],[0,31,32,0,0,33,0,0,[1,2815,3],[[0,69,16,0,0,70,71,0,[1,2816,0],[[2816,2,72]]],[0,73,16,0,0,71,74,0,[1,2816,0],[[2816,2,75]]],[0,76,11,0,77,78,79,0,[1,2817,0],[[2817,2,80]]],[0,81,82,0,0,83,0,0,[1,2817,0],[]]]]]]]],[98,0,0,[5,6],[1,2818,90],[[0,8,0,0,0,99,0,0,[1,2820,88],[[0,10,11,0,12,13,0,0,[1,2820,1],[[2821,2,100]]],[0,15,16,0,0,0,17,0,[1,2821,0],[[2821,2,101]]],[0,19,16,0,0,20,21,0,[1,2821,0],[[2821,2,102]]],[0,10,11,0,12,21,0,0,[1,2821,1],[[2821,2,100]]],[0,23,16,0,0,24,25,0,[1,2822,83],[[2905,2,26]]],[0,27,11,0,28,29,0,0,[1,2905,0],[[2905,2,30]]],[0,31,32,0,0,33,0,0,[1,2906,2],[[0,69,16,0,0,70,71,0,[1,2906,0],[[2906,2,72]]],[0,73,16,0,0,71,74,0,[1,2907,0],[[2907,2,75]]],[0,76,11,0,77,78,79,0,[1,2907,1],[[2907,2,80]]],[0,81,82,0,0,83,0,0,[1,2908,0],[]]]]]]]],[103,0,0,[5,6],[0,2909,81,104],[[0,8,0,0,0,105,0,0,[0,2910,79],[[0,10,11,0,12,13,0,0,[1,2911,0],[[2911,2,106]]],[0,15,16,0,0,0,17,0,[1,2911,0],[[2911,2,107]]],[0,19,16,0,0,20,21,0,[1,2911,0],[[2911,2,108]]],[0,10,11,0,12,21,0,0,[1,2912,0],[[2912,2,106]]],[0,23,16,0,0,24,25,0,[1,2912,76],[[2988,2,109]]],[0,27,11,0,28,29,0,0,[0,2989,0],[[2989,5,104]]],[0,31,32,0,0,33,0,0,[3,2989,0],[]]]]]],[110,0,0,[5,6],[1,2990,212],[[0,8,0,0,0,111,0,0,[1,2992,210],[[0,10,11,0,12,13,0,0,[1,2992,0],[[2992,2,112]]],[0,15,16,0,0,0,17,0,[1,2993,0],[[2993,2,113]]],[0,19,16,0,0,20,21,0,[1,2993,0],[[2993,2,114]]],[0,10,11,0,12,21,0,0,[1,2993,0],[[2993,2,112]]],[0,23,16,0,0,24,25,0,[1,2994,205],[[3199,2,115]]],[0,27,11,0,28,29,0,0,[1,3199,1],[[3200,2,30]]],[0,31,32,0,0,33,0,0,[1,3200,2],[[0,69,16,0,0,70,71,0,[1,3200,0],[[3200,2,116]]],[0,73,16,0,0,71,74,0,[1,3201,0],[[3201,2,117]]],[0,76,11,0,77,78,79,0,[1,3201,0],[[3201,2,118]]],[0,81,82,0,0,83,0,0,[1,3202,0],[]]]]]]]],[119,0,0,[5,6],[1,3202,91],[[0,8,0,0,0,120,0,0,[1,3204,89],[[0,10,11,0,12,13,0,0,[1,3204,1],[[3205,2,121]]],[0,15,16,0,0,0,17,0,[1,3205,0],[[3205,2,122]]],[0,19,16,0,0,20,21,0,[1,3205,0],[[3205,2,123]]],[0,10,11,0,12,21,0,0,[1,3205,1],[[3206,2,121]]],[0,23,16,0,0,24,25,0,[1,3206,84],[[3289,2,124]]],[0,27,11,0,28,29,0,0,[1,3290,0],[[3290,2,30]]],[0,31,32,0,0,33,0,0,[1,3290,3],[[0,69,16,0,0,70,71,0,[1,3291,0],[[3291,2,125]]],[0,73,16,0,0,71,74,0,[1,3291,1],[[3292,2,126]]],[0,76,11,0,77,78,79,0,[1,3292,0],[[3292,2,127]]],[0,81,82,0,0,83,0,0,[1,3292,1],[]]]]]]]],[128,0,0,[5,6],[1,3293,80],[[0,8,0,0,0,129,0,0,[1,3295,78],[[0,10,11,0,12,13,0,0,[1,3295,0],[[3295,2,130]]],[0,15,16,0,0,0,17,0,[1,3296,0],[[3296,2,131]]],[0,19,16,0,0,20,21,0,[1,3296,0],[[3296,2,132]]],[0,10,11,0,12,21,0,0,[1,3296,0],[[3296,2,130]]],[0,23,16,0,0,24,25,0,[1,3296,74],[[3370,2,133]]],[0,27,11,0,28,29,0,0,[1,3370,1],[[3371,2,30]]],[0,31,32,0,0,33,0,0,[1,3371,2],[[0,69,16,0,0,70,71,0,[1,3371,1],[[3372,2,134]]],[0,73,16,0,0,71,74,0,[1,3372,0],[[3372,2,135]]],[0,76,11,0,77,78,79,0,[1,3372,1],[[3373,2,136]]],[0,81,82,0,0,83,0,0,[1,3373,0],[]]]]]]]],[137,0,0,[5,6],[1,3374,95],[[0,8,0,0,0,138,0,0,[1,3375,94],[[0,10,11,0,12,13,0,0,[1,3376,0],[[3376,2,112]]],[0,15,16,0,0,0,17,0,[1,3376,0],[[3376,2,139]]],[0,19,16,0,0,20,21,0,[1,3376,1],[[3377,2,114]]],[0,10,11,0,12,21,0,0,[1,3377,0],[[3377,2,112]]],[0,23,16,0,0,24,25,0,[1,3377,89],[[3466,2,140]]],[0,27,11,0,28,29,0,0,[1,3466,1],[[3467,2,30]]],[0,31,32,0,0,33,0,0,[1,3467,2],[[0,69,16,0,0,70,71,0,[1,3467,0],[[3467,2,141]]],[0,73,16,0,0,71,74,0,[1,3468,0],[[3468,2,142]]],[0,76,11,0,77,78,79,0,[1,3468,0],[[3468,2,143]]],[0,81,82,0,0,83,0,0,[1,3468,1],[]]]]]]]],[144,0,0,[5,6],[1,3469,95],[[0,8,0,0,0,145,0,0,[1,3471,93],[[0,10,11,0,12,13,0,0,[1,3471,0],[[3471,2,146]]],[0,15,16,0,0,0,17,0,[1,3472,0],[[3472,2,147]]],[0,19,16,0,0,20,21,0,[1,3472,0],[[3472,2,114]]],[0,10,11,0,12,21,0,0,[1,3472,0],[[3472,2,146]]],[0,23,16,0,0,24,25,0,[1,3473,88],[[3561,2,26]]],[0,27,11,0,28,29,0,0,[1,3561,1],[[3562,2,30]]],[0,31,32,0,0,33,0,0,[1,3562,2],[[0,69,16,0,0,70,71,0,[1,3562,1],[[3563,2,72]]],[0,73,16,0,0,71,74,0,[1,3563,0],[[3563,2,75]]],[0,76,11,0,77,78,79,0,[1,3563,1],[[3564,2,80]]],[0,81,82,0,0,83,0,0,[1,3564,0],[]]]]]]]],[148,0,0,[5,6],[1,3565,94],[[0,8,0,0,0,149,0,0,[1,3566,93],[[0,10,11,0,12,13,0,0,[1,3567,0],[[3567,2,150]]],[0,15,16,0,0,0,17,0,[1,3567,0],[[3567,2,151]]],[0,19,16,0,0,20,21,0,[1,3567,1],[[3568,2,152]]],[0,10,11,0,12,21,0,0,[1,3568,0],[[3568,2,150]]],[0,23,16,0,0,24,25,0,[1,3568,88],[[3656,2,26]]],[0,27,11,0,28,29,0,0,[1,3656,0],[[3656,2,30]]],[0,31,32,0,0,33,0,0,[1,3657,2],[[0,69,16,0,0,70,71,0,[1,3657,0],[[3657,2,72]]],[0,73,16,0,0,71,74,0,[1,3657,1],[[3658,2,75]]],[0,76,11,0,77,78,79,0,[1,3658,0],[[3658,2,80]]],[0,81,82,0,0,83,0,0,[1,3658,1],[]]]]]]]],[153,0,0,[5,6],[1,3659,126],[[0,8,0,0,0,154,0,0,[1,3661,124],[[0,10,11,0,12,13,0,0,[1,3661,0],[[3661,2,0]]],[0,15,16,0,0,0,17,0,[1,3662,0],[[3662,2,155]]],[0,19,16,0,0,20,21,0,[1,3662,0],[[3662,2,156]]],[0,10,11,0,12,21,0,0,[1,3662,1],[[3662,2,0]]],[0,23,16,0,0,24,25,0,[1,3663,119],[[3781,2,157]]],[0,27,11,0,28,29,0,0,[1,3782,0],[[3782,2,30]]],[0,31,32,0,0,33,0,0,[1,3782,3],[[0,69,16,0,0,70,71,0,[1,3783,0],[[3783,2,158]]],[0,73,16,0,0,71,74,0,[1,3783,0],[[3783,2,159]]],[0,76,11,0,77,78,79,0,[1,3784,0],[[3784,2,160]]],[0,81,82,0,0,83,0,0,[1,3784,1],[]]]]]]]],[161,0,0,[5,6],[1,3785,119],[[0,8,0,0,0,162,0,0,[1,3787,117],[[0,10,11,0,12,13,0,0,[1,3787,0],[[3787,2,163]]],[0,15,16,0,0,0,17,0,[1,3788,0],[[3788,2,164]]],[0,19,16,0,0,20,21,0,[1,3788,0],[[3788,2,165]]],[0,10,11,0,12,21,0,0,[1,3788,0],[[3788,2,163]]],[0,23,16,0,0,24,25,0,[1,3788,113],[[3901,2,26]]],[0,27,11,0,28,29,0,0,[1,3901,0],[[3901,2,30]]],[0,31,32,0,0,33,0,0,[1,3901,3],[[0,69,16,0,0,70,71,0,[1,3902,0],[[3902,2,72]]],[0,73,16,0,0,71,74,0,[1,3902,1],[[3903,2,75]]],[0,76,11,0,77,78,79,0,[1,3903,0],[[3903,2,80]]],[0,81,82,0,0,83,0,0,[1,3903,1],[]]]]]]]],[166,0,0,[5,6],[1,3904,104],[[0,8,0,0,0,167,0,0,[1,3906,102],[[0,10,11,0,12,13,0,0,[1,3906,0],[[3906,2,168]]],[0,15,16,0,0,0,17,0,[1,3907,0],[[3907,2,169]]],[0,19,16,0,0,20,21,0,[1,3907,0],[[3907,2,170]]],[0,10,11,0,12,21,0,0,[1,3907,0],[[3907,2,168]]],[0,23,16,0,0,24,25,0,[1,3908,97],[[4005,2,26]]],[0,27,11,0,28,29,0,0,[1,4005,1],[[4006,2,30]]],[0,31,32,0,0,33,0,0,[1,4006,2],[[0,69,16,0,0,70,71,0,[1,4006,0],[[4006,2,72]]],[0,73,16,0,0,71,74,0,[1,4007,0],[[4007,2,75]]],[0,76,11,0,77,78,79,0,[1,4007,0],[[4007,2,80]]],[0,81,82,0,0,83,0,0,[1,4007,1],[]]]]]]]],[171,0,0,[5,6],[1,4008,94],[[0,8,0,0,0,172,0,0,[1,4010,92],[[0,10,11,0,12,13,0,0,[1,4011,0],[[4011,2,173]]],[0,15,16,0,0,0,17,0,[1,4011,0],[[4011,2,174]]],[0,19,16,0,0,20,21,0,[1,4011,1],[[4012,2,175]]],[0,10,11,0,12,21,0,0,[1,4012,0],[[4012,2,173]]],[0,23,16,0,0,24,25,0,[1,4012,87],[[4098,2,26]]],[0,27,11,0,28,29,0,0,[1,4099,0],[[4099,2,30]]],[0,31,32,0,0,33,0,0,[1,4099,3],[[0,69,16,0,0,70,71,0,[1,4100,0],[[4100,2,72]]],[0,73,16,0,0,71,74,0,[1,4100,0],[[4100,2,75]]],[0,76,11,0,77,78,79,0,[1,4101,0],[[4101,2,80]]],[0,81,82,0,0,83,0,0,[1,4101,1],[]]]]]]]],[176,0,0,[5,6],[1,4102,87],[[0,8,0,0,0,177,0,0,[1,4104,85],[[0,10,11,0,12,13,0,0,[1,4104,0],[[4104,2,178]]],[0,15,16,0,0,0,17,0,[1,4104,1],[[4105,2,179]]],[0,19,16,0,0,20,21,0,[1,4105,0],[[4105,2,180]]],[0,10,11,0,12,21,0,0,[1,4105,0],[[4105,2,178]]],[0,23,16,0,0,24,25,0,[1,4105,81],[[4186,2,26]]],[0,27,11,0,28,29,0,0,[1,4186,1],[[4187,2,30]]],[0,31,32,0,0,33,0,0,[1,4187,2],[[0,69,16,0,0,70,71,0,[1,4187,1],[[4188,2,72]]],[0,73,16,0,0,71,74,0,[1,4188,0],[[4188,2,75]]],[0,76,11,0,77,78,79,0,[1,4188,1],[[4189,2,80]]],[0,81,82,0,0,83,0,0,[1,4189,0],[]]]]]]]],[181,0,0,[5,6],[1,4190,90],[[0,8,0,0,0,182,0,0,[1,4191,89],[[0,10,11,0,12,13,0,0,[1,4192,0],[[4192,2,183]]],[0,15,16,0,0,0,17,0,[1,4192,0],[[4192,2,184]]],[0,19,16,0,0,20,21,0,[1,4192,1],[[4193,2,185]]],[0,10,11,0,12,21,0,0,[1,4193,0],[[4193,2,183]]],[0,23,16,0,0,24,25,0,[1,4193,84],[[4277,2,26]]],[0,27,11,0,28,29,0,0,[1,4277,0],[[4277,2,30]]],[0,31,32,0,0,33,0,0,[1,4277,3],[[0,69,16,0,0,70,71,0,[1,4278,0],[[4278,2,72]]],[0,73,16,0,0,71,74,0,[1,4278,1],[[4279,2,75]]],[0,76,11,0,77,78,79,0,[1,4279,0],[[4279,2,80]]],[0,81,82,0,0,83,0,0,[1,4279,1],[]]]]]]]],[186,0,0,[5,6],[1,4280,103],[[0,8,0,0,0,187,0,0,[1,4282,101],[[0,10,11,0,12,13,0,0,[1,4283,0],[[4283,2,188]]],[0,15,16,0,0,0,17,0,[1,4284,0],[[4284,2,189]]],[0,19,16,0,0,20,21,0,[1,4284,0],[[4284,2,190]]],[0,10,11,0,12,21,0,0,[1,4284,1],[[4285,2,188]]],[0,23,16,0,0,24,25,0,[1,4285,95],[[4380,2,26]]],[0,27,11,0,28,29,0,0,[1,4380,0],[[4380,2,30]]],[0,31,32,0,0,33,0,0,[1,4381,2],[[0,69,16,0,0,70,71,0,[1,4381,0],[[4381,2,72]]],[0,73,16,0,0,71,74,0,[1,4381,1],[[4382,2,75]]],[0,76,11,0,77,78,79,0,[1,4382,0],[[4382,2,80]]],[0,81,82,0,0,83,0,0,[1,4383,0],[]]]]]]]],[191,0,0,[5,6],[1,4383,96],[[0,8,0,0,0,192,0,0,[1,4385,93],[[0,10,11,0,12,13,0,0,[1,4386,0],[[4386,2,193]]],[0,15,16,0,0,0,17,0,[1,4386,0],[[4386,2,194]]],[0,19,16,0,0,20,21,0,[1,4386,0],[[4386,2,195]]],[0,10,11,0,12,21,0,0,[1,4386,1],[[4387,2,193]]],[0,23,16,0,0,24,25,0,[1,4387,88],[[4475,2,26]]],[0,27,11,0,28,29,0,0,[1,4475,1],[[4476,2,30]]],[0,31,32,0,0,33,0,0,[1,4476,2],[[0,69,16,0,0,70,71,0,[1,4477,0],[[4477,2,72]]],[0,73,16,0,0,71,74,0,[1,4477,0],[[4477,2,75]]],[0,76,11,0,77,78,79,0,[1,4477,1],[[4478,2,80]]],[0,81,82,0,0,83,0,0,[1,4478,0],[]]]]]]]],[196,0,0,[5,6],[1,4479,107],[[0,8,0,0,0,197,0,0,[1,4481,105],[[0,10,11,0,12,13,0,0,[1,4481,0],[[4481,2,198]]],[0,15,16,0,0,0,17,0,[1,4481,1],[[4481,2,199]]],[0,19,16,0,0,20,21,0,[1,4482,0],[[4482,2,200]]],[0,10,11,0,12,21,0,0,[1,4482,0],[[4482,2,198]]],[0,23,16,0,0,24,25,0,[1,4482,101],[[4583,2,26]]],[0,27,11,0,28,29,0,0,[1,4583,0],[[4583,2,30]]],[0,31,32,0,0,33,0,0,[1,4584,2],[[0,69,16,0,0,70,71,0,[1,4584,0],[[4584,2,72]]],[0,73,16,0,0,71,74,0,[1,4584,1],[[4585,2,75]]],[0,76,11,0,77,78,79,0,[1,4585,0],[[4585,2,80]]],[0,81,82,0,0,83,0,0,[1,4585,1],[]]]]]]]],[201,0,0,[5,6],[1,4586,90],[[0,8,0,0,0,202,0,0,[1,4590,86],[[0,10,11,0,12,13,0,0,[1,4591,0],[[4591,2,203]]],[0,15,16,0,0,0,17,0,[1,4591,1],[[4592,2,204]]],[0,19,16,0,0,20,21,0,[1,4592,0],[[4592,2,205]]],[0,10,11,0,12,21,0,0,[1,4592,0],[[4592,2,203]]],[0,23,16,0,0,24,25,0,[1,4592,81],[[4673,2,26]]],[0,27,11,0,28,29,0,0,[1,4673,1],[[4674,2,30]]],[0,31,32,0,0,33,0,0,[1,4674,2],[[0,69,16,0,0,70,71,0,[1,4674,1],[[4675,2,72]]],[0,73,16,0,0,71,74,0,[1,4675,0],[[4675,2,75]]],[0,76,11,0,77,78,79,0,[1,4675,1],[[4676,2,80]]],[0,81,82,0,0,83,0,0,[1,4676,0],[]]]]]]]],[206,0,0,[5,6],[1,4677,95],[[0,8,0,0,0,207,0,0,[1,4679,92],[[0,10,11,0,12,13,0,0,[1,4679,0],[[4679,2,208]]],[0,15,16,0,0,0,17,0,[1,4679,1],[[4680,2,209]]],[0,19,16,0,0,20,21,0,[1,4680,0],[[4680,2,210]]],[0,10,11,0,12,21,0,0,[1,4680,0],[[4680,2,208]]],[0,23,16,0,0,24,25,0,[1,4680,88],[[4768,2,26]]],[0,27,11,0,28,29,0,0,[1,4768,1],[[4769,2,30]]],[0,31,32,0,0,33,0,0,[1,4769,2],[[0,69,16,0,0,70,71,0,[1,4770,0],[[4770,2,72]]],[0,73,16,0,0,71,74,0,[1,4770,0],[[4770,2,75]]],[0,76,11,0,77,78,79,0,[1,4770,1],[[4771,2,80]]],[0,81,82,0,0,83,0,0,[1,4771,0],[]]]]]]]],[211,0,0,[5,6],[1,4772,83],[[0,8,0,0,0,212,0,0,[1,4774,80],[[0,10,11,0,12,13,0,0,[1,4774,0],[[4774,2,213]]],[0,15,16,0,0,0,17,0,[1,4774,1],[[4775,2,214]]],[0,19,16,0,0,20,21,0,[1,4775,0],[[4775,2,215]]],[0,10,11,0,12,21,0,0,[1,4775,0],[[4775,2,213]]],[0,23,16,0,0,24,25,0,[1,4775,77],[[4852,2,26]]],[0,27,11,0,28,29,0,0,[1,4852,0],[[4852,2,30]]],[0,31,32,0,0,33,0,0,[1,4852,2],[[0,69,16,0,0,70,71,0,[1,4853,0],[[4853,2,72]]],[0,73,16,0,0,71,74,0,[1,4853,0],[[4853,2,75]]],[0,76,11,0,77,78,79,0,[1,4854,0],[[4854,2,80]]],[0,81,82,0,0,83,0,0,[1,4854,0],[]]]]]]]],[216,0,0,[5,6],[1,4855,106],[[0,8,0,0,0,217,0,0,[1,4859,102],[[0,10,11,0,12,13,0,0,[1,4859,0],[[4859,2,218]]],[0,15,16,0,0,0,17,0,[1,4860,0],[[4860,2,219]]],[0,19,16,0,0,20,21,0,[1,4860,0],[[4860,2,220]]],[0,10,11,0,12,21,0,0,[1,4860,0],[[4860,2,218]]],[0,23,16,0,0,24,25,0,[1,4861,97],[[4958,2,26]]],[0,27,11,0,28,29,0,0,[1,4958,0],[[4958,2,30]]],[0,31,32,0,0,33,0,0,[1,4959,2],[[0,69,16,0,0,70,71,0,[1,4959,0],[[4959,2,72]]],[0,73,16,0,0,71,74,0,[1,4959,1],[[4960,2,75]]],[0,76,11,0,77,78,79,0,[1,4960,0],[[4960,2,80]]],[0,81,82,0,0,83,0,0,[1,4960,1],[]]]]]]]],[221,0,0,[5,6],[1,4961,101],[[0,8,0,0,0,222,0,0,[1,4963,99],[[0,10,11,0,12,13,0,0,[1,4963,0],[[4963,2,223]]],[0,15,16,0,0,0,17,0,[1,4963,1],[[4964,2,224]]],[0,19,16,0,0,20,21,0,[1,4964,0],[[4964,2,225]]],[0,10,11,0,12,21,0,0,[1,4964,0],[[4964,2,223]]],[0,23,16,0,0,24,25,0,[1,4964,94],[[5058,2,26]]],[0,27,11,0,28,29,0,0,[1,5059,0],[[5059,2,30]]],[0,31,32,0,0,33,0,0,[1,5059,3],[[0,69,16,0,0,70,71,0,[1,5060,0],[[5060,2,72]]],[0,73,16,0,0,71,74,0,[1,5060,0],[[5060,2,75]]],[0,76,11,0,77,78,79,0,[1,5061,0],[[5061,2,80]]],[0,81,82,0,0,83,0,0,[1,5061,1],[]]]]]]]],[226,0,0,[5,6],[1,5062,97],[[0,8,0,0,0,227,0,0,[1,5064,95],[[0,10,11,0,12,13,0,0,[1,5064,1],[[5064,2,228]]],[0,15,16,0,0,0,17,0,[1,5065,0],[[5065,2,229]]],[0,19,16,0,0,20,21,0,[1,5065,0],[[5065,2,230]]],[0,10,11,0,12,21,0,0,[1,5065,0],[[5065,2,228]]],[0,23,16,0,0,24,25,0,[1,5066,90],[[5156,2,26]]],[0,27,11,0,28,29,0,0,[1,5156,1],[[5157,2,30]]],[0,31,32,0,0,33,0,0,[1,5157,2],[[0,69,16,0,0,70,71,0,[1,5157,1],[[5158,2,72]]],[0,73,16,0,0,71,74,0,[1,5158,0],[[5158,2,75]]],[0,76,11,0,77,78,79,0,[1,5158,1],[[5159,2,80]]],[0,81,82,0,0,83,0,0,[1,5159,0],[]]]]]]]],[231,0,0,[5,6],[1,5160,85],[[0,8,0,0,0,232,0,0,[1,5161,84],[[0,10,11,0,12,13,0,0,[1,5162,0],[[5162,2,233]]],[0,15,16,0,0,0,17,0,[1,5162,0],[[5162,2,234]]],[0,19,16,0,0,20,21,0,[1,5162,1],[[5163,2,235]]],[0,10,11,0,12,21,0,0,[1,5163,0],[[5163,2,233]]],[0,23,16,0,0,24,25,0,[1,5163,79],[[5242,2,26]]],[0,27,11,0,28,29,0,0,[1,5242,0],[[5242,2,30]]],[0,31,32,0,0,33,0,0,[1,5243,2],[[0,69,16,0,0,70,71,0,[1,5243,0],[[5243,2,72]]],[0,73,16,0,0,71,74,0,[1,5243,1],[[5244,2,75]]],[0,76,11,0,77,78,79,0,[1,5244,0],[[5244,2,80]]],[0,81,82,0,0,83,0,0,[1,5244,1],[]]]]]]]],[236,0,0,[5,6],[1,5245,100],[[0,8,0,0,0,237,0,0,[1,5247,97],[[0,10,11,0,12,13,0,0,[1,5248,0],[[5248,2,238]]],[0,15,16,0,0,0,17,0,[1,5248,0],[[5248,2,239]]],[0,19,16,0,0,20,21,0,[1,5248,0],[[5248,2,240]]],[0,10,11,0,12,21,0,0,[1,5249,0],[[5249,2,238]]],[0,23,16,0,0,24,25,0,[1,5249,90],[[5339,2,26]]],[0,27,11,0,28,29,0,0,[1,5339,1],[[5340,2,30]]],[0,31,32,0,0,33,0,0,[1,5340,4],[[0,69,16,0,0,70,71,0,[1,5341,1],[[5341,2,72]]],[0,73,16,0,0,71,74,0,[1,5342,1],[[5343,2,75]]],[0,76,11,0,77,78,79,0,[1,5343,1],[[5344,2,80]]],[0,81,82,0,0,83,0,0,[1,5344,0],[]]]]]]]],[241,0,0,[5,6],[1,5345,98],[[0,8,0,0,0,242,0,0,[1,5347,96],[[0,10,11,0,12,13,0,0,[1,5347,1],[[5347,2,243]]],[0,15,16,0,0,0,17,0,[1,5348,0],[[5348,2,244]]],[0,19,16,0,0,20,21,0,[1,5348,0],[[5348,2,245]]],[0,10,11,0,12,21,0,0,[1,5348,0],[[5348,2,243]]],[0,23,16,0,0,24,25,0,[1,5349,89],[[5437,2,26]]],[0,27,11,0,28,29,0,0,[1,5438,0],[[5438,2,30]]],[0,31,32,0,0,33,0,0,[1,5438,5],[[0,69,16,0,0,70,71,0,[1,5439,0],[[5439,2,72]]],[0,73,16,0,0,71,74,0,[1,5439,0],[[5439,2,75]]],[0,76,11,0,77,78,79,0,[1,5440,1],[[5440,2,80]]],[0,81,82,0,0,83,0,0,[1,5441,1],[]]]]]]]],[246,0,0,[5,6],[1,5443,92],[[0,8,0,0,0,247,0,0,[1,5445,90],[[0,10,11,0,12,13,0,0,[1,5446,0],[[5446,2,248]]],[0,15,16,0,0,0,17,0,[1,5446,0],[[5446,2,249]]],[0,19,16,0,0,20,21,0,[1,5447,0],[[5447,2,250]]],[0,10,11,0,12,21,0,0,[1,5447,0],[[5447,2,248]]],[0,23,16,0,0,24,25,0,[1,5447,85],[[5532,2,26]]],[0,27,11,0,28,29,0,0,[1,5532,0],[[5532,2,30]]],[0,31,32,0,0,33,0,0,[1,5533,2],[[0,69,16,0,0,70,71,0,[1,5533,0],[[5533,2,72]]],[0,73,16,0,0,71,74,0,[1,5533,1],[[5534,2,75]]],[0,76,11,0,77,78,79,0,[1,5534,0],[[5534,2,80]]],[0,81,82,0,0,83,0,0,[1,5534,1],[]]]]]]]],[251,0,0,[5,6],[1,5535,92],[[0,8,0,0,0,252,0,0,[1,5537,90],[[0,10,11,0,12,13,0,0,[1,5537,0],[[5537,2,253]]],[0,15,16,0,0,0,17,0,[1,5537,1],[[5538,2,254]]],[0,19,16,0,0,20,21,0,[1,5538,0],[[5538,2,255]]],[0,10,11,0,12,21,0,0,[1,5538,0],[[5538,2,253]]],[0,23,16,0,0,24,25,0,[1,5539,85],[[5624,2,26]]],[0,27,11,0,28,29,0,0,[1,5624,1],[[5625,2,30]]],[0,31,32,0,0,33,0,0,[1,5625,2],[[0,69,16,0,0,70,71,0,[1,5625,1],[[5626,2,72]]],[0,73,16,0,0,71,74,0,[1,5626,0],[[5626,2,75]]],[0,76,11,0,77,78,79,0,[1,5626,0],[[5626,2,80]]],[0,81,82,0,0,83,0,0,[1,5627,0],[]]]]]]]],[256,0,0,[5,6],[1,5627,87],[[0,8,0,0,0,257,0,0,[1,5629,85],[[0,10,11,0,12,13,0,0,[1,5630,0],[[5630,2,258]]],[0,15,16,0,0,0,17,0,[1,5630,0],[[5630,2,259]]],[0,19,16,0,0,20,21,0,[1,5630,1],[[5631,2,260]]],[0,10,11,0,12,21,0,0,[1,5631,0],[[5631,2,258]]],[0,23,16,0,0,24,25,0,[1,5631,80],[[5711,2,26]]],[0,27,11,0,28,29,0,0,[1,5712,0],[[5712,2,30]]],[0,31,32,0,0,33,0,0,[1,5712,2],[[0,69,16,0,0,70,71,0,[1,5712,1],[[5713,2,72]]],[0,73,16,0,0,71,74,0,[1,5713,0],[[5713,2,75]]],[0,76,11,0,77,78,79,0,[1,5713,1],[[5714,2,80]]],[0,81,82,0,0,83,0,0,[1,5714,0],[]]]]]]]],[261,0,0,[5,6],[1,5715,97],[[0,8,0,0,0,262,0,0,[1,5716,96],[[0,10,11,0,12,13,0,0,[1,5717,0],[[5717,2,263]]],[0,15,16,0,0,0,17,0,[1,5717,0],[[5717,2,264]]],[0,19,16,0,0,20,21,0,[1,5717,1],[[5718,2,265]]],[0,10,11,0,12,21,0,0,[1,5718,0],[[5718,2,263]]],[0,23,16,0,0,24,25,0,[1,5718,91],[[5809,2,26]]],[0,27,11,0,28,29,0,0,[1,5809,1],[[5810,2,30]]],[0,31,32,0,0,33,0,0,[1,5810,2],[[0,69,16,0,0,70,71,0,[1,5810,1],[[5810,2,72]]],[0,73,16,0,0,71,74,0,[1,5811,0],[[5811,2,75]]],[0,76,11,0,77,78,79,0,[1,5811,1],[[5812,2,80]]],[0,81,82,0,0,83,0,0,[1,5812,0],[]]]]]]]],[266,0,0,[5,6],[1,5813,87],[[0,8,0,0,0,267,0,0,[1,5814,86],[[0,10,11,0,12,13,0,0,[1,5815,0],[[5815,2,268]]],[0,15,16,0,0,0,17,0,[1,5815,0],[[5815,2,269]]],[0,19,16,0,0,20,21,0,[1,5815,1],[[5816,2,270]]],[0,10,11,0,12,21,0,0,[1,5816,0],[[5816,2,268]]],[0,23,16,0,0,24,25,0,[1,5816,82],[[5898,2,26]]],[0,27,11,0,28,29,0,0,[1,5898,0],[[5898,2,30]]],[0,31,32,0,0,33,0,0,[1,5898,2],[[0,69,16,0,0,70,71,0,[1,5899,0],[[5899,2,72]]],[0,73,16,0,0,71,74,0,[1,5899,0],[[5899,2,75]]],[0,76,11,0,77,78,79,0,[1,5899,1],[[5900,2,80]]],[0,81,82,0,0,83,0,0,[1,5900,0],[]]]]]]]],[271,0,0,[5,6],[1,5901,89],[[0,8,0,0,0,272,0,0,[1,5902,88],[[0,10,11,0,12,13,0,0,[1,5903,0],[[5903,2,273]]],[0,15,16,0,0,0,17,0,[1,5903,0],[[5903,2,274]]],[0,19,16,0,0,20,21,0,[1,5903,1],[[5904,2,275]]],[0,10,11,0,12,21,0,0,[1,5904,0],[[5904,2,273]]],[0,23,16,0,0,24,25,0,[1,5904,83],[[5987,2,26]]],[0,27,11,0,28,29,0,0,[1,5987,1],[[5988,2,30]]],[0,31,32,0,0,33,0,0,[1,5988,2],[[0,69,16,0,0,70,71,0,[1,5988,1],[[5988,2,72]]],[0,73,16,0,0,71,74,0,[1,5989,0],[[5989,2,75]]],[0,76,11,0,77,78,79,0,[1,5989,1],[[5990,2,80]]],[0,81,82,0,0,83,0,0,[1,5990,0],[]]]]]]]],[276,0,0,[5,6],[1,5991,126],[[0,8,0,0,0,277,0,0,[1,5992,125],[[0,10,11,0,12,13,0,0,[1,5993,0],[[5993,2,278]]],[0,15,16,0,0,0,17,0,[1,5993,0],[[5993,2,279]]],[0,19,16,0,0,20,21,0,[1,5993,1],[[5994,2,280]]],[0,10,11,0,12,21,0,0,[1,5994,0],[[5994,2,278]]],[0,23,16,0,0,24,25,0,[1,5994,120],[[6114,2,26]]],[0,27,11,0,28,29,0,0,[1,6114,1],[[6115,2,30]]],[0,31,32,0,0,33,0,0,[1,6115,2],[[0,69,16,0,0,70,71,0,[1,6115,1],[[6116,2,72]]],[0,73,16,0,0,71,74,0,[1,6116,0],[[6116,2,75]]],[0,76,11,0,77,78,79,0,[1,6116,1],[[6117,2,80]]],[0,81,82,0,0,83,0,0,[1,6117,0],[]]]]]]]],[281,0,0,[5,6],[1,6117,101],[[0,8,0,0,0,282,0,0,[1,6119,99],[[0,10,11,0,12,13,0,0,[1,6120,0],[[6120,2,283]]],[0,15,16,0,0,0,17,0,[1,6120,0],[[6120,2,284]]],[0,19,16,0,0,20,21,0,[1,6121,0],[[6121,2,285]]],[0,10,11,0,12,21,0,0,[1,6121,1],[[6122,2,283]]],[0,23,16,0,0,24,25,0,[1,6122,93],[[6215,2,26]]],[0,27,11,0,28,29,0,0,[1,6216,0],[[6216,2,30]]],[0,31,32,0,0,33,0,0,[1,6216,2],[[0,69,16,0,0,70,71,0,[1,6217,0],[[6217,2,72]]],[0,73,16,0,0,71,74,0,[1,6217,0],[[6217,2,75]]],[0,76,11,0,77,78,79,0,[1,6217,1],[[6218,2,80]]],[0,81,82,0,0,83,0,0,[1,6218,0],[]]]]]]]],[286,0,0,[5,6],[1,6219,95],[[0,8,0,0,0,287,0,0,[1,6221,93],[[0,10,11,0,12,13,0,0,[1,6221,1],[[6221,2,288]]],[0,15,16,0,0,0,17,0,[1,6222,0],[[6222,2,289]]],[0,19,16,0,0,20,21,0,[1,6222,1],[[6223,2,290]]],[0,10,11,0,12,21,0,0,[1,6223,0],[[6223,2,288]]],[0,23,16,0,0,24,25,0,[1,6223,88],[[6310,2,26]]],[0,27,11,0,28,29,0,0,[1,6311,0],[[6311,2,30]]],[0,31,32,0,0,33,0,0,[1,6311,3],[[0,69,16,0,0,70,71,0,[1,6312,0],[[6312,2,72]]],[0,73,16,0,0,71,74,0,[1,6312,1],[[6313,2,75]]],[0,76,11,0,77,78,79,0,[1,6313,0],[[6313,2,80]]],[0,81,82,0,0,83,0,0,[1,6314,0],[]]]]]]]],[291,0,0,[5,6],[1,6314,114],[[0,8,0,0,0,292,0,0,[1,6316,112],[[0,10,11,0,12,13,0,0,[1,6317,0],[[6317,2,293]]],[0,15,16,0,0,0,17,0,[1,6317,0],[[6317,2,294]]],[0,19,16,0,0,20,21,0,[1,6318,0],[[6318,2,295]]],[0,10,11,0,12,21,0,0,[1,6318,0],[[6318,2,293]]],[0,23,16,0,0,24,25,0,[1,6318,106],[[6424,2,26]]],[0,27,11,0,28,29,0,0,[1,6425,0],[[6425,2,30]]],[0,31,32,0,0,33,0,0,[1,6425,3],[[0,69,16,0,0,70,71,0,[1,6426,0],[[6426,2,72]]],[0,73,16,0,0,71,74,0,[1,6426,0],[[6426,2,75]]],[0,76,11,0,77,78,79,0,[1,6427,0],[[6427,2,80]]],[0,81,82,0,0,83,0,0,[1,6427,1],[]]]]]]]],[296,0,0,[5,6],[1,6428,89],[[0,8,0,0,0,297,0,0,[1,6430,87],[[0,10,11,0,12,13,0,0,[1,6430,1],[[6431,2,298]]],[0,15,16,0,0,0,17,0,[1,6431,0],[[6431,2,299]]],[0,19,16,0,0,20,21,0,[1,6431,0],[[6431,2,300]]],[0,10,11,0,12,21,0,0,[1,6431,1],[[6432,2,298]]],[0,23,16,0,0,24,25,0,[1,6432,82],[[6514,2,26]]],[0,27,11,0,28,29,0,0,[1,6515,0],[[6515,2,30]]],[0,31,32,0,0,33,0,0,[1,6515,2],[[0,69,16,0,0,70,71,0,[1,6516,0],[[6516,2,72]]],[0,73,16,0,0,71,74,0,[1,6516,0],[[6516,2,75]]],[0,76,11,0,77,78,79,0,[1,6516,1],[[6517,2,80]]],[0,81,82,0,0,83,0,0,[1,6517,0],[]]]]]]]],[301,0,0,[5,6],[1,6518,87],[[0,8,0,0,0,302,0,0,[1,6519,86],[[0,10,11,0,12,13,0,0,[1,6520,0],[[6520,2,303]]],[0,15,16,0,0,0,17,0,[1,6520,0],[[6520,2,304]]],[0,19,16,0,0,20,21,0,[1,6520,1],[[6521,2,305]]],[0,10,11,0,12,21,0,0,[1,6521,0],[[6521,2,303]]],[0,23,16,0,0,24,25,0,[1,6521,81],[[6602,2,26]]],[0,27,11,0,28,29,0,0,[1,6602,0],[[6602,2,30]]],[0,31,32,0,0,33,0,0,[1,6603,2],[[0,69,16,0,0,70,71,0,[1,6603,0],[[6603,2,72]]],[0,73,16,0,0,71,74,0,[1,6603,1],[[6604,2,75]]],[0,76,11,0,77,78,79,0,[1,6604,0],[[6604,2,80]]],[0,81,82,0,0,83,0,0,[1,6604,1],[]]]]]]]],[306,0,0,[5,6],[1,6605,141],[[0,8,0,0,0,307,0,0,[1,6607,139],[[0,10,11,0,12,13,0,0,[1,6607,1],[[6608,2,308]]],[0,15,16,0,0,0,17,0,[1,6608,0],[[6608,2,309]]],[0,19,16,0,0,20,21,0,[1,6608,0],[[6608,2,310]]],[0,10,11,0,12,21,0,0,[1,6608,1],[[6609,2,308]]],[0,23,16,0,0,24,25,0,[1,6609,134],[[6743,2,26]]],[0,27,11,0,28,29,0,0,[1,6743,0],[[6743,2,30]]],[0,31,32,0,0,33,0,0,[1,6743,3],[[0,69,16,0,0,70,71,0,[1,6744,0],[[6744,2,72]]],[0,73,16,0,0,71,74,0,[1,6744,1],[[6745,2,75]]],[0,76,11,0,77,78,79,0,[1,6745,0],[[6745,2,80]]],[0,81,82,0,0,83,0,0,[1,6745,1],[]]]]]]]],[311,0,0,[5,6],[1,6746,179],[[0,8,0,0,0,312,0,0,[1,6748,177],[[0,10,11,0,12,13,0,0,[1,6748,1],[[6749,2,313]]],[0,15,16,0,0,0,17,0,[1,6749,0],[[6749,2,314]]],[0,19,16,0,0,20,21,0,[1,6749,0],[[6749,2,315]]],[0,10,11,0,12,21,0,0,[1,6749,1],[[6750,2,313]]],[0,23,16,0,0,24,25,0,[1,6750,172],[[6922,2,26]]],[0,27,11,0,28,29,0,0,[1,6922,1],[[6922,2,30]]],[0,31,32,0,0,33,0,0,[1,6923,2],[[0,69,16,0,0,70,71,0,[1,6923,0],[[6923,2,72]]],[0,73,16,0,0,71,74,0,[1,6924,0],[[6924,2,75]]],[0,76,11,0,77,78,79,0,[1,6924,0],[[6924,2,80]]],[0,81,82,0,0,83,0,0,[1,6925,0],[]]]]]]]],[316,0,0,[5,6],[1,6925,83],[[0,8,0,0,0,317,0,0,[1,6927,80],[[0,10,11,0,12,13,0,0,[1,6928,0],[[6928,2,318]]],[0,15,16,0,0,0,17,0,[1,6928,0],[[6928,2,319]]],[0,19,16,0,0,20,21,0,[1,6928,1],[[6929,2,320]]],[0,10,11,0,12,21,0,0,[1,6929,0],[[6929,2,318]]],[0,23,16,0,0,24,25,0,[1,6929,76],[[7005,2,26]]],[0,27,11,0,28,29,0,0,[1,7005,1],[[7006,2,30]]],[0,31,32,0,0,33,0,0,[1,7006,1],[[0,69,16,0,0,70,71,0,[1,7006,0],[[7006,2,72]]],[0,73,16,0,0,71,74,0,[1,7006,1],[[7007,2,75]]],[0,76,11,0,77,78,79,0,[1,7007,0],[[7007,2,80]]],[0,81,82,0,0,83,0,0,[1,7007,0],[]]]]]]]],[321,0,0,[5,6],[1,7008,87],[[0,8,0,0,0,322,0,0,[1,7009,86],[[0,10,11,0,12,13,0,0,[1,7010,0],[[7010,2,323]]],[0,15,16,0,0,0,17,0,[1,7010,0],[[7010,2,324]]],[0,19,16,0,0,20,21,0,[1,7010,0],[[7010,2,325]]],[0,10,11,0,12,21,0,0,[1,7010,1],[[7011,2,323]]],[0,23,16,0,0,24,25,0,[1,7011,81],[[7092,2,26]]],[0,27,11,0,28,29,0,0,[1,7092,0],[[7092,2,30]]],[0,31,32,0,0,33,0,0,[1,7093,2],[[0,69,16,0,0,70,71,0,[1,7093,0],[[7093,2,72]]],[0,73,16,0,0,71,74,0,[1,7094,0],[[7094,2,75]]],[0,76,11,0,77,78,79,0,[1,7094,0],[[7094,2,80]]],[0,81,82,0,0,83,0,0,[1,7095,0],[]]]]]]]],[326,0,0,[5,6],[1,7095,90],[[0,8,0,0,0,327,0,0,[1,7097,88],[[0,10,11,0,12,13,0,0,[1,7097,1],[[7098,2,328]]],[0,15,16,0,0,0,17,0,[1,7098,0],[[7098,2,329]]],[0,19,16,0,0,20,21,0,[1,7098,0],[[7098,2,320]]],[0,10,11,0,12,21,0,0,[1,7098,1],[[7099,2,328]]],[0,23,16,0,0,24,25,0,[1,7099,83],[[7182,2,26]]],[0,27,11,0,28,29,0,0,[1,7182,1],[[7183,2,30]]],[0,31,32,0,0,33,0,0,[1,7183,2],[[0,69,16,0,0,70,71,0,[1,7183,1],[[7184,2,72]]],[0,73,16,0,0,71,74,0,[1,7184,0],[[7184,2,75]]],[0,76,11,0,77,78,79,0,[1,7184,1],[[7185,2,80]]],[0,81,82,0,0,83,0,0,[1,7185,0],[]]]]]]]],[330,0,0,[5,6],[1,7186,91],[[0,8,0,0,0,331,0,0,[1,7187,90],[[0,10,11,0,12,13,0,0,[1,7188,0],[[7188,2,332]]],[0,15,16,0,0,0,17,0,[1,7188,0],[[7188,2,333]]],[0,19,16,0,0,20,21,0,[1,7189,0],[[7189,2,320]]],[0,10,11,0,12,21,0,0,[1,7189,0],[[7189,2,332]]],[0,23,16,0,0,24,25,0,[1,7189,85],[[7274,2,26]]],[0,27,11,0,28,29,0,0,[1,7274,0],[[7274,2,30]]],[0,31,32,0,0,33,0,0,[1,7274,3],[[0,69,16,0,0,70,71,0,[1,7275,0],[[7275,2,72]]],[0,73,16,0,0,71,74,0,[1,7275,1],[[7276,2,75]]],[0,76,11,0,77,78,79,0,[1,7276,0],[[7276,2,80]]],[0,81,82,0,0,83,0,0,[1,7276,1],[]]]]]]]],[334,0,0,[5,6],[1,7277,90],[[0,8,0,0,0,335,0,0,[1,7279,87],[[0,10,11,0,12,13,0,0,[1,7279,1],[[7280,2,336]]],[0,15,16,0,0,0,17,0,[1,7280,0],[[7280,2,337]]],[0,19,16,0,0,20,21,0,[1,7280,0],[[7280,2,320]]],[0,10,11,0,12,21,0,0,[1,7280,1],[[7281,2,336]]],[0,23,16,0,0,24,25,0,[1,7281,82],[[7363,2,26]]],[0,27,11,0,28,29,0,0,[1,7364,0],[[7364,2,30]]],[0,31,32,0,0,33,0,0,[1,7364,2],[[0,69,16,0,0,70,71,0,[1,7365,0],[[7365,2,72]]],[0,73,16,0,0,71,74,0,[1,7365,0],[[7365,2,75]]],[0,76,11,0,77,78,79,0,[1,7365,1],[[7366,2,80]]],[0,81,82,0,0,83,0,0,[1,7366,0],[]]]]]]]],[338,0,0,[5,6],[1,7367,105],[[0,8,0,0,0,339,0,0,[1,7369,103],[[0,10,11,0,12,13,0,0,[1,7370,0],[[7370,2,340]]],[0,15,16,0,0,0,17,0,[1,7371,0],[[7371,2,341]]],[0,19,16,0,0,20,21,0,[1,7371,1],[[7372,2,342]]],[0,10,11,0,12,21,0,0,[1,7372,0],[[7372,2,340]]],[0,23,16,0,0,24,25,0,[1,7372,97],[[7469,2,26]]],[0,27,11,0,28,29,0,0,[1,7469,0],[[7469,2,30]]],[0,31,32,0,0,33,0,0,[1,7469,3],[[0,69,16,0,0,70,71,0,[1,7470,0],[[7470,2,72]]],[0,73,16,0,0,71,74,0,[1,7470,1],[[7471,2,75]]],[0,76,11,0,77,78,79,0,[1,7471,0],[[7471,2,80]]],[0,81,82,0,0,83,0,0,[1,7471,1],[]]]]]]]]];
+</script>
+<script type="text/javascript">
+window.output["suite"] = [1,2,3,0,[],[0,0,7473],[],window.sPart0,[],[58,49,9,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Api Demo","*/Users/magnet/IdeaProjects/test/4_test_cases/api_demo.robot","*../4_test_cases/api_demo.robot","*1 - Check API add product thành công với đầy đủ các dữ liệu hợp lệ","*api","*test","*NameError: name 'params' is not defined","*Call API demo","eNp9kM1OwzAQhO99iipnTOziJHUrX5KGCz+tVMQVbWOHWiR2SNaVEOLdiUtbOOHT+tuZtWdXrgVj5R6xGxZxjHpA/XZ9sHEDuxg6Ex9o3PVOkRbsdDylVRtnLMoj9RUG+KBx75TcrLdP4boCBPk5nYQ6qgD1q+s/osU0SrM8LUteEHGbMcLTsZrnBSNFUaZC5CsxEyK6Ovmc0sFzD+36js1ueCJE6J7GKj1UvenQOBtUDbQvFxG7qCy0+p9215sq9BNKz+jdg0WD4bv8lw6+6xqj+zCLaZbVTFBSQwqEJ5qSOd9xktaKzhmra0iyywveGgymCkw0+Qpoi4B+KMZ0ckZZIDkMegM9tDJkXqpxe0eh3/1Qo5anXQfXuX4co/2VPUPjtfwGFR6BPQ==","*Call Api","*testing_api","*${Domain}${EndPoint}    ${Method}    ${Data}","*${Results}","*Should Be Equal As Strings","*BuiltIn","*<p>Fails if objects are unequal after converting them to strings.\x3c/p>","*${Results}[status_code]    ${StatusCode}","*2 - Check API add product thành công với với code là chuỗi kí tự số","eNp9kDFPwzAQhff+iiozJnZxkrqVl6RhAyqBWNE1dqhFYpvkXAkh/jtxaQsTnp6/e8++u43rwVi5R/TjKk1Rj6jfrg827WCXgjfpgaZ+cIr0YOfTqa3aOmNRHmloMMI7jXun5Pbh8SleN4AgP+ezqJMGUL+64SNZzZO8KPO65hURtwUjPJ/UsqwYqao6F6LciIUQydUp55SOGba44ZkQsXB6UemxGYxH42w0dNC/XEzs4rLQ63/KfjBNrGeUntF7AIsGY6f8l47B+87o4diLZkXLBCUt5EB4pilZ8h0neavokrG2hay4/BCswRhqwCSzr4geETCM1TSYXFAWSQmj3sIAvYzjrtW0uKMx7H6oUevTmmPqrO+n0f7anqELWn4DLvh/iQ==","*3 - Check API add product thành công với với code là chuỗi kí tự lower case","eNp9kD1PwzAQhvf+iiozJnZxkrqVl6RhAyqBWNE1dqhFYofkUgkh/ju50hYmPJ2fe9/72oQWnNd7xG5YxTHaAe3b9cHHDexi6Fx84HHXB8Na8PPpld5sg/Ooj3SskOCdxX0wevvw+ETfDSDoz/mM4qgCtK+h/4hW8yjN8rQsZcHUbSaYTKdomReCFUWZKpVv1EKp6OrkC8aShyYSixuZKEXJU1Vjh6p3HbrgSdRA+3IRiYvKQ2v/SXe9qyifcH5G7yN4dEjTyl86jF3XONtTLWFFVgvFWQ0pMJlYzpZyJ1laG74Uoq4hyS4dRu+QTBW4aPZF6BEBx6GYltMLLojkMNgt9NBqWnltpuMdhePuhzqzPp2aXOf4flrtr+wZmtHqb/PzgUk=","*4 - Check API add product thành công với với code là chuỗi kí tự upper case","eNp9kMFuwjAMhu88BeqZrAlLWwLKpaW7bUMCcZ1Mk45obZK1LtI07d3XMGA7zSfn8//bsdeuBWPlEdH3yzhG3aN+uzvZuIFDDN7EJxr7zinSgp2OUVq1ccaiPNOhwgAfNR6dkpvn7S4814AgP6eTkEcVoH513Ue0nEZplqdlyQsiHjJGeDpmi7xgpCjKVIh8LeZCRLOLzykdPLtyu2Pze56IMdJodmmrdF91xqNxNqgaaF9uKnZTWWj1P2XfmSrUE0qv6H0AiwbDd/kv7QfvG6O70ItpltVMUFJDCoQnmpIFP3CS1oouGKtrSLLbhMEaDKYKTDT5CmiLgENfjNvJOWWB5NDrDXTQyrDzSo3XOwuHww81anW5dXBd86dxtb+yPTSDlt/MfYD/","*5 - Check API add product thành công với với code là chuỗi kí tự upper case và lower case","eNp9kMFuwjAMhu88BeqZrAlrUwLqpaW7bUMCcZ1Mk45obZK1DtI07d3XMGA7zSfn8//bsde2A23yI6IblnGMakD1dncycQuHGJyOTzR2vZWkAzMdozJyY7XB/Ex9jQE+KjxamW+et7vwXANC/jmdhDyqAdWr7T+i5TTiWcGrKimJeMgYSfiYLYqSkbKsuBDFWsyFiGYXn5UqeHZqi/P7JBVj8Gh26SrVUPfaobYmiFroXthVxW4qA536p+x6XYd6SukVvXswqDH8Nvmlg3eu1aoPvZhiWcMEJQ1wIEmqKFkkh4TwRtIFY00DaXab4I3GYKpBR5OvgLYI6IdyXC6fUxZIAYPaQA9dHlZeyfF4Z6E//FAtV5dTB9c1fxpX+yvbQ+tV/g2uwoEO","*6 - Check API add product thành công với dữ liệu không có param desc","eNpNkE1PwzAMhu/7FVPPC01G+pFNubQrN2DSJq7Ia1IW0aaldSYhxH8nGdvAJ+fx+zq2N30Hxsoj4jCt4hj1hPr97mTjFg4xDCY+0XgYe0U6sHMflVXb3liUZ+pqDPBR47FXcvu824fnBhDk13wW8qgG1G/9+Bmt5lGaFWlV8ZKIh4wRnvosL0pGyrJKhSg2YilEtLj4eqWDZ693uLznifCR5j6ixaWzhe6saKF7ZVcJu5WH0dShnlB6RR8OLBoMs/A/OrlhaI0eQy+mWdYwQUkDKRCeaEpyfuAkbRTNGWsaSLLbD84aDKYaTDT7DmiHgG4q/ehySVkgBUx6CyN0Miy0Vv40Z6E7/FKj1pdDBtc1f/Kr/Ze9QOu0/AFpoXfl","*7 - Check API add product thành công với dữ liệu không có param Unit","eNp9kDFPwzAQhff+iipzTeziJHUrL0nDBlRqxYousUMtEtskl0oI8d+JS6sycdPzd++dfLd1HRgrj4h+WMcx6gH1+93Jxi1UMXgTn2jse6dIB3Y+VWnVzhmL8kzHGgN81Hh0Su6e94fw3AKC/JrPgo5qQP3m+s9oPY/SLE/LkhdEPGSM8HRSq7xgpCjKVIh8K5ZCRItLzikdMge9x+U9T8RUqaCUsmhxGa30UPfGo3E2OFvoXtnVenNZ6PQ/bd+bOvQTSq/oYwSLBsOX+Y0Oo/et0X2YxTTLGiYoaSAFwhNNyYpXnKSNoivGmgaSLJp9h9weAcehmLaRS8oCyWHQO+ihk2HHjZqudTaO1S81anO5bUhd9dO0xl/bC7Sjlj+Xk31j","*8 - Check API add product thành công với dữ liệu không có param desc và Unit","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"67B6EE4C-9F71-464C-8BC1-CCE699BD9299\",\n    \"code\": \"TeSt23459999690002\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"1e17f190-fa6a-45e0-84b4-6fd0811ffa57\"\n}    StatusCode=201    BaseParam=code;data    SubParam=id;productCode;productName    SubParamValue=","*9 - Check API add product không thành công với dữ liệu UUID của category không tồn tại","eNp9UUFuwjAQvPcVUc6ksUkChCiXQo9VkUC9Vht7A1YTO43XSBXi77UR0EqVuid7ZnZ2x16bHpSuD0SDXaYpoSX8eDzqtIMmhUGlR5YOo5FJDzry9azlxihN9QV1ggL4gnQwst68bnfhugaC+hQ9hHMsgHBvxq94GcWMN5Dlc5YsOEKSsyZLylm5SKCcChRF3uScx5Nrn5EYena4pWmWF6WvWckYy+LJ1VqiFaMaSBkdlB307/wm5XeVhh7/oYdRicAXjN2gTweaFIWV8x/UumHoFI7BiyOft7xkSQszH6RAH8lvn8xayRacty0U8/sEpxWFJnFQKOKHcwC3BOTsymes/YiAPIHFDYzQ1yF51aO1sMeL1jV/iapV2Mnf9Bt0Lrjl3pBXq+uzR9pQ1Bqn5TI6sXN1+45vunqPXA==","*10 - Check API add product không thành công với dữ liệu UUID của category là biến name của category có trong hệ thống","eNp9kE1OwzAQhfc9RZR1Q2ya9C/KBsqyolIrtmgaTxqL+Id4XKlCHIZTILHlJNyEuGoLEhKzst/3/GbGC6NA6rIhsm6epoSO8Olqr9MWtilYme5ZajsjEgU66utOi5WRmsqj6isK4hKpMaJc3a834boAgvIlGoRzXAHhznSHeB7Fy8+3Q7STXx/vFA9P2AgMaINruh5l+ayv8YwxNoqHpwSBruqkJWl0cLagHvnZyi8uDQr/wbaTVeA5Y2fp2YMmSWGy7Ed13tpWYheyOPJJzWcsqWEMSZYjS6bZNkvGtWBTzusa8smlg9eSwqOqkVjFg9cgrgnIu9t+x7JvEZQbcLiCDlQZNi8UOgc7PHr99i8oaomt+I0foPXHtGIpnQKqGhSR1NZTcf7qb4sJiU8=","*11 - Check API add product không thành công với dữ liệu UUID của Supply không tồn tại","eNp9T8lOwzAQvfcropwb7CTO4ka5QDkiKqXiiiaO21okdojHlVDVfycuLSAhMSf7bTNvbQZQuj4gjnZFCEqL8u3uqEkPLYFRkSMl42S6aAAdzPOou41RGusL6gR68EniwXT15rnZ+u8aEOpTsPDvUADKvZk+wlUQ0riFlBU0KmMJEaNtGvGclxHwREiRsZZRGi6vPtNJ79nKBpOUZXyenFNK03B5je6kFZMaURntlT0Mr/FNGn+rNAzyH3qclPB8RukNenegUaE/mf2g1o1jr+Tks4DHqSizLMp2WRGxPJ0rFWxuI1hSQFnkwPm8gZCEfpmdVuiN4qCkCBdnDzYI6OzD3LOe13jkHqzcwARD7dtXg7QW9vKide1fotop2Xe/6RfonU9jc5u4aq4XB9pgsDNOd6vgRM/Vrckn9KWPRw==","*12 - Check API add product không thành công với dữ liệu UUID của Supply là biến name của Supply có trong hệ thống","eNp9j09PwkAQxe98iqZn6m5pQUrTi+ARJYFwNdPtSDd2/9idJTHG7263gpqYOKeZ33vzMrMxCqSuWiLrVowROsKXm7NmHdQMrGRnzmxvmkSBjoa6183OSE3VSL2gALdIrWmq3eP+EMYNEFTv0ST0sQDCk+nf4lUU87SGLL/lyTJFSHJeZ0mxKJYJFDOBYp7XOefx9LJnGgw7B9zTLMvnxVCLgnOexdNLdINO9NKSNDo4O1BP6dWafrs0KPxHtr0UQZ9zfkWvHjRJCifnP9R5azuJfchagzY6Okqk6AHUkMXYjH/ZvJYULKKVKOLJR4B7AvJuPXxUDYGB3IHDHfSgqvBnqdA5OOHo9fVfoXyW2DW/5SN0fkwrt9IpINFiE0ltPZXXQz8BPFWIuQ==","*13 - Check API add product không thành công với code product đã tồn tại trong hệ thống","eNp9T0FugzAQvPcViHOoDZgAQVza9NaokVL1Wi1mE6xiQ/E6UlX178VpolSq1D3ZMzuzM+tBgzJ1RzTaFWOElvDt9mhYDw2DUbEjZ+M0tJEGE8zzYNrtoAzVJ9RJ8uAGqRvaevu0e/bfNRDUn8GNf4cSCA/D9BGugpDHDaQi51ERI0SCN2lULssigjKRKDPRCM7DxVk3tOg1j6DjOA4XZ7sWrZzUSGownu1Bv8ZJKrJynuuWAY3/0OOkpOczzi/QuwNDinxMcUWtG8de4eS9oIxTWWRZlO2zPBLLdK6Ri7mBFEkORb6EZA4fMJbwH7EzirxQdgplePPlwR0BOXs/d6vnMx65A4tbmEDXvnGl0Vo44GnXNX+Jaq+wb3/TL9C7k1u1UVYDyQ7bQJnRUXWJ/w0xYomC","*14 - Check API add product không thành công với baseURL bị sai","eNqVTztPwzAQ3vMrIs8NdhI7j6ruAGVEVGphRRfHJRaJE5xLJYT478SFqgMSgtvue919m74DY2WDOIxLSlGPqF+ujpa2UFEYDD0yOri+jjqwcTjPra23vbEoT/Ck0IN3Gpu+ltv73d6vG0CQD65dhisIG6cPkvztwDmTrP+nX1FYB8F7GPjrRAHq5969kWVIWFxBynMWFbGGiLMqjcqsLCIoE6WV4BVnjCy+fX2tvWevd5ikXJTzZCVjLCaL7+haj8qZAU1vvbKF7ik+Sy8qC53+hR6cUZ4XjJ2h1wksGvQv8ws6TsPQGu18FpRxqgohInEQecSzdK6U87mN4kkORZ5BMhcJKU3Yl3myBr1RNUYrEnx4cIeA03gz95SccY9cw6i34KCTJ36qfi6P0E5afgL3EJ0k","*15 - Check API add product không thành công với endpoint bị sai","eNp9j0tPwzAQhO/9FVHODXYS59UoFyjcgEqtuKKNs1CLxA7OuhJC/HfiPlRO7Mn7zczKszYDKN3sicZpxRjhRPhxc9Csh5bBqNiBs9GaLhpAB/Pc625jlKbmSJ2k2NNHpL3pms3zdufXNRA038HCv0MJhO/GfoWrIORxC6koeFTGCJHgbRpVeVVGUCUSZSZawXm4POdMhz6zwy0lqciqefKKcx6Hy/PpDidp1UjKaO/sYXiNL9arS8OA/8ijVdLrGecX9OlAkyL/ZXGlkxvHXqH1t6CKU1lmWZS9ZUUk8nSuVIi5jRRJAWWRQzIXCRhL+CnstCIflHuFMlz8eLglIDfdzT0bwYUntzDhBiwMzVF37WlBa42tp6O9/qu8QO+weTIUPBinu3o+8wvsfH9O","*16 - Check API add product không thành công khi chọn method là GET","eNp9kUtrwzAQhO/+FcLnuJZt+ZXgS5vQXgqBhF7LWt4korbk2OtAKf3vlfIghUL3pm9mFw2zNB0oXR2I+nEehoQj4cfDSYct1CH0KjzxsB9ME3SgmZ2VbtZGaarOdJLk4CvSwTTV82rrXksgqC5ozizzvC/mOcGXQLg3w6c/Zz6PakhEzoMiQggEr5OgzMoigDKWKFNRC8792XXPNOh2trihOBFpaScrOeeRP7uebnCUg+pJGe2cLXTv0c16d2no8B+5H5R0esr5DR0n0KTIfVnc6Tj1fatwcLegjBJZpGmQ7tI8EFliI+XCppEizqHIM4htEBaGMb8sT1qRW5QHhdL3vh3cENA0PtmcleCpI48w4hoG6CqXftHhOMIez96p/issdgrb5rf8Bu10vrZ4seWyAY+TLZd152KYNsRcCjPQwnb0A07Ikr8=","*17 - Check API add product không thành công khi chọn method là PUT","eNp9kc1qwzAQhO9+CuFzXMu2/BfjS5tCL4VA0l7LWt4korbk2OtAKX33SklKCoXuTd/MLhpmZXpQuj4QDdMyDAknwve7kw47aEIYVHji4TCaNuhBMzuPul0bpak+01mSg89IB9PW65ete62AoL6gJbPM8z6Z5wRfAuHejB/+kvk8aiAROQ+KCCEQvEmCMiuLAMpYokxFIzj3F9c906Lb2eKG4kSkpZ2s5JxH/uJ6usVJjmogZbRzdtC/RT/Wm0tDj//Iw6ik01POf9BxBk2K3JfFjU7zMHQKR3cLyiiRRZoG6S7NA5ElNlIubBop4hyKPIPYBmFhGPPL8qwVuUV5UCh978vBDQHN04PNWQueOnIPE65hhL526asepwn2ePbOzV+h2ins2t/yK3Tz+Vr1ZMtlIx5nWy7rz8UwbYi5FGakynb0DaN1kwo=","*18 - Check API add product không thành công khi chọn method là DELETE","eNp9Uctqg0AU3ecrxHXsjDq+Im7aCF20EEjotlzHm2Sozhi9Bkrpv9cxCSkUelfDeTGHszYtKF0cibphxRjhQPjxcNasgYpBp9iZs643tdeCdqYrdb0xSlMxo6MkC74iHU1drMuXcldaYA0ExZezsG9XAuHB9J/uynG5X0EoEu6lPoIneBV6WZylHmSBRBmJSnDuLq8+U6P17HBLQSiibLo445z77vIaXeMge9WRMtoqG2jf/Zv0rtLQ4j901ytp+YjzG3QaQZMi+2VxR4ex6xqFvc2CzA9lGkVetI8ST8ThVCkRUxspggTSJIZgKuIwFvCLedSKrFEeFUp38W3BLQGNw9PUsxA8ssgjDLiBHtrCts9bHAY44Kwdq79EvlfY1L/pN2jGOS1/niZ1ejyN06ROOy/kaEOObWF6yi9r/QAUYpC2","*19 - Check API add product không thành công khi body truyền vào sai chuẩn json","eNp9T71OwzAQ3nkKK3NDnMb5a5UFyoio1IoVXRzTWE0cE18qIcTMgzAjFiY68iR5E+yqha032d/f3bfoWpCqqBG1mQUBCoNie7lTQQNlAFoGOxrovqv8FhSxc6OqZScVFgd04OjAW4F1VxXLu9XafReAULyQC/f2OKDYdP2zNyMeDUuIWEr9LBTgM1pGfp7kmQ/5lAses5JR6k2Ovq4SzrMWK5xGLM7tJDmlNPQmx+hKGN5LjbJTTtlA+xCepP8qBa04Q+tecsfHlJ6gpwEUSnQns3/UDFo3UvQuC/Iw4lkc+/FjnPosiWyllNk2nE1TyNIEpvRvw6AkOhOvpeC23qtDVwg4mGtbsrA7HHIFRiyhh7Zw1eetMAY24qAdyvPEPTTDIWe+GPefpJHj/m0gqh6/PzTZ1j9fakPqcf+uSWOZX5UVklU=","*20 - Check API add product không thành công khi body truyền vào là rỗng dạng {}","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;objectName    SubParamValue=400;Dữ liệu nhập không hợp lệ;createProductRequest","*21 - Check API add product không thành công khi không truyền gì ở body","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data=    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;null","*22 - Kiểm tra require của trường category khi không truyền giá trị vào param category","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"\",\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;category","*23 - Kiểm tra require của trường category khi không truyền param category","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;category","*24 - Kiểm tra validate của trường category có giá trị null","eNp9kLFOwzAQhvc+hZWZELdJmqZRFigjolIrVnR13MaqY5v4XAkhZh6EGbEw0ZEnyZsQVy0gIXGT/f3/3fn3TDcgVFkjGjuNIuQW+fZ8pyIJqwiMiHY0Mq2uwgYU6etKVXMtFJYH6hh6eM2x1lU5v1ks/XUGCOUjGfhzwAD5RrcPwZQoJ+XZkeqK9yRY8gWO4iTN+xrnlNI0ODs2VtyyVhgUWnmnhOZueLIOv10KGv6PbFrBvJ5SekL3DhQK9A9Kfqh1xkjBWz8L8mHMJmkapus0C5NxTMNJlsRhzpJRBpNsDCMaHIM4JdD3sFpwFgyePFwgoLOXfcSy3+DJBVg+hxaa0gcvGm4tbPjB61Z/hWItuKx+y7cg3WFaMev2b0SKbv/siKq7j1dDtvXnu9qQutu/GCJ7pTh9+hdBNZBY","*25 - Kiểm tra validate của trường category có giá trị là số","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": 123,\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;category","*26 - Kiểm tra validate của trường category có giá trị là kí tự đặc biệt","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400###\",\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;category","*27 - Kiểm tra validate của trường category có giá trị là kí tự tiếng việt","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400Â\",\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;category","*28 - Kiểm tra validate của trường category có giá trị là kí tự tiếng trung","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400富\",\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;category","*29 - Kiểm tra validate của trường category có giá trị space ở đầu","eNp9UbtOwzAU3fsVVuaGOImdR6MsUEZEpVas6MZxG6uJY2KnEkLMfAgzYmGiI1+SPyGu2oKExJ3s87o+8rxtQMi8MkbpmecZrg3fXuykV0PhgRLeDnuqa0u3AYnGuZblohXS5Ae0Z8aCN9xUbZkvbpcre52DgfwJTezZYWD4pu0enRlyEPYLCEmM3cTn4BJchG4apYkLacA4o6QgGDvTo7EtuTWt+NIEIaHpOFGKMabO9Jhdcs06oYxopVXW0Nz7J6l/Vklo+D+06gSzPMX4BD30II0w9s3kB9W9UrXgnc2C1A9ZQqlL1zR2SRSOlWIytmEkiCGJIwjORXopjPWwSnDmTJ4tuDRgen01VszHDRa5BM0X0EGT2+JZw7WGDT9o++Ivka0Fr8vf9B3U/SEtmw/7d1SLYf/SI1kNn28KbauvD7lB1bB/Vagemez0L9+th5gF","*30 - Kiểm tra validate của trường category có giá trị space ở cuối","eNp9UT1OwzAY3XsKKzMhTuL8NcoCZURUasWKvjhuYzVxTGxXQoiZgzAjFiY6cpLchLhqAAmJN9nvT37yomuBi6LWWqq552mmNNud74XXQOmB5N4ee7LvKrcFgUZciWrZcaGLI2uotuQ103VXFcub1dpeF6CheEQze3YoaLbt+gdnjhzslxCSBLupz8AluAzdLM5SF7KAMhqRkmCMnLNTsKuYDa3ZSgchibIRcYYxjp2zU3fFFO251LwT1tlAe+dPVv/bJaBl/8iy59TqEcYTdW9AaK7tm8kPq4yUDWe97YLMD2kaRW60iRKXxOG4KSHjHEqCBNIkhgBPQ4zg2mZozRl1Zk+WXGnQRl2OEwu7ecQFKLaEHtrCDs9bphRs2dFryr9CvuGsqX7Lt9CYY1u+GA5vqOHD4dkgUQ8frxLt6s93sUX1cHiRqBmVfPqXL7NZmAY=","*31 - Kiểm tra validate của trường category có giá trị space ở giữa","eNp9UbtOwzAU3fsVVuaGOInzapQFyoio1IoV3ThuYzVxTGxXQoiZD2FGLEx05EvyJ8RVW5CQuJN9XtdHnnctcFHUWks18zzNlGbbi53wGig9kNzbYU/2XeW2INA416JadFzo4oAaqi14w3TdVcXidrmy1zloKJ7QxJ4dCpptuv7RmSEH+yWEJMFu6jNwEcFl6GZxlrqQBZTRiJQEY2d6NHYVs6YVW+ogJFE2TpxhjGNnesyumKI9l5p3wiobaO/9k9Q/qwS07B9a9pxaPsL4BD0YEJpr+2bygyojZcNZb7Mg80OaRpEbraPEJXE4dkrI2IaSIIE0iSE4FzGCa+uhNWfUmTxbcKlBG3U1VizGDRa5BMUW0ENb2OJ5y5SCDTtoTfmXyNecNdVv+g4ac0jL58P+HTV82L8YJOrh802ibf31ITaoHvavEjUjk5/+5RuwkJgG","*32 - Kiểm tra require của trường supplier khi không truyền giá trị vào param supplier","eNp9kLFOwzAQhvc+hZW5IU6blqZRFigjolIrVnRxjsZq4pj4XAkhZh6EGbEw0ZEnyZs0LgSQkLjp7vv/O/tuUVcgVVoQaTMPAkJDuD3ZqaCELAAtgx0PdFPnfgWKdXGh8mUtFaVHagU5eIlU1Hm6vFqtXbkAgvSBDVzuCSDc1M29N2ceDzMYR6fcn4UIfsSzsR9P45kP8UigmERZxLk3/OwzVutSYuP6eibqHF29xhWNxtEk7mIac85jb/j1XI5GNFKTrJVzllDdhL01/HYpqPAfWTdSOH3CeY/uLCiS5NaIfqhVktwcUUgU3uDRwRUBWXPefTXtnI6cgcElNFClboGkQmNgg0evzf4Kya3EMv8tX0Npj9OSRbt/ZaVs90+WqaJ9f9FsW3y8qQ0r2v2zZmWnJP3pDsQKj5w=","*33 - Kiểm tra require của trường supplier khi không truyền param supplier","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;supplier","*34 - Kiểm tra validate của trường supplier có giá trị null","eNp9kLFOwzAQhvc+hZW5IU6blqZVFigjolIrVnRxjsaq45j4XAkhZh6EGbEw0ZEnyZsQlxaQkLjJ/v7//vN5XlcgdVYSGTuNIkJLuDnZ6khBHoGR0ZZHpqmLsALNurrQxaKWmrI9dYI8vEQq6yJbXC1X/joHguyB9fw5EEC4rpv7YMoCHucwTE55OIkRwoTnwzAdp5MQ0oFAMUryhPOg/9VnnTFKYtP1aafUgYq6QJ+0wiUNhsko7Wqccs7ToH8YWKAVjTQka+2dCqqb+GiNv10aKvxHNo0UXh9xfkR3DjRJ8oskP9RpST5HlBJF0Hv0cElAzp53T806pydnYHEBDVSZX2BWobWwxr3X5X+F2a1EVfyWr0G5fdps3u5emZLt7skxXbbvL4Ztyo83vWZlu3s2THXK7Ph5n+/DkRM=","*35 - Kiểm tra validate của trường supplier có giá trị là số","eNp9kLFOwzAQhvc+hZW5IU6blqZRFigjolIrVnRxjsZq4pj4XAkhZh6EGbEw0ZEnyZsQhxaQkLjJ/v7//vN5UVcgVVoQaTMPAkJDuD3ZqaCELAAtgx0PdFPnfgWKdXWh8mUtFaU9tYIcvEQq6jxdXq3W7roAgvSBDdzZE0C4qZt7b848HmYwjk65PwsR/IhnYz+exjMf4pFAMYmyiHNv+NVnrNalxKbrC0fj6EBFnaNLWuOKOjqJu5rGnPPYGx4G5mhEIzXJWjlnCdVNeLSG3y4FFf4j60YKp084P6I7C4okuUWiH2qVJJcjConCGzw6uCIga867p6ad05EzMLiEBqrULZBUaAxssPfa7K+Q3Eos89/yNZS2T0sW7f6VlbLdP1mmivb9RbNt8fGmNqxo98+alZ2SHD/vE8l3kCI=","*36 - Kiểm tra validate của trường supplier có giá trị là kí tự đặc biệt","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20@#$\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;supplier","*37 - Kiểm tra validate của trường supplier có giá trị là kí tự tiếng việt","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20Â\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;supplier","*38 - Kiểm tra validate của trường supplier có giá trị là kí tự tiếng trung","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20祎妃\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;supplier","*39 - Kiểm tra validate của trường supplier có giá trị space ở đầu","eNp9kL9OwzAQxvc+hZW5IU7i/GuUBcqIqNSKFV0ct7GaOCa2KyHEzIMwIxYmOvIkeRPiQgsSEjfZv+/7Tnc371rgoqi1lmrmeZopzbZnO+E1UHogubfDnuy7ym1BoLEuRbXouNDFgRqqLbxiuu6qYnG9XNnvHDQUD2hi3w4FzTZdf+/MkIP9EkKSYDf1GbgEl6GbxVnqQhZQRiNSEoyd6VdOGSkbznqbQ5D5IU2jyI3WUeKSOBxbJGRMUxIkkCYxBKcg7SpmQyu21EFIomysOMMYZ870e6aKKdpzqXknrLOB9tY/Wv2TS0DL/pFlz6nVI4yP6M6A0FzbXckPNYJr24fWnFFn8mjhUoM26mIctRidlpyDYgvooS3sAnnLlIINO3hN+VfI15w11W/5Bhpz6JbPh/0raviwfzJI1MP7i0Tb+uNNbFA97J8lakYlP973E85ymB8=","*40 - Kiểm tra validate của trường supplier có giá trị space ở cuối","eNp9kL9OwzAQxneewsrcECdx/jXKAmVEVGrFii6O21hNHBPblRBi5kGYEQsTHXmSvAlxIYCExE327/u+090tuha4KGqtpZp7nmZKs93pXngNlB5I7u2xJ/uuclsQaKwLUS07LnRxpIZqCy+ZrruqWF6t1va7AA3FPTqxb4eCZtuuv3PmyMF+CSFJsJv6DFyCy9DN4ix1IQsooxEpCcbO7DOnjJQNZ73NQeaHNI0iN9pEiUvicOyQkDFMSZBAmsQQYDQFaVcxG1qzlQ5CEmVjxRnGOHNmXzNVTNGeS807YZ0NtDf+ZPW/XQJa9o8se06tHmE8oVsDQnNtdyU/1AiubR9ac0adkwcLVxq0UefjqMXotOQMFFtCD21hF8hbphRs2dFryr9CvuGsqX7L19CYY7d8MRxeUMOHw6NBoh7eniXa1e+vYovq4fAkUTMq+XTfD9JVmB8=","*41 - Kiểm tra validate của trường supplier có giá trị space ở giữa","eNp9kL9OwzAQxvc+hZW5IU7i/GuUBcqIqNSKFV0ct7GaOCa2KyHEzIMwIxYmOvIkeRPiQgsSEjfZv+/7Tnc371rgoqi1lmrmeZopzbZnO+E1UHogubfDnuy7ym1BoLEuRbXouNDFgRqqLbxiuu6qYnG9XNnvHDQUD2hi3w4FzTZdf+/MkIP9EkKSYDf1GbgEl6GbxVnqQhZQRiNSEoyd6VdOGSkbznqbg8wPaRpFbrSOEheROBxbJGRMUxIkkCYxBKcg7SpmQyu21EFIomysOMMYZ870e6aKKdpzqXknrLOB9tY/Wv2TS0DL/pFlz6nVI4yP6M6A0FzbXckPNYJr24fWnFFn8mjhUoM26mIctRidlpyDYgvooS3sAnnLlIINO3hN+VfI15w11W/5Bhpz6JbPh/0raviwfzJI1MP7i0Tb+uNNbFA97J8lakYlP973E9AWmB8=","*42 - Kiểm tra require của trường supplier khi không truyền giá trị vào param code","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;code","*43 - Kiểm tra require của trường supplier khi không truyền param code","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;code","*44 - Kiểm tra validate của trường code có giá trị null","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": null, \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;code","*45 - Kiểm tra validate của trường code có giá trị số","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": 123123, \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;code","*46 - Kiểm tra validate của trường code có giá trị là kí tự đặc biệt","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690012@#$\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;code","*47 - Kiểm tra validate của trường code có giá trị là kí tự tiếng việt","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690012â\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;code","*48 - Kiểm tra validate của trường code có giá trị là kí tự tiếng trung","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690012祎妃\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;code","*49 - Kiểm tra validate của trường code có giá trị space ở đầu","eNp9j7tOwzAUhvc+hZW5IU7i3BplgTIiKrViRSeO21hNHBPblRBi5kGYEQsTHXmSvAlxoQUJiTPZ33/ROfOuBS6KWmupZp6nmdJse7YTXgOlB5J7O+zJvqvcFgQa51JUi44LXRyoodrCK6brrioW18uV/c5BQ/GAJvbtUNBs0/X3zgw52C8hJAl2U5+BS3AZulmcpS5kAWU0IiXB2Jl+5ZSRsuGstznI/JCmUeRG6yhxSRyODQkZw5QECaRJDMEpR7uK2QxasaUOQhJl48QZxn7gTL93qpiiPZead8JaG2hv/aPVP7kEtOwfWfacWj3C+IjuDAjNtb2V/FAjuLY9tOaMOpNHC5catFEX467F6LTkHBRbQA9tYS/IW6YUbNjBa8q/Qr7mrKl+yzfQmENbPh/2r6jhw/7JIFEP7y8SbeuPN7FB9bB/lqgZldyWfQJul5ZA","*50 - Kiểm tra validate của trường code có giá trị space ở cuối","eNp9j7tOwzAUhvc+hZW5IU7i3BplgTIiKrViRSeO21hNHBPblRBi5kGYEQsTHXmSvAlxoQUJiTPZ33/ROfOuBS6KWmupZp6nmdJse7YTXgOlB5J7O+zJvqvcFgQa51JUi44LXRyoodrCK6brrioW18uV/c5BQ/GAJvbtUNBs0/X3zgw52C8hJAl2U5+BS3AZulmcpS5kAWU0IiXB2Jl+5ZSRsuGstznI/JCmUeRG6yhxSRyODQkZw5QECaRJDMEpR7uK2QxasaUOQhJl48QZxn6InOn3UhVTtOdS805YbwPtrX/0+ieXgJb9I8ueU6tHGB/RnQGhubbHkh9qBNe2h9acUWfyaOFSgzbqYly2GJ2WnINiC+ihLewJecuUgg07eE35V8jXnDXVb/kGGnNoy+fD/hU1fNg/GSTq4f1Fom398SY2qB72zxI1o5Lbsk/S7JZh","*51 - Kiểm tra validate của trường code có giá trị space ở giữa","eNp9j7tOwzAUhvc+hZW5IU7i3BplgTIiKrViRSeO21hNHBPblRBi5kGYEQsTHXmSvAlxoQUJiTPZ33/ROfOuBS6KWmupZp6nmdJse7YTXgOlB5J7O+zJvqvcFgQa51JUi44LXRyoodrCK6brrioW18uV/c5BQ/GAJvbtUNBs0/X3zgw52C8hJAl2U5+BS3AZulmcpS5kAWU0IiXB2Jl+5ZSRsuGstznI/JCmUeRG6yhxSRyODQkZw5QECaRJDMEpR7uK2QxasaVGQUiibJw4w9gPnen3UhVTtOdS805YbwPtrX+0+ieXgJb9I8ueU6tHGB/RnQGhubbHkh9qBNe2h9acUWfyaOFSgzbqYly2GJ2WnINiC+ihLewJecuUgg07eE35V8jXnDXVb/kGGnNoy+fD/hU1fNg/GSTq4f1Fom398SY2qB72zxI1o5Lbsk/Rx5Zh","*52 - Kiểm tra max length của trường code ","eNrtkrtOwzAUhvc+hZW5IU7i3BplgTIiKrViRSeO21hNHBM7lRBi5kGYEQsTHXmSvgl2oQUJCYmdM9nffxl8PO1a4KKotZZq4nmaKc3WJxvhNVB6ILm3wZ7su8ptQSAz56KadVzoYk8Hqi28YLruqmJ2OV/Y6xQ0FHdoZM8OBc1WXX/rTJCD/RJCkmA39Rm4BJehm8VZ6kIWUEYjUhKMnfFHTg1SNpz1NgeZH9I0itxoGSUuiUPTkBATpiRIIE1iCI452lXMZhZsroOQRJmZOMPYj//JX4lvrs74c5EVU7TnUvNO2PdtoL32D3b/6BLQsl9k2XNq9QjjA7oZQGiu7QchX3QQXNseWnNGndG9hXMNelBnZsGFcVpyCorNoIe2sGvPW6YUrNjeO5Q/hXzJWVN9l6+gGfZt+XS3fUYN320fBiTq3euTROv67UWsUL3bPkrUGCW3Ze/TrOHW","*53 - Kiểm tra require của trường supplier khi không truyền giá trị vào param name","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;name","*54 - Kiểm tra require của trường supplier khi không truyền param name","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n\n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;name","*55 - Kiểm tra validate của trường name có giá trị null","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": null, \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;name","*56 - Kiểm tra validate của trường name có giá trị số","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": 123123, \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;name","*57 - Kiểm tra validate của trường name có giá trị là kí tự đặc biệt","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991@#$\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;name","*58 - Kiểm tra validate của trường name có giá trị là kí tự tiếng việt","*Domain=https://testek.vn/lab/api/v0/prod-man    EndPoint=/product    Method=POST    Data={ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690018\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991Â\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}    StatusCode=400    BaseParam=code;message    SubParam=code;message;field    SubParamValue=400;Dữ liệu nhập không hợp lệ;name"]);
+window.output["strings"] = window.output["strings"].concat(["*","*Api Demo","*/Users/admin/Documents/GitHub/robot_testing/4_test_cases/api_demo.robot","*4_test_cases/api_demo.robot","*1 - Check API add product thành công với đầy đủ các dữ liệu hợp lệ","*api","*test","*400 != 201","*Call API demo","eNqNkMlOwzAQhu99CstnGy+xm6SUXrgDUntHE8clFoljEqcSQrw7NrTlhMScZvm/2baAuske73AXY5g3jEU7R/t6c/Ksh4ZBcOzEWZjGlg7g8e5fsi2DHUHf4WIiQU+P+wNBH2iFkmED0b6M0zveIMxFA4UqOa2EBap4U9B6XVcUamms0apRnGPyw81LCL2zU+agFoWptKb6qEuq1kXqUKoEGyVLqMo1yCtnxtZm5mD3URZK18k4FxKT80Ktnc3kQnSjz7oehmeRheKq8DDYP0phcibXNOeX1NsCPrqYD1S/2cW7mHuYzlmDV58ESS4Icu3t+U/3ac+L/5AGfgEe/nGD","*Log","*BuiltIn","*<p>Logs the given message with the given level.\x3c/p>","*${Data}","eNp1j70OwjAMhHeeospMJCdxmobXgB25xkAkaEtJB4R4dxrxN3Hj3X0n+14tqlmKKcuhH29qVSkwLTkMoBsjpBFap2MdG03RsrDHFgHU8sVdp2E4JRkLR9E4brzXfu+DxtrNCwFnmNEGakJN9stxv5PCbGSdrUMfZwEYq5bvg3Zy5TENOfVd6Z3ovDWlaL6Njs7yJxrGxCXzAB/rMlGXUy4P4s+dupTLBh+TsFo8niQ+QeY=","*Random String Value","*testing_api","*${random_data}","*${random_data} = V$?0}v:4ha","*Replace String To Generate Data","*${Data}, 234569999, ${random_data}","*${new_data}","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt234599990012\", \n    \"description\": \"lam_123451\", \n    \"name\": \"lam_1...","*Call Api","*${Domain}${EndPoint}, ${Method}, ${new_data}","*${Results}","*${Results} = {'status_code': 400, 'response': {'code': 400, 'message': 'Dữ liệu nhập không hợp lệ', 'error': 'INVALID_INPUT', 'errors': [{'field': '', 'objectName': None, 'message': 'Mismatched input', 'error': No...","*Should Be Equal As Strings","*<p>Fails if objects are unequal after converting them to strings.\x3c/p>","*${Results}[status_code], ${StatusCode}","*Argument types are:\n&lt;class 'int'&gt;\n&lt;class 'str'&gt;","*[Common] - Validate Json Response Data","*common_api","*${Results}[response], ${BaseParam}, ${SubParam}, ${SubParamValue}","*2 - Check API add product thành công với với code là chuỗi kí tự số","eNqNkMlOwzAQhu99CstnGy+xs5TSC3dAgjuaOC6xSByTOJUQ4t2xoS0nJOY0y//NtgPUz/Zwg/sYw7JlLNol2tero2cDtAyCY0fOwjx1dASP9/+S7RjsCfoOVxMJerh/fCLoA21QMmwg2pdpfsdbhLlooVAVp7WwQBVvC9qUTU2hkcYarVrFOSY/3LKGMDg7Zw4aUZhaa6oPuqKqLFKHSiXYKFlBXZUgL5yZOpsZWSjdJONcSExOy3R2MbML0U0+awYYn0UWiovCw2j/KIXZmVzTnJ9Tbyv46GI+Tv1mV+9i7mF6Zw3efBIkuSDIddenH92mHc/+XRr4BQzbcAM=","eNp1j8EOgjAQRO98BemZJtt2S6k/Y5alahMEhHIwxn+XRsWTc5yZN9l9lEW5STClcB7nuziUAlRLBh3IRgWSCK2RvvaNJK85sMUWAUT15pZ1mvoY5syRV4Yba6U9WSexNtuCww1m1I4aV5PeOR67kBlt0PpNAEqL6nNMFxae45TiOOROT9ejykW1Nwa6hj/RNEfOmQX4WreVhhRTfg5/7jrElDf4EgOL4vkC1F9AZg==","*${random_data} = DaptpC1'F=","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"234599990012\", \n    \"description\": \"lam_123451\", \n    \"name\": \"lam_12345...","*3 - Check API add product thành công với với code là chuỗi kí tự lower case","eNqNkE1PwzAMhu/7FVHOCflo0o8xduEOSHBHbprRiDYNbToJIf47CWzjhIRPsf0+9hvvAPWzPdzgPsawbBmLdon29ero2QAtg+DYkbMwTx0dweP9v2Q7BnuCvtPVRIIe7h+fCPpAG5QCG4j2ZZrf8RZhLlooVMVpLSxQxduCNmVTU2iksUarVnGOyQ+3rCEMzs6Zg0YUptaa6oOuqCqLNKFSCTZKVlBXJcgLZ6bOZiZbloXSTQrOhcTkZKizi5ldiG7yWTfA+CyyUFwUHkb7RyvMzuSe5vxcelvBRxfzB9VvdfUu5hmmd9bgzSdBkguCXHd9utNt8nl+36WFX0q+ccM=","eNp1j0sOwjAMRPecosq6kZzEaRoug1xjIBK0pU0XCHF3GvFbMcuZeSP7Xm2qVYopy3GYbmpbKTAdOQygWyOkETqnYxNbTdGysMcOAVT94uZlHM9JpsJRNI5b77U/+KCxcetCwBVmtIHa0JD9cjzspTBZ5mwd+rgKwFhVvw/ay8xTGnMa+tI702VnStF8Gz1d5E80TolL5gE+1nWhPqdcHsSfu/Qplw0+JWG1eTwBR75CJg==","*${random_data} = 5kg|)tufk2","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"test234599990012\", \n    \"description\": \"lam_123451\", \n    \"name\": \"lam_1...","*4 - Check API add product thành công với với code là chuỗi kí tự upper case","eNqNkMlOwzAQhu99CstnGy+xs5TSC+IKSO0dTRyXWGQxjlMJId6dGNpyqsScZvm/2TaA2mAPd7iN0U9rxqKdon27OQ6sg5qBd+zImQ9jQ3sY8PZfsg2DLUE/4WwiQc9Puz1Bn2iFFsMGon0dwwdeI8xFDZkqOC2FBap4ndEqr0oKlTTWaFUrzjH55abZ+87ZkDioRGZKrak+6IKqPFs6FGqBjZIFlEUO8sKZsbGJ2T/s9jJTulqMcyExOS3U2MkE56Mbh6TroH8RSSguigF6e6XkgzOppjk/p95nGKKL6UD1l50HF1MP0zpr8OqLIMkFQa65Pf3pftnz7D8uA78B829xQw==","eNp1j7EOwjAMRHe+ospMJCdxmoadL4AduW6ASNCWNh0Q4t9pBJSJG+/unexHsSpmCaYUTt1wF5tCgKrJoANZqUASoTbSl76S5DUHtlgjgFi/uXHq+0sMQ+bIK8OVtdIerZNYmnnB4QwzakeVK0kvHHdNyMx+u9trg9bPAlBarD8HNWHkIfYpdm3uXeh6ULmolkZL1/An6ofIObMAX+s2UZtiyg/iz53amPIGn2NgsXq+AAD+QaY=","*${random_data} = lfjDRio|b[","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TEST234599990012\", \n    \"description\": \"lam_123451\", \n    \"name\": \"lam_1...","*5 - Check API add product thành công với với code là chuỗi kí tự upper case và lower case","*${random_data} = Fvwm5RJ;)W","*6 - Check API add product thành công với dữ liệu không có param desc","eNqNkMlOwzAQhu99CstnGy+xs5TSS++A1N7RxHGJRRY3cSohxLtjl7ZcmdMs/zfzazaA2sken3Abgp/XjAU7B/vxcB5YBzUD79iZMz+NDe1hwNt/yTYMtgRdysUEgl5f9geCvtAKxcAGgn0fp0+8RpiLGjJVcFoKC1TxOqNVXpUUKmms0apWnGPyy82L952zU+KgEpkptab6qAuq8ixuKFSEjZIFlEUO8s6ZsbGJOdh9kJnSVQzOhcTkamiA/iLooH8TSSHuIz85k2aa81vrtMAQXEj21V93GVxIO0zrrMGrb4IkFwS55vH6hV10ccuf48EflrBoXg==","*{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt234599990012\", \n    \"name\": \"lam_123451\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}","*${random_data} = *]I$Yu~W}i","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt234599990012\", \n    \"name\": \"lam_123451\", \n    \"price\": 500, \n    \"q...","*7 - Check API add product thành công với dữ liệu không có param Unit","eNqNkLlOAzEQhvs8heXaxsfae4SQhh6Qkh7Nep3EYg/j9UZCiHfHhiQdElPN8X+jf2YD6BTs4QGfYvTzmrFo52jf7s4j66Fl4B07c+bD1NEBRrz9l2zDYEvQT7mYSNDL825P0CdaoRTYQLTHKXzgNcJctFCoitNaWKCKtwVtyqam0EhjjVat4hyTX25evO+dDZmDRhSm1prqg66oKou0oVIJNkpWUFclyBtnps5mZm93URZKNyk4FxKTi6HOziY4H900Zl0Pw6vIQnFTjDDYP0Y+OJNnmvNr632BMbqYD0z2V18ESS4Ict395SOPydE1f0qrvwHn8WwP","*{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt234599990012\", \n    \"description\": \"lam_123451\", \n    \"name\": \"lam_123451\", \n    \"price\": 500, \n    \"quantity\": 400\n}","*${random_data} = @n*tV\"i;Y'","*8 - Check API add product thành công với dữ liệu không có param desc và Unit","eNqNj8tOwzAQRff9CstrG48dO4lL6YY9ILV7NHHcNiIPkziVEOLfcUrbNbOaxz0zdzZITqM/PNFTjGFaCxH9FP3Hw7kXLVYCQyPOIMI41LzDnm7/JdsI3DJyKWcXGXl73e0Z+SYrkoI6jP44jF90TSjICjNdAC+lR66hyrjNbcnRKued0ZUGoOyPm+YQ2saPC4dWZq40hpuDKbjOs7Sh0Al2WhVYFjmqO+eG2i/M3u+iyrSxKQCkouxqqMfuImixe5eLQt5HYWzcMjMAt9bnjH1s4mI/mVv9MKJAMtLUj9d/n9O9W/6SVv8CKO9i6g==","*{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt234599990012\", \n    \"name\": \"lam_123451\", \n    \"price\": 500, \n    \"quantity\": 400\n}","*${random_data} = {%puc9vf!M","*9 - Check API add product không thành công với dữ liệu UUID của category không tồn tại","eNqNUM1uwjAMvvMUUc7NktC0tJRx2QNsEtwnN3Ugok2zNkWaEO++ZgN2m+ab/f3YnzdAjgOaZ3oMwY9rzgOOAU9PZ8dbqDl4y8+C+6FvWAeObv9F23DYJuS7nXRIyNvrbp+QC1mQuaiGgId++KRrQoWsIVUrwQqJwJSoU1bmZcGgXGrUmaqVlDS56foGo2aPu7BMVVbOlZdCiJQmN+sGRz1YH2zvIrOF7l3eqfLBctDhH7AfrI54JsR99DGBCzbEk9XvdJy8by0O0UuiXBlZCmYgn4NkOEear2e5aUQhpTGQrR4bJmdDFOmjRU0X1+THNQasOhxHOGBlLLZNBNSMyerl9jTi+kBMP7lmTS7iWt2f+QUan3+Q","eNp9T0sOgjAQ3XMK0jVNZqQF6jV0b4Yy1SYIiGVhjHe3TQB3zvL95r13nuXxhKXA13F+iWMuAFsqVQ2yQSapoC2lqUwjyRwsW61ahSiK1Td2nDxnPoVDqbSJVxkAKEWxRnf8tLOfgh+HpOzpfsFNirtqoDv/oafZ28RrgA16LDQEH1Jl9UOfyzT1nueUhYy1QwPSURWHaI6TYntZuQ4aROdI1/uHZfAhmezNsxXZ5wsNLkVP","*${random_data} = IhbCt!P{m\"","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b411\",\n    \"code\": \"TeSt23459999690003\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 40...","*Replace String By Char To Validate Json","*${data}","*${datas}","*${datas} = {\"code\": 400, \"message\": \"Dữ liệu nhập không hợp lệ\", \"error\": \"INVALID_INPUT\", \"errors\": [{\"field\": \"\", \"objectName\": \"\", \"message\": \"Mismatched input\", \"error\": \"\"}]}","*Load Data To Json","*${json}","*${json} = {'code': 400, 'message': 'Dữ liệu nhập không hợp lệ', 'error': 'INVALID_INPUT', 'errors': [{'field': '', 'objectName': '', 'message': 'Mismatched input', 'error': ''}]}","*Evaluate","*<p>Evaluates the given expression in Python and returns the result.\x3c/p>","*json.dumps(${json}), modules=json","*${json_results}","*${json_results} = {\"code\": 400, \"message\": \"D\\u1eef li\\u1ec7u nh\\u1eadp kh\\u00f4ng h\\u1ee3p l\\u1ec7\", \"error\": \"INVALID_INPUT\", \"errors\": [{\"field\": \"\", \"objectName\": \"\", \"message\": \"Mismatched input\", \"error\": \"\"}]}","*Validate Json","*json_utils","*${json_results}, ${BaseParam}, ${SubParam}, ${SubParamValue}","*10 - Check API add product không thành công với dữ liệu UUID của category là biến name của category có trong hệ thống","eNqNkE1OwzAQhfc9heV1gm2atE1TeoMKpHaPps64sUgcE08qVYjDcAoktpyEm1CXtuwQs5v53rz5WQCrezR3vCbyYS4EYSB8utk70cBWgLdiL4XvuyptwfHlv2QLAcuEndJBU8Ie7tebhL2wETsG10C46/oDnzO++nw7sJ39+ngnnpxxV2FEG1zT7TjLi2NMCinlmCdnhwqD7q0n27mobKB9VBepuqoctPgH9r3VkedSXkrPAziyFDfLfqth8L6x2EcvhWpqVCFTAxNIsxxlOsu2WToxlZwpZQzk0+uEwVmKTbq2qPnoNflxjQeWLYYAOyyNxaY6gXJlQwuka6yYdX6g8vKob8NpeYM=","*{ \n    \"category\": \"Máy giặt\",\n    \"code\": \"TeSt23459999690003\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"1e17f190-fa6a-45e0-84b4-6fd0811ffa57\", \n    \"unit\": \"chiec\"\n}","*${random_data} = ^UXv_u`F`e","*${new_data} = { \n    \"category\": \"Máy giặt\",\n    \"code\": \"TeSt23459999690003\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"1e17f19...","*11 - Check API add product không thành công với dữ liệu UUID của Supply không tồn tại","eNqNT8tugzAQvOcrLJ9xbcA8HNL8Qisl92oxS7AKxgUTqYry78VN0t6q7m13HjuzA9JN2D7Tzns3bzn3OHt8fzpb3kPNwRl+FtxNY8MGsHT/L9qOwz4i3+uifUReXw7HiFzIhqxDNXg8jdMn3RIq4hpSWQhWxghMijplKlclA5Vo1JmspRA0uuvGBoPmiAefpDJT6+RKCJHS6G7d4Kwn47wZbWD2MLzFD2r8w7Iw4B+wm4wOeCbE4/SxgPXGh8jy9zovzvUGp+AFKk51mWUsa7OCyTxdKxVybaNlUkBZ5KDU+oHzRNzEizU+CHVnUNPNNbo5h5LVgPMMJ6xag30TALlmiavD/R+xoyftuNhmSy7iWj1yfAGAQn97","eNp9T0uuwjAM3HOKKmsinMZpmncN2CPXGIgEbV9JFwhxdxLx2zHL+dlzqxZVhmJKchimq/qrFJiOLHrQrRHSCJ3VoQmtplCzsMMOAdTylRt2UjIbWafaogsZTQAAq5av6p1ceIpjikNfnCc6b83baj6uns7yQx6nyEV3AG/qf6Y+xVRexi97mcfxFGUqXRSM5dY57fbOa2xsnuQxr2GsPbW+oRDyhdWqhmd47mMqQT5GYbW4PwDu90UN","*${random_data} = N_2~j&gt;w'5T","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"code\": \"TeSt23459999690003\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 40...","*12 - Check API add product không thành công với dữ liệu UUID của Supply là biến name của Supply có trong hệ thống","eNqNj01PwzAMhu/7FVHOKUm/xrqOXTjzIW3iitzUWyPaNDTuJIT47zTbCjfEe7Pfx6/tDbBmwMMdb4icX0tJ6Anfbk5WtlBJcEaelHRDX0cdWL79F7aRsBXsXI6aBHt+2u0F+2QLNolrIDz2wwdfM67iCtLsVkWrGCHKVJVGxbJYRVAkGnWeVZlSXFzn+hrDzB53lKRZXkxaFkqplItrdI1eD8aR6W0gW+he4xmNfygLHf5hu8Ho4OdKza33ESwZCidnv10/OtcaHELWPdjesheDxB6hm7KkTNQFG62hgOjGoOaLL3HJCO+UHXoPRywPBtv6bJQPxndAusGaGetGKuc1389YeO0=","eNp9jjEPgjAUhHd+RdMZwgMKWld3F42reZQXbQJtLWUwxv8ujaCbN959d7knS9gsrjDQ1foH3zEORYuV2EC2LQgzAW2VyUZuM5SlIlWLVgDwdOnZjmLnRMdQVqKWsxoJABVPl+mORuW1C9qaSPY4XIoVLb6UwYH+xM5rFfMaYLXuE5qgQ7wsfu44Oddr8nFrj8YadtYU2AGHeSvPS/hgk9EhIuqmSfHk9QZxtEF9","*${random_data} = N(*B&amp;)`Z\\,","*13 - Check API add product không thành công với code product đã tồn tại trong hệ thống","eNqNT8tugzAQvOcrLJ9xbYMJENJ8QatWau/VYjbBChgXm0hV1X8vzkO5Vd3bzuzMzmyBdBPuH2kXgvMbzgP6gMeHk+U9NByc4SfB3TS2bABLd/8623LYJeS8zjok5PXl7T0h32RFlqEaAh7G6YtuCBWygUwVgpUSgSnRZKxaVyWDKtWoc9UoIWhy1Y0tRs0TDFJKmlztWvR6Mi6Y0Ua2h+FDppnKq2XuVxYG/IN2k9GRz4W4QZ8z2GBCjKnuqJ+d6w1O0Qsqmekyz1m+zwum1tlSo1BLA63SAspiDekSnnCeiot4tiZEoe4Marr6SS7OsVg9oPdwwHpvsG/PRP1s/ABBd9gSY90c6tvzX9K1ebY=","eNp9j0sOwjAMRPc9RZU1UfNxmoYzcAfkugEi9UdJFwhxdxJR1B2znPEbjV9lUSYxwuiv0/Jkx5IJ2aIGK3gjPXIQreaudg1Hp8iTgRaEYIeNmzqfmRMOUkp22Oo6/6AlzDFMY057HM5SaTAuab8acfB/4nkJlHMjxM+6rzjGEPNM2N3HOs998EvuQic1NcZwczGWQ63TGxbSBwTKYmNrVGl8WVVKfOF1DDGDdAueWPH+AN8RQkY=","*${random_data} = OD|)w56[%J","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"code\": \"Lam111\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"sup...","*14 - Check API add product không thành công với baseURL bị sai","*Có lỗi xảy ra != 404","eNqVj01OwzAQhfc5heW1jZ3Ezp9CrwBSyxpNXLexSBzjOJUQ4u7E0Kg7VGY3M997M68F1Ht9esR9CG5uGAt6Dvrt4WLZAB0DZ9iFM+enIx3Bpnh3H9cy2BH00y8qEPT8tD8Q9OKHBrX/u7h53Ht54+MHSfKJErQWVhD0efIfuEGYpx3kouS0SjVQwbuc1kVdUagzpZUUneAck6tuOuqoOeh9yHIh67WKmnOeYnK1PupZeeOCmWwkBxhf0w29URZG/cfaeaPiXnK+jd4XsMGE+LK4TefFucFoH72gTnNVSUnlSZZUFPkaqRRrGiWyEqqygGwNghjL+K94sSZEoeqNVjj5Iquz+Aa1gZGs","eNqVT8tuwyAQvPsrEOdQwAbbWGl+ou25WpNNjGpjinGkquq/17SJcqvUOa3mpZ2XOHZkD2SIeHqkQ0ph6ThPuCR8e7h4PkLPITh+ETzE+cgm8PLnWm2ih//59xwORfFJCrKBWkh4nuMH7QgVsodKNYK1EoEp0VfM1KZlYEqLVqteCUF319x8xJx5xqdUVkqbDbURQki6u1YfcbHRheRmn50jTK/yZr27PEz4hxyis1nXQtyo9xV8cim/rO7ssoYwOoy5C4ysbKs10yfdMFVX26RGbWusKhtomxrKbQjhvBS/4dW7lIN2cGhp8fUNpYhsNQ==","*${random_data} = HQp-w+KGD^","eNqVjMFugzAQRO98hWXliPEanDRGgZ9oe44Ws21QwSCzoapQ/71JmyrnzGmkeW82a6DPY4uM36ISr7EvxQHFKdJbJU/M01xqzTQzfWRL0D02GqdOL6CnOLZqwGB+29mzrB/jDxrrJFlFIi6RHpnex/glSyHBNFjYJ1B7Q6gsNIVyO7dX6HJPfmsbCyDTmze2dHVe6Jnzwm7dJTsHAEamt+uWZh+7ibsxXMkeh6P5R+9UwIH+5izLfgDzR1Cs","*${Results} = {'status_code': 'Có lỗi xảy ra', 'error': 'Expecting value: line 1 column 1 (char 0)'}","*15 - Check API add product không thành công với endpoint bị sai","eNqNT8tOwzAQvPcrLJ9t7CR2Hm3pkSMgtXe0cVxq0drG2VRCiH/HgVa9Iea289LOGsgh2f09PSDGcSkE2hHt293ZiyP0AqITZyliCgM/gaebf9nWAjaM/JyTwYKR56ftjpFPsiAZ1ADa15A+6JJQWfRQqUbytrDAlewr3tVdy6ErjTVa9UpKyi65MNg5s7NbLCulu4y6k1IWlF2qBzua5CK64GfnEU4vxdV6c3k42T/kmJyZdS3llXqfwKPD+WV1Y8cpxqOzae6CrqhMqzXXe91wVVd5UqPyGqPKBtqmhjIPIUKU8jc8eYdz0BycNXTxxXKzYsSmFNJqRMBpXDHyGJA8hMkPq6x+A7ArdD0=","eNp9j8FuwjAQRO98ReQzFmt7Hcf9DbhXm2XbWoIkDc4Bof47tkjErXucmTfaeTS7ppxiyvI9znf10SgwPTkMoDsjpBF6p2MbO03RsrDHHgHUfuXGs1TmJMdsHfpYro0AYNR+rT7Ljec05TQONXmh66fZou/UQFf5x57mxNX3AJv0u9CQU64v41u9LdN0STLXLorGcee99l8+aGxdmRSwrGG0gbrQki1DmsPBwgtehpQryD9JWO3+nuuGRPs=","*${random_data} = }'w[GQW=L@","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"code\": \"TeSt23459999690001\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 40...","*${Results} = {'status_code': 404, 'response': {'timestamp': 1743685339132, 'status': 404, 'error': 'Not Found', 'message': '', 'path': '/lab/api/v0/prod-man/product1'}}","*${datas} = {\"timestamp\": 1743685339132, \"status\": 404, \"error\": \"Not Found\", \"message\": \"\", \"path\": \"/lab/api/v0/prod-man/product1\"}","*${json} = {'timestamp': 1743685339132, 'status': 404, 'error': 'Not Found', 'message': '', 'path': '/lab/api/v0/prod-man/product1'}","*${json_results} = {\"timestamp\": 1743685339132, \"status\": 404, \"error\": \"Not Found\", \"message\": \"\", \"path\": \"/lab/api/v0/prod-man/product1\"}","*16 - Check API add product không thành công khi chọn method là GET","eNqNUTtPwzAQ3vMrLM8OdhI7j6Z0Q7Aw0R1dnGtjkVcdpxJC/Hfs0qob4ra776H77rZAOouHR9o5Ny8bzh0uDj8eziPvoeEwG34WfLZTGw8w0t2/aFsOO0Yu7aodI89Pe0Ze0XVTuwlNFH2RiPiiGhweJ/tJN4SKpIFMFiIuE4RYiiaLq7wqY6hSjVrJRgpB2VU3tRg0e3xzaSZV5SuvhBAJZVfrFhdtzezMNAZmD8N7cqPeWSMM+Ac8W6MDroS4jU4rjM64sLK8T5d1nnuDNnhBlWS6VCpWB1XEMs98pEL6NFqmBZRFDqkPQjhPxa94HY0LQt0Z1DT6Zt5ZMRJC1gMuCxyxPhjs2wtQv/gfEIun1f+ADJezknFyJOwwWVf7C/8AZSaC8w==","eNp9j71uwzAMhHc/haA5Qqg/y8pedOrU7AFNs42AxHYdeSiCvHskNEG2cry778D74Hychp14f9s3zVU0opwkzPw9Lb9yJyToHq0LoDrNqBz0VsU2dgqjISbvegcgNw9uGrgye/7Mxjofy7URALTcPKoHvtCS5pymsSZPeD7oZ/SVGvHM/9jzkqj6HuAp/aw45pTry+6lXtZ5PiVeahdGbanzXvkvH5RrbZkUXFlDzgTsQoumDBHbrYE/eB1TriAdE5Nsbncn/0iq","*${random_data} = tS1@2rg)b:","*${new_data} = Method: GET\n\n{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"code\": \"TeSt23459999690001\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"...","*${Results} = {'status_code': 405, 'response': {'code': 405, 'message': 'Dữ liệu nhập không hợp lệ', 'error': 'INVALID_INPUT', 'errors': [{'field': 'GET', 'objectName': None, 'message': 'Http request method not sup...","*${datas} = {\"code\": 405, \"message\": \"Dữ liệu nhập không hợp lệ\", \"error\": \"INVALID_INPUT\", \"errors\": [{\"field\": \"GET\", \"objectName\": \"\", \"message\": \"Http request method not support\", \"error\": \"\"}]}","*${json} = {'code': 405, 'message': 'Dữ liệu nhập không hợp lệ', 'error': 'INVALID_INPUT', 'errors': [{'field': 'GET', 'objectName': '', 'message': 'Http request method not support', 'error': ''}]}","*${json_results} = {\"code\": 405, \"message\": \"D\\u1eef li\\u1ec7u nh\\u1eadp kh\\u00f4ng h\\u1ee3p l\\u1ec7\", \"error\": \"INVALID_INPUT\", \"errors\": [{\"field\": \"GET\", \"objectName\": \"\", \"message\": \"Http request method not support\"...","*17 - Check API add product không thành công khi chọn method là PUT","eNqNUUtPwzAMvvdXRDmnJG2TPtaxMxckJMYZuam3RvS1NJ2EEP+dZGzaDeGb/T3kz94C6SweHmnn3LxsOHe4OPx4OI+8h4bDbPhZ8NlObTzASHf/om057Bi5tKt2jLy87Rl5RtdN7SY0UfRFIuKLanB4nOwn3RAqkgYyWYi4TBBiKZosrvKqjKFKNWolGykEZVfd1GLQ7PHVpZlUla+8EkIklF2tW1y0NbMz0xiYPQzvyY16Z40w4B/wbI0OuBLiNjqtMDrjwsryPl3Wee4N2uAFVZLpUqlYHVQRyzzzkQrp02iZFlAWOaQ+COE8Fb/idTQuCHVnUNPom3lnxUgIWQ+4LHDE+mCwby9A/eR/QCyeVv8DMlzOSsbJkbDDZF3tL/wDrECDPg==","eNp9j81uwjAQhO95CstnLNZ/ccw7VKpUOFebzbZYgiQNzqGqePfaAsSNPc7MN9p543ychp14P+yb5k80opwkzPw9Lb9yJyToHq0LoDrNqBz0VsU2dgqjISbvegcgN3duGrgye/7Ixjofy7URALTc3KsHvtCS5pymsSZPeP7Uj+gzNeKZX9jzkqj6HuAh/aw45pTry+6pXtZ5PiVeahdGbanzXvkvH5RrbZkUXFlDzgTsQoumDBHbrYEbvI4pV5COiUk2139EWkjD","*${random_data} = bMfwx:sTx\"","*${new_data} = Method: PUT\n\n{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"code\": \"TeSt23459999690001\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"...","*${Results} = {'status_code': 405, 'response': {'code': 405, 'message': 'Dữ liệu nhập không hợp lệ', 'error': 'INVALID_INPUT', 'errors': [{'field': 'PUT', 'objectName': None, 'message': 'Http request method not sup...","*${datas} = {\"code\": 405, \"message\": \"Dữ liệu nhập không hợp lệ\", \"error\": \"INVALID_INPUT\", \"errors\": [{\"field\": \"PUT\", \"objectName\": \"\", \"message\": \"Http request method not support\", \"error\": \"\"}]}","*${json} = {'code': 405, 'message': 'Dữ liệu nhập không hợp lệ', 'error': 'INVALID_INPUT', 'errors': [{'field': 'PUT', 'objectName': '', 'message': 'Http request method not support', 'error': ''}]}","*${json_results} = {\"code\": 405, \"message\": \"D\\u1eef li\\u1ec7u nh\\u1eadp kh\\u00f4ng h\\u1ee3p l\\u1ec7\", \"error\": \"INVALID_INPUT\", \"errors\": [{\"field\": \"PUT\", \"objectName\": \"\", \"message\": \"Http request method not support\"...","*18 - Check API add product không thành công khi chọn method là DELETE","eNqNULluwzAM3fMVgma7km3JR5xmaoAO3Zq9oGUmFupDkeUARdF/r5QD2YpyI98BvrcB0lk8PNPOOTOvGXM4O/x8Oo+sh4aB0ezMmbFTGw8w0u2/aBsG24hc1kW5iLzs3nb7XUS+yYr4oQocHif7RdeE8qSBTBQ8LhOEWPAmi6u8KmOoUoVKikZwTqObbmoxaPb47tJMyMpPXnHOExrdrFucldXG6WkMzB6Gj+ROfbBGGPAP2FitAi45v59OC4xOu/CyeFznxZheow1eUCWZKqWM5UEWscgzH6kQPo0SaQFlkUPqgxDGUn4VL6N2Qag6jYqufiLvLCMSQtYDzjMcsT5o7NsLUL/65onF0+KbJwO6bmrJODkSfpisq68l/wJ17oDq","*${random_data} = \"^Rk{0lJ44","*${Results} = {'status_code': 405, 'response': {'code': 405, 'message': 'Dữ liệu nhập không hợp lệ', 'error': 'INVALID_INPUT', 'errors': [{'field': 'DELETE', 'objectName': None, 'message': 'Http request method not ...","*${datas} = {\"code\": 405, \"message\": \"Dữ liệu nhập không hợp lệ\", \"error\": \"INVALID_INPUT\", \"errors\": [{\"field\": \"DELETE\", \"objectName\": \"\", \"message\": \"Http request method not support\", \"error\": \"\"}]}","*${json} = {'code': 405, 'message': 'Dữ liệu nhập không hợp lệ', 'error': 'INVALID_INPUT', 'errors': [{'field': 'DELETE', 'objectName': '', 'message': 'Http request method not support', 'error': ''}]}","*${json_results} = {\"code\": 405, \"message\": \"D\\u1eef li\\u1ec7u nh\\u1eadp kh\\u00f4ng h\\u1ee3p l\\u1ec7\", \"error\": \"INVALID_INPUT\", \"errors\": [{\"field\": \"DELETE\", \"objectName\": \"\", \"message\": \"Http request method not suppo...","*19 - Check API add product không thành công khi body truyền vào sai chuẩn json","eNqNT7tOwzAU3fkKy3OMncTOoy2d2EFqd3Tjuo3VxDGJUwkhZj6EGbEw0ZEvyZ8Q90E3xN3ued17ZoDKVq1vcOmc7SaUOtU5tb3eGVpBQcFqumPUts2K1GDw/F+yGYV5gA5rL12A7u8WywA9oys0Dpbg1KZpn/AEYRYWEPOUkSxUQDgrYpIneUYgj6SSghecMRycfM1Kec9SLVwUc5GPk+SMsRAHp+iV6mSrrdON8coK6ofwLL2oDNTqD9q2WnpeMHaGHnswTjv/Mr+gXW9tpVXrsyAPY5kJQcRapIQn8Vgp5WMbyaMUsjSBiP1e6I123iRLreRY7yU4xvqG01p1HWzUAZreDvsPVOlh/9ojUw5f7xZty+9Ps0HlsH+zqBqZH5kpgok=","eNp9TzsOwjAM3TlFlZlITuM0DdeAHbnGQCRoS5sOCHF3EonPxhvfz36PalVlKKYkp2G6q02lwHRk0YNujZBG6KwOTWg1hZqFHXYIoNbv3HCQktnJNtUWXchoAgAYtX5XH2TmKY4pDn1xXui6Nx/rz9XTVf7I4xS56A7gQ90W6lNM5WX8sfMyjpcoU+miYCy3zml3dF5jY/Mkj3kNY+2p9Q3V8L2w9DGVEJ+jcJ73fAEjMURn","*${random_data} = *JgZb#bv(\\","*20 - Check API add product không thành công khi body truyền vào là rỗng dạng {}","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n\n}, 400, code;message;objectName, 400;Dữ liệu nhập không hợp lệ;createProductRequest","*{ \n\n}","*${random_data} = !8_PSoW$;T","*${new_data} = { \n\n}","*21 - Check API add product không thành công khi không truyền gì ở body","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;null","*${random_data} = ,&amp;QG43}2:#","*${new_data} = ","*${Results} = {'status_code': 400, 'response': {'code': 400, 'message': 'Dữ liệu nhập không hợp lệ', 'error': 'INVALID_INPUT', 'errors': [{'field': None, 'objectName': None, 'message': 'Invalid input', 'error': Non...","*${datas} = {\"code\": 400, \"message\": \"Dữ liệu nhập không hợp lệ\", \"error\": \"INVALID_INPUT\", \"errors\": [{\"field\": \"\", \"objectName\": \"\", \"message\": \"Invalid input\", \"error\": \"\"}]}","*${json} = {'code': 400, 'message': 'Dữ liệu nhập không hợp lệ', 'error': 'INVALID_INPUT', 'errors': [{'field': '', 'objectName': '', 'message': 'Invalid input', 'error': ''}]}","*${json_results} = {\"code\": 400, \"message\": \"D\\u1eef li\\u1ec7u nh\\u1eadp kh\\u00f4ng h\\u1ee3p l\\u1ec7\", \"error\": \"INVALID_INPUT\", \"errors\": [{\"field\": \"\", \"objectName\": \"\", \"message\": \"Invalid input\", \"error\": \"\"}]}","*22 - Kiểm tra require của trường category khi không truyền giá trị vào param category","eNqNUL1OwzAQ3vsUlucEu0ncJE3pxA5Su6PDuTZWE8ckTiWEmHkQZsTCREaeJG9CXBrYEN/2/Z3ubgWkaHB3SQtrTbtkzGJr8XBx1KyEOwZGsSNnpqlzvwJN1/+KrRisPXKinbQeubnebD3ySGZkBJVgcV83D3RJKPXOWp2j41vc2CCMRDpikXLOBfXOtRxb2ShjVa1dsoTqdj5F5z8pDRX+YZtGSecLzifpvgNtlXXrRL9q2xlTKmzcLEjnoUyE8MVOxH60CLmfxFHopzIKYkjiBQR8OqTTyrqOLBRKOnvyvoe6+7IK2xb2mO0UlvnJyK6G/o2UauifO6KL4ePVkEPx+a73pBj6F0PK0cmmh30BXkR/FQ==","eNp9j8EOgjAQRO98BemZJgvtUupv6N1sStUmUEopB2P8d2kCenNuO/Nms/sqi3ITM5TsfYpPdioZq3Zv6m2eL/acGiFRb2o1ACCr9lpvFxNdSG7ymRxovNYHWn8pT6P9E4foTM4R4LDmlXxyKZ8jf+6yhjA4G/Mu0rUwHSLHGyouWwG8U1JwbWSjqFMtNXA8snqXcsc8nDWseH8AUZI7Gw==","*${random_data} = )[}e#`lp'X","eNp9jsEKwjAMhu8+RSket9G5Ra3gU+h9hC5KYWtrlyEyfHdX2PTmf8v3fwnZTo6eTYuMb3EWk9iIOdIg093HlzwJKbOF+ZbSfKUL76oa9Jy9VkqBzJa1lgYTbWDrXTI77JtyVcuv5bCnP3WI1qQelFrRY0THltM79Y8OYwidpZhuoS4rcwTI4QaHvC6K4gN/+TW5","*23 - Kiểm tra require của trường category khi không truyền param category","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;category","eNp9jEEOgyAURPeegrCW5Ct8kV6j3TcEafoTRYq4aJrevRJju+ss37yZF6sqtoW7efD8xPjFn3MrFZotnQEA5DXblcEvLlHMNIdijna6NofafK1gJ/+njolc6RHgQI/Vhkz5uVH1o8sa40g+lS9rGul6RIE31EJ1EkSvlRTGqVbbXne2BV7vuzVQLht3J+949f4AynU2Lw==","*${random_data} = N2u'F\\'w%i","*${new_data} = { \n\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a...","*24 - Kiểm tra validate của trường category có giá trị null","eNqNUL1OwzAQ3vsUlucEu02cn6Z0Ygep3dHhXBOrjmMSpxJCzDwIM2JhoiNPkjchKQ1siG+77+d0362AlA3uLmnpnG2XjDlsHe4vDoZpuGNgFTtwZps69yswdP0v24rB2iOnsZPOIzfXm61HHsmMDKASHBZ180CXxHRae2e2znFg6BY3bhGEIh0QpZxzQb1zMMdWNso6VZvRqaG6nU/W+Y/LQIV/yLZRctQF5xN134Fxyo0Hhb9s21mrFTbjLkjngUyE8MVOxH4YBdxP4jDwUxkuYkjiCBacnot0RrkxI0uFks6evO+lY7+swraFArOdQp2fhOyqP74Rrfrjc0dM2X+8WrIvP99NQcr++GKJHpRsetkXbHGAjA==","eNp9j8EOgyAQRO9+heEsySog0t9o7w1ZaUuCiAiHpum/VxJtb53jm5nNzquu6k0EdTL3OT7JqfbZuWan82g2Qi7mnDrGhdrUKwAQpNmLo1kx2pDs7EvS6enaHtH2m/J6Mn/sEC0WXwAcaMnaJ5vKQ/xH1xyCsyaWW1q1DAchqLgJSXnPgA6SM6qQd1IPstcdkH1I9jaVDj6sQVK9P6f6PJI=","*${random_data} = wf&lt;s1&gt;p;@v","eNp9jkEKwjAQRfeeIgSXtaS2o63gKXRfhnSUQJrENEGkeHcTaHXnX77//jDb2dCzHzDgm53ZzDYshUsMdLf+xU/MRK2LhdqBEuFXuoR93UCXcuiEEMCLZTjQJL1yQVmTTY1jX61q9bUMjvSndl7J3IMQK3pENEGF/FDzo1N0Tivy+RZ2VS1bgB3c4FiW5Qc0WDbP","*25 - Kiểm tra validate của trường category có giá trị là số","eNqNUL1OwzAQ3vsUlmcHOz9ukqZ0Ygep3dHhXBOriWMSpxJCzDwIM2JhoiNPkjchKS1siG+77+d03y2BlC1uL2npnO0WnDvsHO4u9oZXcMfBar4X3LZN7tVg6OpftiWHFSPHsVeOkZvr9YaRRzIjI6gCh0XTPtAF8YOQncgmx5GgG1y7IIxkOmKeCiEkZadcjp1qtXW6MZOzgvrWP1v9H5eBGv+QbavVpEshztR9D8ZpN90T/bJdb22lsZ12QeqHKpHSk1sZe9E8FF4SR6GXqiiIIYnnEAh6KtIb7aaMKjUqOnti30unflmNXQcFZluNVX4Usqvh8EYqPRyee2LK4ePVkl35+W4KUg6HF0uqUcnOH/sC6HN/Zw==","eNp9j80OgjAQhO88BemZJtufpdTX0LtpStUmUEopB2N8d2kCenOO38xsdl51VW8i1mR3n9KTnGrGRbPDqXcbIBd3zlxI1JtaDQBImr3Xu8UmH7OfQkkOZryyI8q+qWBG98eOydviI8CB5tWE7HP5R/7ossY4eJfKLaOZsB0ixRsqKlsBtFNSUG0lV6ZTreFA9iFr8Ll07MM7S6r3B584O20=","*${random_data} = N;8&lt;DPGU=l","*${new_data} = { \n    \"category\": 123,\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"supplier\": \"a913c855-5f57-...","*26 - Kiểm tra validate của trường category có giá trị là kí tự đặc biệt","eNqNUL1Sg0AQ7n2Km0sLcsBdgBBT2etM0jvLsQk3geOEIzOOY+2DWDs2Vqb0SXgTIQbtHL9u9/uZ/XYJpGhwe0ULa0278DyLrcX95UF7JWQeGOUdmGeaOncr0HT1L9nSg5VDTmMnrUNub9YbhzySCzKASrC4q5sHuiCU+RmEPGJu7CO4nGWhm8yT2IUkkCgFzzhjs9mMOmdrneNo2+DaBiEXyYB5whgT1Dmn59jKRhmraj0qS6ju/Enq/6g0VPgHbRolR14wNq3uO9BW2fFq/rttO2NKhc2YBYkfylgIV2xF5PJ5OLSK+FBI8iCCOJpDwKYinVZ29MhCoaQXT8536NgvrbBtYYfpVmGZn4j0uj++kVL1x+eO6KL/eDVkX3y+6x0p+uOLIeXApNNfvwCFnYiC","eNp9T8sOgjAQvPsVpFxtsqVbSv0NvZtlXbWJAmI5GOO/SxPRm3OcV2aexaqYoZiSnPrxoTaFAtOSRQ+6MUIaobU61KHRFCoWdtgiQFmWav2J9gfJsZ1sU2XRhRl1AACn1p/2g9x5jEOKfZedF7ruzWI1X1dHV/kjD2PkrDuAhbpN1KWY8mr8sfdpGC5RxtxFwVhunNPu6LzG2s6vPM6HGCtPja+pguXI1MWUM3yOwmr1egMooESI","*${random_data} = &gt;,GSs8]$s~","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400###\",\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\":...","*27 - Kiểm tra validate của trường category có giá trị là kí tự tiếng việt","eNqNUL1OwzAQ3vsUlueEOImdn6Z0Ygep3dHFuTZWE8ckTiWEWFh4EGbEwkRHnqRvQlIa2BDfdvf96L5bAClb3FzS0lrTzT3PYmdxd7HXXgW5B0Z5e+aZtincGjRd/ku28GDpkNPYS+uQm+vV2iEPZEYGUAkWt017T+eEMj+HkMfMTXwEl7M8dNMoTVxIA4lS8Jwz9vlEnbOzKXB0rXFlg5CLdECUMsYEdc7hBXayVcaqRo/KCupbf5L6PyoNNf5Bm1bJkReMTau7HrRVdjya/2673phKYTtmQeqHMhHCFRsRuzwKh1IxH/pIHsSQxBEEbCrSa2VHjywVSjp7dL5Dx35ZjV0HW8w2CqviRGRXx8MbqdTx8NwTXR4/Xg3ZlZ/vekvK4+HFkGpgsumtX1cViV4=","eNp9TzkOwjAQ7HlF5BpL63gdx3wDerRZFrAESQhOgRANX+NjxBKBjinn0sy9WBQTFFOSQzfc1KpQYBqy6EHXRkgjNFaHKtSaQsnCDhsEeD3V8pPsdpJTG1mn0qILE6oAAE4tP+U7ufIQ+xS7NjtPdN6a2Wq+rpbO8kfuh8hZdwAzdRmpTTHl0fhjr2Pfn6IMuYuCsVw7p93eeY2VnU55nP4wlp5qX1EJ85GxjSln+BiF1eLxBtzqRWQ=","*${random_data} = xFddQ(9Dtc","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400Â\",\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 4...","*28 - Kiểm tra validate của trường category có giá trị là kí tự tiếng trung","eNqNULtOwzAU3fsVlucEO4mdR1M6sYPU7ujGcRuriWMSpxJCzCz8BTPqwkRHviQD/0FSGtgQZ7v3PHTPXQAqGrm5xIW1pp0TYmVr5e5ir0kJGQGjyJ4S09S5W4HGy3/JFgSWDjqNnbAOurlerR30gGZoABZg5bZu7vEcYeplELCIurEnwWU0C9wkTGIXEl9IwVnGKP08PGPnbK1zOdrWcmX9gPFkQJhQSjl2zum5bEWjjFW1HpUlVLfeJPV+VBoq+QdtGiVGnlM6re460FbZ8Wr2u207Y0olmzELEi8QMecu3/DIZWEwtIrYUEgwP4I4CsGnU5FOKzt6RKGkwLNH5zt07JdWsm1hK9ONkmV+ItKr/nhApeqPTx3SRf/+atCu+HjTW1T0xxeDyoFJp79+AY2tijk=","eNp9T0lOxDAQvOcVkc+x1I7bccw3Zu6jTqcBS9nIOIcR4gf8hVfxD2IpgRt1rE1V72VR7lBMSV7m9aGeSgWmI4sedGuENEJndWhCqynULOywQ4Dvr09VHdG5lxy7yiXVFl3Y0QQAcKo62nu58xqXFOcpOwcab+a0ml/XRKP8Iy9r5Kw7gJN622hKMeXV+Mfet2UZoqy5i4Kx3Dqn3bPzGhu7v/K4H2KsPbW+oRrOI9sUU87waxRWxccPrk1GPw==","*${random_data} = h7#m8A5C4E","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400富\",\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 4...","*29 - Kiểm tra validate của trường category có giá trị space ở đầu","eNqNUL1OwzAQ3vsUlueEOImdn6Z0Ygep3dHFuTZWE8ckTiWEmHkQZsTCREeeJG9CUtqyIb7t7vvRfbcAUra4uaaltaabe57FzuLuaq+9CnIPjPL2zDNtU7g1aLr8l2zhwdIhx7GX1iF3t6u1Q57IjIygEixum/aRzgklzM8h5DFzEx/B5SwP3TRKExfSQKIUPOeMUedkbAqcTGtc2SDkIh0RpYwxQZ1TdoGdbJWxqtGTsoL63j9L/YtKQ41/0KZVcuIFY+fVQw/aKjvdzH+3XW9MpbCdsiD1Q5kI4YqNiF0ehWOlmI9tJA9iSOIIgkuRXis7eWSpUNLZs/MTOvXLauw62GK2UVgVRyK7GQ7vpFLD4aUnuhw+3wzZlV8fekvK4fBqSDUy2fmr38WRiDk=","eNp9T8sOgjAQvPsVpGeabOmWUn9D72ZZV22igFAOxvjv0gT15hznlZlnsSkWKKYk5358qG2hCjAtWfSgGyOkEVqrQx0aTaFiYYctAqhyDfZHyaG97FJl0YUFdQAAp8q1+ygTj3FIse+y80q3g/lYzdfV0U3+yMMYOesO4EPdZ+pSTHkz/thpHoZrlDF3UTCWG+e0OzmvsbbLJY/LG8bKU+Nrqr5H5i6mnOFLFFab1xvGokQ/","*${random_data} = &amp;2z[=7qncF","*${new_data} = { \n    \"category\": \" 01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"code\": \"TeSt23459999690005\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 4...","*30 - Kiểm tra validate của trường category có giá trị space ở cuối","eNqNUL1OwzAQ3nkKy3NCnMT5a0ondpDaHV2ca2M1cUziVEKImQdhRixMdORJ8ibEpYEN8W1334/uuyWQqsPtFa2M0f3C8wz2BveXB+XVUHigpXdgnu7a0m1A0dW/ZEsPVg45jYMwDrm9WW8c8kguyAQqwOCu7R7oglDmFxDyhLmpj+ByVoRuFmepC1kgUES84IwR6pyNbYnWtMG1CUIeZRPijDEWU+ecXWIvOqmNbJVV1tDc+bPU/1EpaPAPWndSWD5ibF7dD6CMNPZm/rvtB61riZ3NgswPRRpFbrSNEpfH4dQp4VMdwYME0iSGgM1FBiWN9YhKoqAXT853qO2XN9j3sMN8K7EuT0R+PR7fSC3H4/NAVDV+vGqyrz7f1Y5U4/FFk3pi8vmrX8shiDo=","eNp9T7sOwjAM3PmKKjORnMZJGn4DduQaA5GgLSUdEOLfaSQKGzfeS3fPalXNUExZTv34UJtKgWnJYgDdGCGN0FodfWw0xZqFHbYIUKn1J9gfpIR2ss21RRdn+AgAXq0/3Qe585iGnPquOC903ZvFar6ujq7yRx7GxEV3AAt1m6jLKZfN+GPv0zBckoyli6Kx3Din3dEFjd7OnwLOdxjrQE3wVMNyZOpSLhk+J2G1er0By+ZEQA==","*${random_data} = !Y1Io$r4Ji","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400 \",\n    \"code\": \"TeSt23459999690006\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 4...","*31 - Kiểm tra validate của trường category có giá trị space ở giữa","eNqNUL1OwzAQ3vsUlueEOInz15RO7CC1O7o418Zq4pjEqYQQMw/CjFiY6MiT5E2IS1s2xLfdfT+67xZAqg4317QyRvdzzzPYG9xd7ZVXQ+GBlt6eebprS7cBRZf/ki08WDrkOA7COOTudrV2yBOZkQlUgMFt2z3SOaHMLyDkCXNTH8ElnBWhm8VZ6kIWCBQRLzhj1DkZ2xKtaY0rE4Q8yibEGWMsps4pu8RedFIb2SqrrKG5989S/6JS0OAftO6ksHzE2Hn1MIAy0tib+e+2H7SuJXY2CzI/FGkUudEmSlweh1OnhE9tBA8SSJMYgkuRQUljPaKSKOjs2fkJtf3yBvsetphvJNblkchvxsM7qeV4eBmIqsbPN0121deH2pJqPLxqUk9Mfv7qN8hYiDo=","eNp9TzkOwjAQ7HlF5BpL63htx3wDerRZFrAESUicAiH+TixxdEw5l2Ye1apaoJiynPrxrjaVAtOSxQC6MUK6Qmitjj42mmLNwg5bBFDrd7A/SAntZJtriy4u8BEAvFq/uw8y8ZiGnPquOC903ZuP1XxdHV3ljzyMiYvuAD7UbaYup1w244+d5mG4JBlLF0VjuXFOu6MLGr1dPgVc3jDWgZrgqf4embuUS4bPSVitni/JHURA","*${random_data} = SyBWn/@j{@","*${new_data} = { \n    \"category\": \"01ba3470-81ea- 40b3-9698-a92cec54b400\",\n    \"code\": \"TeSt23459999690006\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 4...","*32 - Kiểm tra require của trường supplier khi không truyền giá trị vào param supplier","eNqNj71OwzAUhfc+heU5wU7jlKYpndhBand049wmVhPHJE4lhJh5EGbEwkRGniRvQtwS2BB3O+c7928NpGhwf0ULa027Ysxia/FwcdSshJSBUezImWnqzK9A082/YmsGG4+cZCetR25vtjuPPJIZGYtKsJjXzQNdEcqDFEJxyf1lgOALnoZ+vIiXPsRziTISqeCceue+tjOmVNi4vsmTdYZO73Br56GI4rEWMec8pt73ugxb2ShjVa1dsoTqLpiiwU9KQ4V/YNMo6XjE+WTdd6Ctsu4N8et2Wlk3RxYKJZ09eWfo7kwqbFvIMdkrLLMTSK6H/o2UauifO6KL4ePVkEPx+a5zUgz9iyHlSJLp8S8YP3/Q","eNp9j8EOgjAQRO98BemZJlsoSP0NvZuybHQTKKWUgzH+uzSK3pzbzrzZzT7yLN8k0Ea6TuEujrkA1dlKH0C2iqzU0FXSNKaV1pRIWOtOA4ji3VtW7wemkHq7h1NPaT7TKZaVrs2mxgCAEcXnXE8LBvaRJ5fIwY4XtaPqSzk70p/YB8aU1wC7Na/WRY7pDf1zV8cx7cEbE4rs+QLZdjvA","*${random_data} = .d~2+-3lBV","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500,...","*33 - Kiểm tra require của trường supplier khi không truyền param supplier","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;supplier","eNp9js0OgjAQhO99iqZnmmyhIPU19G62y0abSPmxHIzx3aUJ6M05znwzmZcUcpUiTHwd5qc6SgXGY2UPoFvDqC34SrvGtRpdSUy19RZAFWIrDh3n0plPqaxs7VY1DgCcKrbtjh80hzGFIWbyjv3F7Kj5UhF7/hOPc6Cc1wC7NS0YU0j5s/25Swwp79AtMCnx/gBMkDa+","*${random_data} = &lt;_!(/z`B;e","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 4...","*34 - Kiểm tra validate của trường supplier có giá trị null","eNqNj71OwzAUhfc+heXZwU6TlKYpndhBand049wmVh3HJE4lhJh5EGbEwkRHniRvQtI2ZUOc7Z7v3L8lkKLG7Q0tnLPNgnOHjcPd1d5wDSkHq/hecFtXmVeCoat/xZYcVowcy1Y6Ru7v1htGnsmE9KISHOZV/UQXhAo/hSC8Ft7cR/BCkQZePIvnHsRTiTIK01AIyk59TWutVlj3fabV+uzKKsNh0gbXbhqEUdxrFgshYsrOCzNsZK2sU5UZkhrKB3+M+peUgRL/wLZWcuCREKP12IJxyg2PhL9ua5Qb5shCoaSTF3aCw51JiU0DOSZbhTo7guS2O3wQrbrDa0tM0X29W7Irvj9NToru8GaJ7kkyvv4D8HWBRw==","eNp9j00OgjAQhfecgnRNkykUpF5D96YME21SSi3twhjvLo2gO9/yez+TeZZFuYqhjnSdw4MdSwZi0I08AO8FaS5haLjqVM+1qpGwlYMEYNWntyTvraGw9lyydqM4j5SXznSKdSNbtapTAKBYtR0cacFgfDSzy0mrp4vYo+KbcnqiP7YPBrPfAuzonrSLJuZH5I8mZ2LewZshZMXrDfn2PTc=","*${random_data} = ^5gY))pbci","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": null,\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 50...","*35 - Kiểm tra validate của trường supplier có giá trị là số","eNqNj71OwzAUhfc+heU5wU6TlKYpndhBand049wmVhPH2E4lhJh5EGbEwkRHniRvQtI2ZUOc7Z7v3L8lkNLg9oaWzmm7YMyhdbi72itWQcZAS7bnTJsm92tQdPWv2JLByiPHshXOI/d3641HnsmE9KICHBaNeaILQnmQQRhdc38eIPgRz0I/mSVzH5KpQBFHWcQ59U59ttW6kmj6vmAaRmdXNDkOkza4dr0bJ71mCec8od55YY5WGKmdbNSQrKB+CMZocEkpqPEPrI0UA485H63HFpSTbngk+nVbJd0wR5QSBZ28eCc43JnWaC0UmG4lVvkRpLfd4YNUsju8tkSV3de7Jrvy+1MVpOwOb5pUPUnH138ACFqAVg==","eNp9j00OgjAQhfecgnRNkykUpF5D96YME20CpZZ2YYx3t42gO9/yez+TeZZFmcRQB7ou/sGOJQMx6EYegPeCNJcwNFx1quda1UjYykECsOrTW6NzkyGfeqJu5EZxGSkvnekUEm1VUqcAQLFqOzjSit64YBabk5OeL2KPim/K6pn+2M4bzH4LsKN71DaYkB+RPxqtCXkHb4aQFa83WWc8Rg==","*${random_data} = mbu=YKW_]*","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": 1234,\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 50...","*36 - Kiểm tra validate của trường supplier có giá trị là kí tự đặc biệt","eNqNkL9OwzAQh/c+hWUYE+Ikzr+mVAzsILU7ujjXxmrimMSphBAzD8KMWJjoyJPkTUhaAhviNt/3+053XgApGtxc0sIY3c4dx2BrcHexV04JmQNaOnvm6KbO7QoUXf4rtnBgaZHjsxPGIrc3q7VFHsmMDEUFGNzWzQOdE8rcDHweMTt2EWzOMt9OwiS2IfEEioBnnDFqnby207qU2IweJK4v4iCwg00Q2Tz0hwkRH2TBvQjiKASPXZ2dT6qocxy1Na6M5/MgGSpMGGMJtb63yrEVjdRG1mpMllDduVPU/UkpqPAPrBspRh4wNrXuO1BGmvFa/tvtlDTjHFFIFHT2ZJ3guGdaYdvCFtONxDI/gvS6P7yRUvaH546oov941WRXfL6rLSn6w4sm5UDS6X++AMzTiLo=","eNp9j8GOwjAMRO98RZXlSCSncZqG0/7DckeuMRAJ2lLSwwrx7zSCwo05zswb2bdiUUxSTEkO3fCv1oUC05BFD7o2QhqhsTpUodYUShZ22CCAWj2569j3pyhD5igYy7Vz2u2d11jZacHjBDOWnmpfUQm/P8sZ5W4nGdvIXyotujCpCgAQ1Op11U6uPMQ+xa7NzROdt2aumnerpbN8ifshcs4dwGxdRmpTTPlb/LhjG1Pe4WMUVov7A2SyRKo=","*${random_data} = {iI[u&lt;FDt*","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20@#$\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name...","*37 - Kiểm tra validate của trường supplier có giá trị là kí tự tiếng việt","eNqNkL9OwzAQh/c+heU5IU7i/GtKJ3aQ2h1dnGtjNXFM4lRCiIWFB2FGLEx07JPkTUjaBjbEbb7v953uvABSNLi5poUxup07jsHW4O5qr5wSMge0dPbM0U2d2xUouvxXbOHA0iKnZyeMRe5uV2uLPJEZGYoKMLitm0c6J5S5Gfg8YnbsIticZb6dhElsQ+IJFAHPOGPUOnttp3UpsRk9SFxfxEFgB5sgsnnoDxMiPsiCexHEUQgeO75MpqhzHK01rozn8yAZKkwYYwm1Lkvl2IpGaiNrNSZLqO7dKer+pBRU+AfWjRQjDxibWg8dKCPNeCz/7XZKmnGOKCQKOnu2znDcM62wbWGL6UZimZ9AetMfPkgp+8NrR1TRf71rsiuOn2pLiv7wpkk5kHT6nm9Drol4","eNp9j7FuhDAQRHu+ArnG0hqvMb7fyPWnZdkkljhwOFOcTmnya/mxYCUkXaacmTfafdRVvUsxZXlZ1rs61QrMQBY96N4IaYTB6tCFXlNoWdjhgACq+eZuW0pTlLVwFIzl3jntnp3X2Nl9weMOM7aeet9RC58fB8nLKIU6y1NuLbqwqwsAEFTzc9QoN15jynGZS3Oi68UcVfPbmukq/8RpjVxyB3BYbxvNOebyLP652xxz2eHXKKyq9y/HR0Vo","*${random_data} = t.eH%!D6N[","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20Â\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\":...","*38 - Kiểm tra validate của trường supplier có giá trị là kí tự tiếng trung","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20祎妃\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;supplier","*{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20祎妃\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}","*${random_data} = d83e8:7O2=","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20祎妃\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\"...","*39 - Kiểm tra validate của trường supplier có giá trị space ở đầu","eNqNkL9OwzAQh/c+heU5IU7i/GtKJ3aQ2h1dnGtjNXFM4lRCiJkHYUYsTHTkSfImxC0tG+I23/f7TndeAKk63FzTyhjdzz3PYG9wd7VXXg2FB1p6e+bpri3dBhRd/iu28GDpkONzEMYhd7ertUOeyIxMRQUY3LbdI50TyvwCQp4wN/URXM6K0M3iLHUhCwSKiBecMeqcvH7QupbYWY9A5ocijSI32kSJy+NwGpHwyRY8SCBNYgguomhLtNIaVyYIeZRNFWeMsYw6PzuV2ItOaiNbZZM1NPf+OepfUgoa/APrTgrLI8bOrYcBlJHG3sp/u4OSxs4RlURBZ8/OCdo98wb7HraYbyTW5RHkN+PhndRyPLwMRFXj55smu+rrQ21JNR5eNaknkp9/5xvldIhT","eNp9j7EOwjAMRPd+RZWZSE7jNA2/ATtyjYFI0JaSDgjx7zQCysaNd/dO9qMsylmKKcmxH+9qXSowLVn0oBsjpBFaq0MdGk2hYmGHLQKo1Zu7TcNwjjJmrqRgLDfOaXdwXmNt5wmPM81YeWp8TdUCcr+XDG1lkyqLLsyqAwAEtfrctJcbj3FIse9y80yXnflWzdLq6CJ/4mGMnHMH8LWuE3Uppvwr/typiynv8CkKq+L5AuRJREM=","*${random_data} = ,{FoB^x[KC","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \" a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\":...","*40 - Kiểm tra validate của trường supplier có giá trị space ở cuối","eNqNkL9OwzAQh3eewvKcECdx/jWlEztI7Y4uzrWxmjgmcSohxMyDMCMWJjryJHkT4pbAhrjN9/2+052XQKoOt1e0Mkb3C88z2BvcXx6UV0PhgZbegXm6a0u3AUVX/4otPVg55PQchHHI7c1645BHckGmogIM7trugS4IZX4BIU+Ym/oILmdF6GZxlrqQBQJFxAvOGHXOXj9oXUvsrAeZH4o0itxoGyUuj8NpQsInWfAggTSJIWBkFkVbopU2uDZByKNsqjhjjGXU+d6pxF50UhvZKpusobnz56j/k1LQ4B9Yd1JYHjE2t+4HUEYaeyv/7Q5KGjtHVBIFvXhyztDumTfY97DDfCuxLk8gvx6Pb6SW4/F5IKoaP1412Vef72pHqvH4okk9kXz+nS/pV4hT","eNp9j7EOwjAMRHe+ospMJKdxmobfgB25xkAkaEubDgjx7zSCwsaNd/dO9qNYFbMUU5JTN9zVplBgGrLoQddGSCM0Vocq1JpCycIOGwRQ6zc3Tn1/iTJkjoKxXDun3dF5jZWdFzzOMGPpqfYVlVAsIHcHydBOtqm06MKsKgBAUOvPTQcZeYh9il2bmxe67s1SNd9WS1f5E/dD5Jw7gMW6TdSmmPKv+HOnNqa8w+corFbPF+gsREM=","*${random_data} = '4:Mzg3{,;","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20 \",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\":...","*41 - Kiểm tra validate của trường supplier có giá trị space ở giữa","eNqNkL9OwzAQh/c+heU5IU7i/GtKJ3aQ2h1dnGtjNXFM4lRCiJkHYUYsTHTkSfImxC0tG+I23/f7TndeAKk63FzTyhjdzz3PYG9wd7VXXg2FB1p6e+bpri3dBhRd/iu28GDpkONzEMYhd7ertUOeyIxMRQUY3LbdI50TyvwCQp4wN/URXM6K0M3iLHUhCwSKiBecMeqcvH7QupbYWQ8yPxRpFLnRJkpcwuNwGpHwyRY8SCBNYgguomhLtNIaVyYIeZRNFWeMsYw6PzuV2ItOaiNbZZM1NPf+OepfUgoa/APrTgrLI8bOrYcBlJHG3sp/u4OSxs4RlURBZ8/OCdo98wb7HraYbyTW5RHkN+PhndRyPLwMRFXj55smu+rrQ21JNR5eNaknkp9/5xvnGIhT","eNp9j7EOwjAMRPd+RZWZSE7jNA2/ATtyjYFI0JaSDgjx7zQCysaNd/dO9qMsylmKKcmxH+9qXSowLVn0oBsjpBFaq0MdGk2hYmGHLQKo1Zu7TcNwjjJmjoKx3Din3cF5XWJt5wmPM81YeWp8TdUCcr+XDG1lkyqLLsyqAwAEtfrctJcbj3FIse9y80yXnflWzdLq6CJ/4mGMnHMH8LWuE3Uppvwr/typiynv8CkKq+L5AuXtREM=","*${random_data} = rN[kfJ54vN","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57- 4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690009\", \n    \"description\": \"lam_1234599991\", \n    \"name\":...","*42 - Kiểm tra require của trường supplier khi không truyền giá trị vào param code","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;code","eNp9j8EOwiAQRO/9ioZzSaAsBfwZs92iklRaKT0Y479botabc5zZN9l51FW9iRFmf57SnR1qJmSPCozgVnrkIHrFXecsR9eSJw09CMGaN7es8zwGnwqHTiqyWnN90oZDp7YGAxtM0Bq0psN252gafGFY83lg8AulMOcwxeKPeD3KVoF2m+R+FfHq/8RzClRyLcTXuq0Yc8hlGPzcNYZceugSPLHq+QIIID+5","*${random_data} = 4U$db83T)z","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", ...","*43 - Kiểm tra require của trường supplier khi không truyền param code","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;code","eNp9j8sOwiAURPf9ioZ1SXhcCvgz5vaKStLWSunCGP9diK+ds5zJmczc26YtYoQ5nC7pxnYtE3JADVZwJwNyEIPmvveOo1cUyMAAQrDuxa3bsowxpMqhl5qcMdwcjeXQ69JgocAEyqKzPaovdwgrpbjkeJkrOuK0l0qD8UWSde9VM07hT7ykSDU3Qnys64Zzjrn+gJ+7zTHXHjrHQKx5PAFXrjxm","*${random_data} = kt!/4TAb#B","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500...","*44 - Kiểm tra validate của trường code có giá trị null","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": null, \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;code","eNp9j8EOwiAQRO/9ioZzSaAspfgzZrtFJam0Unowxn8XotWbc5zZN9l51FWdxQiTO8/xzg41E3JABUbwXjrkIAbFbWd7jrYlRxoGEII1b27dlmXyLhYOrVTUa831SRsOncoNBjJM0BrsTYftl6N5dJkJ2zQ1nxdGt1L0S/JzKG0TXo+yVaBtlmT7VcCr+xMv0VPJtRC7ddswJJ/KNPi5W/Cp9NDFO2LV8wUN/kEw","*${random_data} = ['@YB)YrFl","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": null, \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\"...","*45 - Kiểm tra validate của trường code có giá trị số","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": 123123, \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;code","eNp9j80OgjAQhO88BemZJv3ZUurLmGWp2gQBSzkY47vbRtGbkz3N7DfZfdRVncUIkz/P8c4ONROyRw1W8E565CB6zV3rOo5OkScDPQjBmje3bssyBh8Lh05q6ozh5mQsh1bnBgsZJlAWO9ui+nI0Dz4zUuk8zeeIwa8Uw5LCPJW+Ea/HnIJxWZLtWxNe/Z94iYFKboTYrduGUwqpPAc/d5tCKj10CZ5Y9XwBAG9AoQ==","*${random_data} = zn)}IWMSd\\","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": 123123, \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_123459999...","*46 - Kiểm tra validate của trường code có giá trị là kí tự đặc biệt","eNqNj7FOwzAQhvc+hWUYE+IkTtI0pWJgB6nd0cW5NlYTxyROJYSYeRBmxMJER54kb0LcUtgQt919/3e6mwMpW1xf0tIY3c08z2BncHuxU14FuQdaejvm6bYp3BoUXfwrNvdg4ZBD2wvjkNub5cohj2RCxqICDG6a9oHOCGV+DiFPmDv1EVzO8tBN43TqQhoIFBHPOWPUOXpdr3UlsbUepH4oplHkRusocXkcjhsSPsqCBwlMkxiCH080BVpnhUsThDxKx4pTxvzg6uycOt9XFdiJVmojG2XDFdR3/int/6QU1PgH1q0UlkeMnUb3PSgjjf2W/057JY3dI0qJgk6enCO0p2Y1dh1sMFtLrIoDyK6H/Rup5LB/7okqh49XTbbl57vakHLYv2hSjSSz8her2Ybb","eNp9j81uwjAQhO88RWR6xNLaXscxJ96B3tFm2baWQhKCc0Co706s8nPrHGfmG+3eqlW1SDFl+R6mq9pWCkxLDgPoxghphNbpWMdGU7Qs7LFFALX54y7zOHZJpsJRNI4b77X/8kFj7ZaFgAvMaAM1oSb74ng4SmE+ZZ+tQx8X1RHA2N36Q20eVx3lwlMacxr6Uu7odDDPtnm1ejrJP/E4JS65B3ha55n6nHL5Ft/u3KdcdvgnCavV7x1mWkSk","*${random_data} = .]\\B2)L.r(","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690012@#$\", \n    \"description\": \"lam_1234599991\", \n    \"name...","*47 - Kiểm tra validate của trường code có giá trị là kí tự tiếng việt","eNqNj79OwzAQh/c+heU5IU7i/GtKJ3aQ2h1dnGtjNXFM4lRCiJn3gBmxMNGxT9I3IW5p2RC33X2/73Q3A1J1uLqmlTG6n3qewd7g5mqrvBoKD7T0tszTXVu6DSg6/1ds5sHcIcd2EMYhd7eLpUOeyISMRQUYXLfdI50SyvwCQp4wN/URXM6K0M3iLHUhCwSKiBecMeqcvH7QupbYWQ8yPxRpFLnRKkpcHofjhoSPsuBBAmkSQ3DxRFuidZa4MEHIo2ysOGPMD/av1Pk5qsRedFIb2SqbraG5989h/5JS0OAfWHdSWB4xdh49DKCMNPZZ/jsdlDR2j6gkCjp5dk7QXpo32PewxnwlsS6PIL857D5ILQ+7l4Go6vD1rsmm2n+qNakOuzdN6pHkVv4GGOmHuQ==","eNp9j0FuwjAQRfecIvIaS2N7HMe9RrtHk8kULEGSBmeBql6Gq3AxYkFg17/8/7+vmd9qUy1STFn2w3RRH5UC05LDALoxQhqhdTrWsdEULQt7bBFAbR/ceR7HY5KpcBSN48Z77b990Fi7ZSHgAjPaQE2oyb44HjopzJd8ZuvQx0V1BDD2dlXb51GdnHlKY05DX7pHOu3MWjavVk8n+Scep8Ql9wCr9TNTn1Muz+LbnfuUyw4fkrDa/N0BuRxFgg==","*${random_data} = !C$yd#YW??","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690012â\", \n    \"description\": \"lam_1234599991\", \n    \"name\":...","*48 - Kiểm tra validate của trường code có giá trị là kí tự tiếng trung","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690012祎妃\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;code","*{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690012祎妃\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}","*${random_data} = ^b#~,~VsFR","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690012祎妃\", \n    \"description\": \"lam_1234599991\", \n    \"name\"...","*49 - Kiểm tra validate của trường code có giá trị space ở đầu","eNqNj79OwzAQh/c+heU5IU7i/GtKJ3aQ2h1dnGtjNXFM4lRCiJkHYUYsTHTkSfImxC0tG+K2u+/3ne4WQKoON9e0Mkb3c88z2BvcXe2VV0PhgZbennm6a0u3AUWX/4otPFg65NgOwjjk7na1dsgTmZGpqACD27Z7pHNCmV9AyBPmpj6Cy1kRulmcpS5kgUAR8YIzRp2T1w9a1xI760HmhyKNIjfaRInL43DakPBJFjxIIE1iCC6eaEu0DlnjygQhj7Kp4owxP6DOz00l9qKT2shW2WgNzb1/jvqXlIIG/8C6k8LyiLHz6GEAZaSxv/Lf6aCksXtEJVHQ2bNzgvbQvMG+hy3mG4l1eQT5zXh4J7UcDy8DUdX4+abJrvr6UFtSjYdXTeqJ5Fb+BsZVhnQ=","eNp9j70OwjAMhHeeospMJCdxmobXgB25xkAkaEtJB4R4dxrxt3Hj3X0n+14tqlmKKcuhH29qVSkwLTkMoBsjpBFap2MdG03RsrDHFgHU8sVdp2E4JRkLR9E4brzXfu+DxtrNCwFnmNEGakJN9stxv5PCVBtZZ+vQx1l1BDBWLd837eTKYxpy6rtSPdF5az5V8211dJY/8TAmLrkH+FiXibqccvkVf+7UpVx2+JiE1eLxBOYwRD0=","*${random_data} = DEN*D.X(h#","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \" TeSt23459999690012\", \n    \"description\": \"lam_1234599991\", \n    \"name\":...","*50 - Kiểm tra validate của trường code có giá trị space ở cuối","eNqNj79OwzAQh/c+heU5IU7i/GtKJ3aQ2h1dnGtjNXFM4lRCiJkHYUYsTHTkSfImxC0tG+K2u+/3ne4WQKoON9e0Mkb3c88z2BvcXe2VV0PhgZbennm6a0u3AUWX/4otPFg65NgOwjjk7na1dsgTmZGpqACD27Z7pHNCmV9AyBPmpj6Cy1kRulmcpS5kgUAR8YIzRp2T1w9a1xI760HmhyKNIjfaRInL43DakPBJFjxIIE1iCC6eaEu0DlnjygQhj7Kp4owxPyTU+TmqxF50UhvZKputobn3z1n/klLQ4B9Yd1JYHjF2Hj0MoIw09ln+Ox2UNHaPqCQKOnt2TtBemjfY97DFfCOxLo8gvxkP76SW4+FlIKoaP9802VVfH2pLqvHwqkk9kdzK3yjUhpU=","eNp9j70OwjAMhHeeIspMJKdxmobXgB25xkAkaEtJB4R4dxrxt3Hj3X0n+64WapZmynLox5teKQ22JYcBTGOFDELrTKxjYyhWLOyxRQC9fHHXaRhOScbCUbSOG++N3/tgsHbzQsAZZqwCNaGm6stxv5PCqI2sc+XQx1l1BLBO6eX7qJ1ceUxDTn1Xuic6b+2na7+tjs7yJx7GxCX3AB/rMlGXUy7P4s+dupTLDh+TsF48nhs2RF4=","*${random_data} = 'Oil%`H3%8","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \" TeSt23459999690013 \", \n    \"description\": \"lam_1234599991\", \n    \"name\"...","*51 - Kiểm tra validate của trường code có giá trị space ở giữa","eNqNj79OwzAQh/c+heU5IU7i/GtKJ3aQ2h1dnGtjNXFM4lRCiJkHYUYsTHTkSfImxC0tG+K2u+/3ne4WQKoON9e0Mkb3c88z2BvcXe2VV0PhgZbennm6a0u3AUWX/4otPFg65NgOwjjk7na1dsgTmZGpqACD27Z7pHNCmV9AyBPmpj6Cy1kRulmcpS5kgUAR8YIzRp2T1w9a1xI760HmhyKNIjfaRInL43DakPBJFjxIIE1iCC6eaEu0DlnjypAg5FE2VZwx5ofU+TmqxF50UhvZKputobn3z1H/klLQ4B9Yd1JYHjF2Hj0MoIw09ln+Ox2UNHaPqCQKOnt2TtBemjfY97DFfCOxLo8gvxkP76SW4+FlIKoaP9802VVfH2pLqvHwqkk9kdzK3yevhpU=","eNp9j70OwjAMhHeeIspMJKdxmobXgB25xkAkaEtJB4R4dxrxt3Hj3X0n+64WapZmynLox5teKQ22JYcBTGOFDELrTKxjYyhWLOyxRQC9fHHXaRhOScbCUbSOG++N3/tgsHbzQsAZZqwCNaGm6stxv5PCqI2ss6oc+jirjgDW6eX7qJ1ceUxDTn1Xuic6b+2nar+tjs7yJx7GxCX3AB/rMlGXUy7P4s+dupTLDh+TsF48nhoRRF4=","*${random_data} = pJ+Aa]FSyE","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \" TeSt 23459999690013\", \n    \"description\": \"lam_1234599991\", \n    \"name\"...","*52 - Kiểm tra max length của trường code ","eNrtkr9OwzAQxvc+heU5IU7i/GtKJ3aQ2h1dnGtjNXFM4lRCiJkHYUYsTHTkSfomxC0tG4Kd2+77vt8NdzcDUnW4uqSVMbqfep7B3uDmYqu8GgoPtPS2zNNdW7oNKDr/VWzmwdwhh3YQxiE314ulQx7IhIxFBRhct909nRLK/AJCnjA39RFczorQzeIsdSELBIqIF5wx6hy5ftC6lthZDjI/FGkUudEqSlweh+OEhI+w4EECaRJDcOZEW6JllrgwQcijbKw4Y8yP/5W/Kv7YUufrkCX2opPayFbZ/dbQ3PqnuH9OKWjwB1t3Ulg/Yuwk3Q2gjDT2Qfi3Oihp7BxRSRR08ugcTXvdvMG+hzXmK4l1eTDyq/3uldRyv3saiKr27y+abKqPN7Um1X73rEk9OrmFPwGpmtIK","eNrtksFuwjAMhu88RZUzkZzGSRpeA+7INd4WCdpS0gNCvPsSbbAbEvf55t//9x9s35pVU0oxZfkc56vaNApMTxYD6M4IaYTe6uhjpym2LOywRwC1/uEuyzQdk8yVo2gsd85p9+GCRm9LQsACM7aBuuCpfXI8HqQyO9nm1qKLpXwEMP5feVcxpVXr30Me5MJzmnIah7rfI5325mE3T9dAJ3kxnubEde4AHtJ5oSGnXB8E/9RlSLnm8FcSVqv7N9RRj9M=","*${random_data} = Gn3x#/;0[4","eNqdzE0KwjAQhuG9pwjBpSmTZPIneArdyyQdRRBbakSkeHdTBA/gu/zg+dbzjZ/Hniq9xU7MYiVaslDl8zC95FZI0JksBlBRMymEbFXyKSpKpnBxmBFAbr7u/hjH64WnxVHStkTnlDu5oNDb9hCw4YImUAyezM+VoefFHHhfjUWXWj4BaP/f0nXdB+esNfA=","*53 - Kiểm tra require của trường supplier khi không truyền giá trị vào param name","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;name","*{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}","*${random_data} = ^,cv87%1F-","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": ...","*54 - Kiểm tra require của trường supplier khi không truyền param name","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n\n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;name","*{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n\n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}","*${random_data} = +dJ98S*Po^","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n\n    \"price\"...","*55 - Kiểm tra validate của trường name có giá trị null","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": null, \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;name","eNpFj0EOgjAQRfeegnRNkymdUuo1dG+GoWoTLAhlYYx3l0bRv3z572fmWeyKNYIp+cswPcS+EKBa0mhBNsqTRGi1dLVrJLmKPRtsEUCUH29exrEPfsoeOaW5MUaas7ESa70uWFxlxspSY2uqfh4Pnc/O0R9SpdG4NbUDUFaU35M6P/MUxhSGmJs93U5qq6pfK9ItD8Wl7zc0ToEzMwAbui8UU0j5PfzTJYaUp/kaPIvd6w2/EEHs","*${random_data} = .RvxXQuZ#6","*56 - Kiểm tra validate của trường name có giá trị số","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": 123123, \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;name","*{ \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": 123123, \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}","*${random_data} = uceDnhT^,b","*57 - Kiểm tra validate của trường name có giá trị là kí tự đặc biệt","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690017\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991@#$\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;name","eNplj8uOwjAMRfd8RZWZJZGcxmkaVvzDsEeu8UCkvijpYjTi32k0UBbj5fU5V/ZvsSmWUUxJzsP0o3aFAtOQRQ+6NkIaobE6VKHWFEoWdtgggNr+ebd5HNsoU/YoGMu1c9p9O6+xskuDx0VmLD3VvqJy9Xg4SXYO8pVKiy4sUwUA49X2edJJbjzFMcWhz2RL3dG8ULNSPXXyf73/+FyJcYqcEQfwiq4z9Smm/C2+07mPKVfxJQqrzf0Bd9tEqQ==","*${random_data} = MUER&gt;v@om&gt;","*58 - Kiểm tra validate của trường name có giá trị là kí tự tiếng việt","*<a href=\"https://testek.vn/lab/api/v0/prod-man\">https://testek.vn/lab/api/v0/prod-man\x3c/a>, /product, POST, { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690018\", \n    \"description\": \"lam_1234599991\", \n    \"name\": \"lam_1234599991Â\", \n    \"price\": 500, \n    \"quantity\": 400, \n    \"unit\": \"chiec\"\n}, 400, code;message;field, 400;Dữ liệu nhập không hợp lệ;name","eNplj0GOwjAMRfecosqaSE7jNAnXgD1yjWcmErSlTRdoNBuuxsWm0UBZjJff733Z39WmWkYxZfnsx5vaVQpMSxY96GCENEJrdWxi0BRrFnbYIoDa/nnTPAznJGPxKBrLwTntPpzX2NilweMiM9aegm+oXj3uT1Kcg+xzbdHFZZoIYILaPk86ycRjGnLqu0Ke6XI0L9SsVEcX+b9+3FdgGBMXwgG8outMXU65PIvvdO5SLk38lYTV5ucXdd1FaA==","*${random_data} = -jdj6!)D&lt;'","*${new_data} = { \n    \"category\": \"01ba3470-81ea-40b3-9698-a92cec54b400\",\n    \"supplier\": \"a913c855-5f57-4630-8743-9c427a876a20\",\n    \"code\": \"TeSt23459999690018\", \n    \"description\": \"lam_1234599991\", \n    \"name\": ..."]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:00","fail":58,"label":"All Tests","pass":0,"skip":0}],[{"elapsed":"00:00:00","fail":58,"label":"api","pass":0,"skip":0},{"elapsed":"00:00:00","fail":58,"label":"test","pass":0,"skip":0}],[{"elapsed":"00:00:01","fail":58,"id":"s1","label":"Api Demo","name":"Api Demo","pass":0,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:06","fail":9,"label":"All Tests","pass":49,"skip":0}],[{"elapsed":"00:00:06","fail":9,"label":"api","pass":49,"skip":0},{"elapsed":"00:00:06","fail":9,"label":"test","pass":49,"skip":0}],[{"elapsed":"00:00:07","fail":9,"id":"s1","label":"Api Demo","name":"Api Demo","pass":49,"skip":0}]];
 </script>
 <script type="text/javascript">
 window.output["errors"] = [];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1743666716336;
+window.output["baseMillis"] = 1743685335764;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 551;
+window.output["generated"] = 7541;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
 </script>
 <script type="text/javascript">
-window.settings = {"defaultLevel":"INFO","minLevel":"FAIL","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
+window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
 </script>
 <title></title>
 </head>
-<body data-theme="dark">
+<body>
 <div id="javascript-disabled">
   <h1>Opening Robot Framework log failed</h1>
   <ul>
@@ -2109,13 +1847,12 @@ window.settings = {"defaultLevel":"INFO","minLevel":"FAIL","reportURL":"report.h
   </ul>
 </div>
 <script type="text/javascript">removeJavaScriptDisabledWarning();</script>
+
 <div id="header"></div>
 <div id="statistics-container"></div>
 
 <script type="text/javascript">
 $(document).ready(function() {
-    storage.init();
-    theme.init(storage);
     try {
         var topsuite = window.testdata.suite();
     } catch (error) {
@@ -2123,7 +1860,6 @@ $(document).ready(function() {
         return;
     }
     initLayout(topsuite.name, 'Log');
-    theme.reflectPreference();
     addStatistics();
     addErrors();
     addExecutionLog(topsuite);
@@ -2164,6 +1900,25 @@ function drawErrorsRecursively(errors, target) {
         // Errors may have moved scroll position. Resetting location re-scrolls.
         if (window.location.hash)
             window.location.replace(window.location.hash);
+        highlightLinkTarget();
+    }
+}
+
+function highlightLinkTarget() {
+    if (window.location.hash) {
+        var target = $(window.location.hash);
+        highlight(target);
+    }
+}
+
+function highlight(element, color) {
+    if (color === undefined)
+        color = 242;
+    if (color < 255) {
+        element.css({'background-color': 'rgb('+color+','+color+','+color+')'});
+        setTimeout(function () { highlight(element, color+1); }, 300);
+    } else {
+        element.css({'background-color': ''});
     }
 }
 
@@ -2181,6 +1936,7 @@ function makeElementVisible(id) {
             expandFailed(window.testdata.findLoaded(util.last(ids)));
             window.location.hash = id;
             document.getElementById(id).scrollIntoView();
+            highlightLinkTarget();
         }
     });
 }
@@ -2204,7 +1960,7 @@ function addExecutionLog(main) {
 
 <script type="text/x-jquery-tmpl" id="tagStatisticsRowTemplate">
   <tr class="row-${$item.index}">
-    <td class="stats-col-name" title="${doc}">
+    <td class="stats-col-name" title="{{html doc}}">
       <div class="stat-name">
         <span>{{html label}}</span>
         {{if info}}(${info}){{/if}}
@@ -2378,9 +2134,8 @@ function addExecutionLog(main) {
       <div class="element-header-left" title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
         <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
         <span class="label ${status.toLowerCase()}">${type}</span>
-        <span class="assign">{{html assign}}</span>
+        <span>{{html assign}}</span>
         <span class="name"><span class="parent-name">{{html libname}}{{if libname}} . {{/if}}</span>{{html name}}</span>
-        &nbsp;
         <span class="arg">{{html arguments}}</span>
       </div>
       <div class="element-header-right" onclick="stopPropagation(event)">
@@ -2414,12 +2169,6 @@ function addExecutionLog(main) {
           <th>Start / End / Elapsed:</th>
           <td>${times.startTime} / ${times.endTime} / ${times.elapsedTime}</td>
         </tr>
-        {{if message()}}
-        <tr>
-          <th>Message:</th>
-          <td class="message">{{html message()}}</td>
-        </tr>
-        {{/if}}
       </table>
     </div>
   </div>
@@ -2442,7 +2191,6 @@ function addExecutionLog(main) {
   <div id="log-level-selector">
   Log level:
     <select onchange="logLevelSelected(this.options[selectedIndex].value)">
-      <option value="3">WARN</option>
       <option value="2">INFO</option>
       <option value="1">DEBUG</option>
       {{if showTrace()}}<option value="0">TRACE</option>{{/if}}

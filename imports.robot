@@ -9,7 +9,7 @@ Library     DateTime
 Library     OperatingSystem
 Library     DatabaseLibrary
 Library     JSONLibrary
-
+Library     DateTime
 
 #### PYTHON3 LIBRARY ####
 Library     ./0_resources/pythonlibs/convert_list_to_string.py
@@ -35,6 +35,7 @@ Library     ./0_resources/pythonlibs/api_libs/json_utils.py
 Resource    ./1_common/common_keywords.robot
 Resource    ./1_common/js_common_keywords.robot
 Resource    ./1_common/common_variables.robot
+Resource    ./1_common/common_api.robot
 
 #### ROBOT ELEMENT ####
 Resource    ./2_elements/Homepage.robot

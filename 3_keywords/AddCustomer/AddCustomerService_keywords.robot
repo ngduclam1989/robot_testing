@@ -15,7 +15,7 @@ Resource     ../../imports.robot
     [Common] - Click Element               ${rab_Male}
     [Common] - Click Element               ${rab_Promo}
     [Common] - Click Button              ${btn_addNewCustomer_submit}
-    Convert List To String Without Quote    ${rab_Male}
+    # Convert List To String Without Quote    ${rab_Male}
     [Common] - Verify Page Contains Element Text        Success! New customer added.
 
 

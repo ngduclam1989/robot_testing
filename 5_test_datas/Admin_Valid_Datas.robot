@@ -15,6 +15,10 @@ ${AddNew_City}          Dallas
 ${AddNew_State}         Iowa
 
 
+${username_api}         admin_role
+${password_api}             aA12345678@"
+
+
 
 
 
