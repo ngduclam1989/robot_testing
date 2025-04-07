@@ -92,6 +92,19 @@ def call_api_login(url, method, data):
         results["error"] = str(e)
     return results
 
+def headers():
+    headers = {}
+    headers['Content-Type'] = 'application/json'
+    return headers
+
+def headers_with_accept_and_access_token(auth):
+    headers = {}
+    headers['Authorization'] = auth
+    headers['Accept']='*/*'
+    headers['Content-Type'] = 'application/json'
+    return headers
+
+
 def load_data_to_json(data):
     json_object = json.loads(data)
     return  json_object

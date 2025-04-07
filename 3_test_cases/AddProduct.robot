@@ -12,11 +12,10 @@ ${STT} - ${Name}
 *** Keywords ***
 Call API demo
     [Arguments]     ${Domain}   ${EndPoint}     ${Method}       ${Data}         ${StatusCode}       ${BaseParam}     ${SubParam}        ${SubParamValue}
-    Log    ${AUTH_TOKEN}
-    ${header}    [Common][Pre-Request] - Content-type and Accept headers and Bearer token     ${AUTH_TOKEN}
-    Log    ${header}
+    ${header}    Headers With Accept And Access Token     ${AUTH_TOKEN}
     ${body_data}      [Common] - Generate random body data for add product   ${Data}
     ${Results}      Call Api    ${Domain}${EndPoint}    ${header}     ${Method}         ${body_data}
+    Log        ${Results}[status_code]
     [Common] - Validate API Status Code   ${Results}[status_code]    ${StatusCode}
     [Common] - Validate Json Response Data  ${Results}[response]    ${BaseParam}    ${SubParam}    ${SubParamValue}
 
