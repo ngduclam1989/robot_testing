@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20250407 18:17:51.481" rpa="false" schemaversion="4">
+<suite id="s1" name="Api Demo" source="/Users/admin/Documents/GitHub/robot_testing/4_test_cases/api_demo.robot">
+<status status="SKIP" starttime="20250407 18:17:51.483" endtime="20250407 18:17:52.681"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="0" skip="0" id="s1" name="Api Demo">Api Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

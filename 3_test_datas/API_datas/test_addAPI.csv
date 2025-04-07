@@ -1,0 +1,566 @@
+﻿${No};${Name};${Domain};${EndPoint};${Method};${Data};${StatusCode};${BaseParam};${SubParam};${SubParamValue}
+TC-1;TC1 - Check API add product thành công với đầy đủ các dữ liệu hợp lệ;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt234599990012"", 
+    ""description"": ""lam_123451"", 
+    ""name"": ""lam_123451"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";201;;"id;productCode;productName";
+TC-2;Check API add product thành công với với code là chuỗi kí tự số;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""234599990012"", 
+    ""description"": ""lam_123451"", 
+    ""name"": ""lam_123451"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";201;;"id;productCode;productName";
+TC-3;Check API add product thành công với với code là chuỗi kí tự lower case;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""test234599990012"", 
+    ""description"": ""lam_123451"", 
+    ""name"": ""lam_123451"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";201;;"id;productCode;productName";
+TC-4;Check API add product thành công với với code là chuỗi kí tự upper case;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TEST234599990012"", 
+    ""description"": ""lam_123451"", 
+    ""name"": ""lam_123451"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";201;;"id;productCode;productName";
+TC-5;Check API add product thành công với với code là chuỗi kí tự upper case và lower case;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt234599990012"", 
+    ""description"": ""lam_123451"", 
+    ""name"": ""lam_123451"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";201;;"id;productCode;productName";
+TC-6;Check API add product thành công với dữ liệu không có param desc;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt234599990012"", 
+    ""name"": ""lam_123451"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";201;;"id;productCode;productName";
+TC-7;Check API add product thành công với dữ liệu không có param Unit;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt234599990012"", 
+    ""description"": ""lam_123451"", 
+    ""name"": ""lam_123451"", 
+    ""price"": 500, 
+    ""quantity"": 400
+}";201;;"id;productCode;productName";
+TC-8;Check API add product thành công với dữ liệu không có param desc và Unit;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt234599990012"", 
+    ""name"": ""lam_123451"", 
+    ""price"": 500, 
+    ""quantity"": 400
+}";201;;"id;productCode;productName";
+TC-9;Check API add product không thành công với dữ liệu UUID của category không tồn tại;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b411"",
+    ""code"": ""TeSt23459999690003"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""1e17f190-fa6a-45e0-84b4-6fd0811ffa57"", 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"4044001;Category not found: {0};category"
+TC-10;Check API add product không thành công với dữ liệu UUID của category là biến name của category có trong hệ thống;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""Máy giặt"",
+    ""code"": ""TeSt23459999690003"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""1e17f190-fa6a-45e0-84b4-6fd0811ffa57"", 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Mismatched input;category"
+TC-11;Check API add product không thành công với dữ liệu UUID của Supply không tồn tại;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""code"": ""TeSt23459999690003"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a99"", //20
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"4045001;Supplier not found: {0};supplier"
+TC-12;Check API add product không thành công với dữ liệu UUID của Supply là biến name của Supply có trong hệ thống;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""code"": ""TeSt23459999690003"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""Canon Viet Nam"", //20
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Mismatched input;supplier"
+TC-13;Check API add product không thành công với code product đã tồn tại trong hệ thống;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""code"": ""Lam111"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"", //20
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Mismatched input;supplier"
+TC-14;Check API add product không thành công với baseURL bị sai;https://testek.vn/lab/api/v0/prod-man1;/product;POST;"Url: https://testek.vn/lab/api/v0/prod-man1/product
+
+{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""code"": ""TeSt23459999690001"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"", //20
+    ""unit"": ""chiec""
+}";Có lỗi xảy ra;;;
+TC-15;Check API add product không thành công với endpoint bị sai;https://testek.vn/lab/api/v0/prod-man;/product1;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""code"": ""TeSt23459999690001"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"", //20
+    ""unit"": ""chiec""
+}";404;;"error;status;";"Not Found;404"
+TC-16;Check API add product không thành công khi chọn method là GET;https://testek.vn/lab/api/v0/prod-man;/product;GET;"Method: GET
+
+{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""code"": ""TeSt23459999690001"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"", //20
+    ""unit"": ""chiec""
+}";405;;"code;message;field";"405;Http request method not support;GET"
+TC-17;Check API add product không thành công khi chọn method là PUT;https://testek.vn/lab/api/v0/prod-man;/product;PUT;"Method: PUT
+
+{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""code"": ""TeSt23459999690001"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"", //20
+    ""unit"": ""chiec""
+}";405;;"code;message;field";"405;Http request method not support;PUT"
+TC-18;Check API add product không thành công khi chọn method là DELETE;https://testek.vn/lab/api/v0/prod-man;/product;DELETE;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""code"": ""TeSt23459999690001"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"", //20
+    ""unit"": ""chiec""
+}";405;;"code;message;field";"405;Http request method not support;DELETE"
+TC-19;Check API add product không thành công khi body truyền vào sai chuẩn json;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""code"": ""TeSt23459999690001"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"", 
+    ""unit"": ""chiec"",
+}";400;;"code;message";"400;Dữ liệu nhập không hợp lệ"
+TC-20;Check API add product không thành công khi body truyền vào là rỗng dạng {};https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+
+}";400;;"code;message;objectName";"400;Dữ liệu nhập không hợp lệ;createProductRequest"
+TC-21;Check API add product không thành công khi không truyền gì ở body;https://testek.vn/lab/api/v0/prod-man;/product;POST;;400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;null"
+TC-22;Kiểm tra require của trường category khi không truyền giá trị vào param category;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": """",
+    ""code"": ""TeSt23459999690005"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;category"
+TC-23;Kiểm tra require của trường category khi không truyền param category;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+
+    ""code"": ""TeSt23459999690005"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;category"
+TC-24;Kiểm tra validate của trường category có giá trị null;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": null,
+    ""code"": ""TeSt23459999690005"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;category"
+TC-25;Kiểm tra validate của trường category có giá trị là số;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": 123,
+    ""code"": ""TeSt23459999690005"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;category"
+TC-26;Kiểm tra validate của trường category có giá trị là kí tự đặc biệt;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400###"",
+    ""code"": ""TeSt23459999690005"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;category"
+TC-27;Kiểm tra validate của trường category có giá trị là kí tự tiếng việt;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400Â"",
+    ""code"": ""TeSt23459999690005"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;category"
+TC-28;Kiểm tra validate của trường category có giá trị là kí tự tiếng trung;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400富"",
+    ""code"": ""TeSt23459999690005"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;category"
+TC-29;Kiểm tra validate của trường category có giá trị space ở đầu;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": "" 01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""code"": ""TeSt23459999690005"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;category"
+TC-30;Kiểm tra validate của trường category có giá trị space ở cuối;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400 "",
+    ""code"": ""TeSt23459999690006"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;category"
+TC-31;Kiểm tra validate của trường category có giá trị space ở giữa;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea- 40b3-9698-a92cec54b400"",
+    ""code"": ""TeSt23459999690006"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;category"
+TC-32;Kiểm tra require của trường supplier khi không truyền giá trị vào param supplier;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": """",
+    ""code"": ""TeSt23459999690009"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;supplier"
+TC-33;Kiểm tra require của trường supplier khi không truyền param supplier;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+
+    ""code"": ""TeSt23459999690009"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;supplier"
+TC-34;Kiểm tra validate của trường supplier có giá trị null;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": null,
+    ""code"": ""TeSt23459999690009"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;supplier"
+TC-35;Kiểm tra validate của trường supplier có giá trị là số;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": 1234,
+    ""code"": ""TeSt23459999690009"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;supplier"
+TC-36;Kiểm tra validate của trường supplier có giá trị là kí tự đặc biệt;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20@#$"",
+    ""code"": ""TeSt23459999690009"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;supplier"
+TC-37;Kiểm tra validate của trường supplier có giá trị là kí tự tiếng việt;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20Â"",
+    ""code"": ""TeSt23459999690009"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;supplier"
+TC-38;Kiểm tra validate của trường supplier có giá trị là kí tự tiếng trung;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20祎妃"",
+    ""code"": ""TeSt23459999690009"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;supplier"
+TC-39;Kiểm tra validate của trường supplier có giá trị space ở đầu;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": "" a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690009"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;supplier"
+TC-40;Kiểm tra validate của trường supplier có giá trị space ở cuối;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20 "",
+    ""code"": ""TeSt23459999690009"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;supplier"
+TC-41;Kiểm tra validate của trường supplier có giá trị space ở giữa;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57- 4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690009"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;supplier"
+TC-42;Kiểm tra require của trường supplier khi không truyền giá trị vào param code;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": """", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-43;Kiểm tra require của trường supplier khi không truyền param code;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-44;Kiểm tra validate của trường code có giá trị null;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": null, 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-45;Kiểm tra validate của trường code có giá trị số;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": 123123, 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-46;Kiểm tra validate của trường code có giá trị là kí tự đặc biệt;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690012@#$"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-47;Kiểm tra validate của trường code có giá trị là kí tự tiếng việt;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690012â"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-48;Kiểm tra validate của trường code có giá trị là kí tự tiếng trung;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690012祎妃"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-49;Kiểm tra validate của trường code có giá trị space ở đầu;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": "" TeSt23459999690012"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-50;Kiểm tra validate của trường code có giá trị space ở cuối;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": "" TeSt23459999690013 "", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-51;Kiểm tra validate của trường code có giá trị space ở giữa;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": "" TeSt 23459999690013"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-52;Kiểm tra max length của trường code ;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt23459999690016TeSt234599996900161234"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;code"
+TC-53;Kiểm tra require của trường supplier khi không truyền giá trị vào param name;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690017"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": """", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;name"
+TC-54;Kiểm tra require của trường supplier khi không truyền param name;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690017"", 
+    ""description"": ""lam_1234599991"", 
+
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;name"
+TC-55;Kiểm tra validate của trường name có giá trị null;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690017"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": null, 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;name"
+TC-56;Kiểm tra validate của trường name có giá trị số;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690017"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": 123123, 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;name"
+TC-57;Kiểm tra validate của trường name có giá trị là kí tự đặc biệt;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690017"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991@#$"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;name"
+TC-58;Kiểm tra validate của trường name có giá trị là kí tự tiếng việt;https://testek.vn/lab/api/v0/prod-man;/product;POST;"{ 
+    ""category"": ""01ba3470-81ea-40b3-9698-a92cec54b400"",
+    ""supplier"": ""a913c855-5f57-4630-8743-9c427a876a20"",
+    ""code"": ""TeSt23459999690018"", 
+    ""description"": ""lam_1234599991"", 
+    ""name"": ""lam_1234599991Â"", 
+    ""price"": 500, 
+    ""quantity"": 400, 
+    ""unit"": ""chiec""
+}";400;;"code;message;field";"400;Dữ liệu nhập không hợp lệ;name"

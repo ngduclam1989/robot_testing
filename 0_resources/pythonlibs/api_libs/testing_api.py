@@ -6,10 +6,10 @@ from robot.libraries.BuiltIn import BuiltIn
 
 def call_api(url,authorization, method, data):
 
-
     headers = {
         "Authorization": authorization.strip(),
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Accept":   "*/*"
     }
 
     results = {}
@@ -17,13 +17,13 @@ def call_api(url,authorization, method, data):
     try:
         response = None
         if method == "PUT":
-            response = requests.put(url, headers=headers,  data=json.dumps(data) if data else None)
+            response = requests.put(url, headers=headers,  data=data)
         elif method == "GET":
             response = requests.get(url, headers=headers)
         elif method == "PATCH":
-            response = requests.patch(url, headers=headers,  data=json.dumps(data) if data else None)
+            response = requests.patch(url, headers=headers,  data=data)
         elif method == "POST":
-            response = requests.post(url, headers=headers,  data=json.dumps(data) if data else None)
+            response = requests.post(url, headers=headers,  data=data)
         elif method == "DELETE":
             response = requests.delete(url, headers=headers)
         results["status_code"] = response.status_code
@@ -74,18 +74,19 @@ def call_api_with_param(url, method, data=None, headers=None, params_keys=None, 
 def call_api_login(url, method, data):
     headers = {}
     headers["Content-Type"] = "application/json"
+    headers["Accept"] = "*/*"
 
     results = {}
     try:
         response = None
         if method == "PUT":
-            response = requests.put(url, headers=headers,  data=json.dumps(data) if data else None)
+            response = requests.put(url, headers=headers,  data=data)
         elif method == "GET":
             response = requests.get(url, headers=headers)
         elif method == "PATCH":
-            response = requests.patch(url, headers=headers,  data=json.dumps(data) if data else None)
+            response = requests.patch(url, headers=headers,  data=data)
         elif method == "POST":
-            response = requests.post(url, headers=headers,  data=json.dumps(data) if data else None)
+            response = requests.post(url, headers=headers,  data=data)
         elif method == "DELETE":
             response = requests.delete(url, headers=headers)
         results["status_code"] = response.status_code
@@ -99,20 +100,6 @@ def load_data_to_json(data):
     json_object = json.loads(data)
     return  json_object
 
-def replace_string_by_char_to_validate_json(data):
-    dict_str = str(data)
-    new_text = dict_str.replace("'", '"')
-    new_text = new_text.replace("None", '""')
-    return new_text
-
-def random_string_value():
-    length = 10
-    random_string = ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=length))
-    return random_string
-
-def replace_string_to_generate_data(text, char, newchar):
-    replace_string = str(text)
-    new_text = replace_string.replace(char, newchar)
-    return  new_text
-
-
+def load_dictionary_to_json(data):
+    json_str = json.dumps(data)
+    return  json_str
