@@ -4,28 +4,24 @@ import random
 import string
 from robot.libraries.BuiltIn import BuiltIn
 
-def call_api(url,authorization, method, data):
+def call_api(url,header, method, data):
 
-    headers = {
-        "Authorization": authorization.strip(),
-        "Content-Type": "application/json",
-        "Accept":   "*/*"
-    }
+
 
     results = {}
 
     try:
         response = None
         if method == "PUT":
-            response = requests.put(url, headers=headers,  data=data)
+            response = requests.put(url, headers=header,  data=data)
         elif method == "GET":
-            response = requests.get(url, headers=headers)
+            response = requests.get(url, headers=header)
         elif method == "PATCH":
-            response = requests.patch(url, headers=headers,  data=data)
+            response = requests.patch(url, headers=header,  data=data)
         elif method == "POST":
-            response = requests.post(url, headers=headers,  data=data)
+            response = requests.post(url, headers=header,  data=data)
         elif method == "DELETE":
-            response = requests.delete(url, headers=headers)
+            response = requests.delete(url, headers=header)
         results["status_code"] = response.status_code
         results["response"] = response.json() if response.text else {}
 

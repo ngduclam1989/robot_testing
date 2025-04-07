@@ -3,32 +3,9 @@ Resource        ../imports.robot
 
 *** Keywords ***
 
-
-#[Common] - Login
-#    ${headers}    Create Dictionary    Content-Type=application/json
-#    ${data}        Create Dictionary    username=${USERNAME_API}    password=${PASSWORD_API}
-#    ${response}    POST    ${LOGIN_URL}${LOGIN_PATH}    json=${data}    headers=${headers}
-#    Should Be Equal As Numbers    ${response.status_code}    200    Login thất bại! HTTP Code: ${response.status_code}
-#    ${response_json}=    Evaluate    json.loads('''${response.text}''')    json
-#    ${bearer_token}=    Set Variable    Bearer ${response_json['access_token']}
-#    Log    Bearer Token: ${bearer_token}
-#    [Return]    ${bearer_token}
-
-[Common] - Login And Set Token
-    [Documentation]    Thực hiện login và lưu token vào Suite Variable
-    ${bearer_token}=    [Common] - Login 
-    Set Suite Variable    ${AUTH_TOKEN}    ${bearer_token}
-
-[Common] - Login
-    ${data}        Create Dictionary    username=${USERNAME_API}    password=${PASSWORD_API}
-    ${json_data}       Load dictionary to json    ${data}
-    ${login_response}       Call api login    ${LOGIN_URL}${LOGIN_PATH}     POST       ${json_data}
-    Log    ${login_response}
-    ${bearer_token}=    Set Variable    Bearer ${login_response['response']['access_token']}
-    Log    Bearer Token: ${bearer_token}
-    [Return]    ${bearer_token}
-
-
+[Common] - Validate API Status Code
+    [Arguments]    ${response}    ${expectedAPIStatusCode}
+    Should Be Equal As Numbers    ${response.status_code}     ${expectedAPIStatusCode}    Current HTTP Code: ${response.status_code}
 
 [Common] - Validate Json Response Data
     [Arguments]    ${data}      ${BaseParam}    ${SubParam}    ${SubParamValue}
@@ -37,8 +14,39 @@ Resource        ../imports.robot
     ${json_results}    Evaluate    json.dumps(${json})    modules=json
     Validate Json    ${json_results}    ${BaseParam}    ${SubParam}    ${SubParamValue}
 
-[Common] - Generate random body data
-    [Arguments]        ${data}
-    ${data_random}  Random string value
-    ${body_data}    Replace string to generate data     ${data}     23459999    ${data_random}
-    [Return]    ${body_data}
+[Common] - Extract Json Value from Response
+    [Arguments]    ${response}     ${extractJsonValue}
+    ${variables}    Set Variable    ${response.json()}[${extractJsonValue}]
+    RETURN    ${variables}
+
+# [Common][Pre-Request] - Content-type headers
+#     [Arguments]    ${content_type}=application/json    ${output}=headers
+#     ${headers}    create dictionary    content-type=${content_type}
+#     [common] - Set variable    name=${output}    value=${headers}
+
+# [Common][Pre-Request] - Content-type and Accept headers
+#     [Arguments]    ${content_type}=application/json    ${Accept}=application/json    ${output}=headers
+#     ${headers}    create dictionary    content-type=${content_type}    Accept=${Accept}
+#     [common] - Set variable    name=${output}    value=${headers}
+
+[Common][Pre-Request] - Content-type and Accept headers and Bearer token
+    [Arguments]
+    ...    ${Bearer_token}
+    ...    ${content_type}=application/json
+    ...    ${Accept}=*/*
+    ...    ${output}=headers
+    ${headers}    create dictionary
+    ...    content-type=${content_type}
+    ...    Accept=${Accept}
+    ...    Authorization=${Bearer_token}
+    [common] - Set variable    name=${output}    value=${headers}
+
+[common] - Set variable
+    [Arguments]    ${name}    ${value}
+    ${is_suite_var}    Run Keyword And Return Status    Should Match    ${name}    suite_*
+    ${has_test_case}    Run Keyword And Return Status    Variable Should Exist    ${TEST_NAME}
+    IF    '${is_suite_var}'=='${True}' or '${has_test_case}'=='${False}'
+        set suite variable    \${${name}}    ${value}
+    ELSE
+        set test variable    \${${name}}    ${value}
+    END
