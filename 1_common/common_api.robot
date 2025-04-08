@@ -18,3 +18,15 @@ Resource        ../imports.robot
     [Arguments]    ${response}     ${extractJsonValue}
     ${variables}    Set Variable    ${response.json()}[${extractJsonValue}]
     RETURN    ${variables}
+
+
+[Common] - Replace data with random string
+    [Arguments]        ${data}        ${replace_data}
+    ${data_random}  Random string value
+    ${new_data}    Replace string to generate data     ${data}     ${replace_data}    ${data_random}
+    [Return]    ${new_data}
+
+[Common] - Replace data with old and new value 
+    [Arguments]        ${data}        ${oldvalue}        ${newvalue}
+    ${new_data}    Replace string to generate data     ${data}     ${oldvalue}    ${newvalue}
+    [Return]    ${new_data}

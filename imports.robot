@@ -12,22 +12,22 @@ Library     JSONLibrary
 Library     DateTime
 
 #### PYTHON3 LIBRARY ####
-Library     ./0_resources/pythonlibs/api_libs/testing_api.py
-Library     ./0_resources/pythonlibs/api_libs/json_utils.py
-Library     ./0_resources/pythonlibs/api_libs/string_utils.py
+Library     ${CURDIR}/0_resources/pythonlibs/api_libs/testing_api.py
+Library     ${CURDIR}/0_resources/pythonlibs/api_libs/json_utils.py
+Library     ${CURDIR}/0_resources/pythonlibs/api_libs/string_utils.py
 
 #### ROBOT COMMON ####
-Resource    ./1_common/common_api.robot
+Resource    ${CURDIR}/1_common/common_api.robot
 
 #### KEYWORDS ####
-Resource    ./2_keywords/Login/Login_keywords.robot
-Resource    ./2_keywords/Products/AddProduct_keywords.robot
+Resource    ${CURDIR}/2_keywords/Login/Login_keywords.robot
+Resource    ${CURDIR}/2_keywords/Products/AddProduct_keywords.robot
 
 
 
 #### TESTCASES ####
-Resource    ./3_test_cases/AddProduct.robot
+Resource    ${CURDIR}/3_test_cases/AddProduct.robot
 
 
 #### TEST DATAS ####
-Resource    ./4_test_datas/API_datas/api_datas.robot
+Resource    ${CURDIR}/4_test_datas/API_datas/api_datas.robot

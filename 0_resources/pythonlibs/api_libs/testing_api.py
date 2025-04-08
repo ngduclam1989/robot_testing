@@ -112,3 +112,17 @@ def load_data_to_json(data):
 def load_dictionary_to_json(data):
     json_str = json.dumps(data)
     return  json_str
+
+def update_json_object(file_path, key, value):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+        data[key] = value
+        update_json = json.dumps(data)
+        print(update_json)
+        final_body = json.loads(update_json)
+        return final_body
+    
+def validation_json_schema_response(json_file, schema_file_path):
+    with open(schema_file_path, 'r') as file:
+        schema = json.load(file)
+        validate(instance=json_file, schema=schema)
