@@ -3,12 +3,6 @@ Resource        ../../imports.robot
 
 *** Keywords ***
 
-
-[Common] - Login And Set Token
-    [Documentation]    Thực hiện login và lưu token vào Suite Variable
-    ${bearer_token}=    [Common] - Login 
-    Set Suite Variable    ${AUTH_TOKEN}    ${bearer_token}
-
 [Common] - Login
     ${data}        Create Dictionary    username=${USERNAME_API}    password=${PASSWORD_API}
     ${json_data}       Load dictionary to json    ${data}
@@ -17,3 +11,9 @@ Resource        ../../imports.robot
     ${bearer_token}=    Set Variable    Bearer ${login_response['response']['access_token']}
     Log    Bearer Token: ${bearer_token}
     [Return]    ${bearer_token}
+[Common] - Login And Set Token
+    [Documentation]    Thực hiện login và lưu token vào Suite Variable
+    ${bearer_token}=    [Common] - Login 
+    Set Suite Variable    ${AUTH_TOKEN}    ${bearer_token}
+
+

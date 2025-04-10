@@ -2,6 +2,8 @@ import requests
 import json
 import random
 import string
+from jsonschema import validate
+
 from robot.libraries.BuiltIn import BuiltIn
 
 def call_api(url,header, method, data):
@@ -123,6 +125,10 @@ def update_json_object(file_path, key, value):
         return final_body
     
 def validation_json_schema_response(json_file, schema_file_path):
+    # Nếu json_file là chuỗi JSON (string), parse nó về dict
+    if isinstance(json_file, str):
+        json_file = json.loads(json_file)
+
     with open(schema_file_path, 'r') as file:
         schema = json.load(file)
         validate(instance=json_file, schema=schema)

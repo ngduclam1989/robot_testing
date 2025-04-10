@@ -7,12 +7,12 @@ Resource        ../imports.robot
     [Arguments]    ${responsecode}    ${expectedAPIStatusCode}
     Should Be Equal As Strings    ${responsecode}     ${expectedAPIStatusCode}    Current HTTP Code: ${responsecode}
 
-[Common] - Validate Json Response Data
-    [Arguments]    ${data}      ${BaseParam}    ${SubParam}    ${SubParamValue}
-    ${datas}  Replace string by char to validate json    ${data}
-    ${json}     Load data to json    ${datas}
-    ${json_results}    Evaluate    json.dumps(${json})    modules=json
-    Validate Json    ${json_results}    ${BaseParam}    ${SubParam}    ${SubParamValue}
+[Common] - Validate Json Response Structure
+    [Arguments]    ${data}      ${dataStructure}    
+    Log    ${data}
+    ${json_actual}    Load Dictionary To Json    ${data}
+    Log    ${json_actual}
+    Validation Json Schema Response    ${json_actual}       ${dataStructure}    
 
 [Common] - Extract Json Value from Response
     [Arguments]    ${response}     ${extractJsonValue}
@@ -30,3 +30,8 @@ Resource        ../imports.robot
     [Arguments]        ${data}        ${oldvalue}        ${newvalue}
     ${new_data}    Replace string to generate data     ${data}     ${oldvalue}    ${newvalue}
     [Return]    ${new_data}
+
+
+[Common] - Validate Json Response Structure test
+    [Arguments]    ${data}      ${dataStructure}    
+    Validation Json Schema Response    ${data}    ${dataStructure}   

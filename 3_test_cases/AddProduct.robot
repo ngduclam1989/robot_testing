@@ -11,12 +11,15 @@ ${STT} - ${Name}
 
 *** Keywords ***
 Call API demo
-    [Arguments]     ${Domain}   ${EndPoint}     ${Method}       ${Data}         ${StatusCode}       ${BaseParam}     ${SubParam}        ${SubParamValue}
+    [Arguments]     ${Domain}   ${EndPoint}     ${Method}       ${Data}         ${StatusCode}       ${ResponseStructure}     ${ResponseParam}        ${ResponseValue}
     ${header}    Headers With Accept And Access Token     ${AUTH_TOKEN}
     ${body_data}      [Common] - Generate random body data for add product   ${Data}
-    ${Results}      Call Api    ${Domain}${EndPoint}    ${header}     ${Method}         ${body_data}
-    Log        ${Results}[status_code]
-    [Common] - Validate API Status Code   ${Results}[status_code]    ${StatusCode}
-    [Common] - Validate Json Response Data  ${Results}[response]    ${BaseParam}    ${SubParam}    ${SubParamValue}
+    ${results}      Call Api    ${Domain}${EndPoint}    ${header}     ${Method}         ${body_data}
+    [Common] - Validate API Status Code   ${results}[status_code]    ${StatusCode}
+    
+
+     [Common] - Validate Json Response Structure      ${results}[response]           ${ResponseStructure} 
+#     [Common] - Validate Json Response Data  ${Results}[response]    ${BaseParam}    ${SubParam}    ${SubParamValue}
+
 
 
