@@ -16,10 +16,8 @@ Call API demo
     ${body_data}      [Common] - Generate random body data for add product   ${Data}
     ${results}      Call Api    ${Domain}${EndPoint}    ${header}     ${Method}         ${body_data}
     [Common] - Validate API Status Code   ${results}[status_code]    ${StatusCode}
-    
-
-     [Common] - Validate Json Response Structure      ${results}[response]           ${ResponseStructure} 
-#     [Common] - Validate Json Response Data  ${Results}[response]    ${BaseParam}    ${SubParam}    ${SubParamValue}
+    [Common] - Validate Json Response Structure      ${results}[response]           ${ResponseStructure} 
+    [Common] - Validate Json Response Data  ${Results}[response]    ${ResponseParam}    ${ResponseValue}    
 
 
 

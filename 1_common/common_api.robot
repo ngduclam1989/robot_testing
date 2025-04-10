@@ -32,6 +32,9 @@ Resource        ../imports.robot
     [Return]    ${new_data}
 
 
-[Common] - Validate Json Response Structure test
-    [Arguments]    ${data}      ${dataStructure}    
-    Validation Json Schema Response    ${data}    ${dataStructure}   
+[Common] - Validate Json Response data
+    [Arguments]    ${data}      ${compareParam}    ${compareValue} 
+    Log    ${data}
+    ${json_actual}    Load Dictionary To Json    ${data}
+    Log    ${json_actual}  
+    Validate Json    ${json_actual}     ${compareParam}        ${compareValue} 
